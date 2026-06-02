@@ -6,8 +6,8 @@ from zoneinfo import ZoneInfo
 
 
 TZ_NAME = "Asia/Shanghai"
-MODE_LABEL = "模拟数据 / mock mode"
 MOCK_NOTICE = "当前为模拟数据，仅用于测试页面链路，不代表真实热点，不建议作为素材参考。"
+REAL_NOTICE = "当前为真实热榜数据，来源于平台公开热门榜单。"
 
 
 def shanghai_now() -> datetime:
@@ -27,7 +27,7 @@ def load_analysis(date_text: str) -> dict:
         return {
             "date": date_text,
             "generated_at": shanghai_now().isoformat(),
-            "mode": "mock",
+            "mode": "real",
             "today_overview": {"summary": "暂无分析数据。", "total_clusters": 0},
             "top_hot": [],
             "top_interesting": [],
@@ -75,8 +75,8 @@ def render_markdown(analysis: dict, health: dict, generated_at: str) -> str:
         "# 今日热点灵感雷达",
         "",
         f"- 生成时间: {generated_at}",
-        f"- 当前模式: {MODE_LABEL}",
-        f"- 重要提示: {MOCK_NOTICE}",
+        f"- 当前模式: {analysis.get('mode', 'real')}",
+        f"- 重要提示: {REAL_NOTICE if analysis.get('mode', 'real') == 'real' else MOCK_NOTICE}",
         f"- 今日总览: {overview.get('summary', '暂无总览。')}",
         f"- 热点簇数量: {overview.get('total_clusters', 0)}",
         "",
@@ -91,7 +91,7 @@ def render_markdown(analysis: dict, health: dict, generated_at: str) -> str:
     if sources:
         for source in sources:
             lines.append(
-                f"- {source['platform']}: {source['status']}，抓取 {source['fetched_count']} 条，候选 {source['candidate_count']} 条"
+                f"- {source['platform']}: {source['status']}，抓取 {source.get('fetched_count', 0)} 条，原文链接 {source.get('with_source_url_count', 0)} 条，榜单条目链接 {source.get('with_board_item_url_count', 0)} 条，热榜页面链接 {source.get('with_board_url_count', 0)} 条"
             )
     else:
         lines.append("- 暂无健康状态数据。")
@@ -161,12 +161,14 @@ def render_cards(entries: list[dict]) -> str:
 
 def render_html(analysis: dict, health: dict, generated_at: str) -> str:
     overview = analysis.get("today_overview", {})
+    mode = analysis.get("mode", "real")
+    notice = REAL_NOTICE if mode == "real" else MOCK_NOTICE
     health_rows = "\n".join(
-        f"<tr><td>{html.escape(source['platform'])}</td><td>{html.escape(source['status'])}</td><td>{source['fetched_count']}</td><td>{source['candidate_count']}</td><td>{source['ai_analyzed_count']}</td></tr>"
+        f"<tr><td>{html.escape(source['platform'])}</td><td>{html.escape(source['status'])}</td><td>{source.get('fetched_count', 0)}</td><td>{source.get('with_source_url_count', 0)}</td><td>{source.get('with_board_item_url_count', 0)}</td><td>{source.get('with_board_url_count', 0)}</td><td>{html.escape(str(source.get('source_origin_type', '')))}</td><td>{html.escape(str(source.get('error') or ''))}</td></tr>"
         for source in health.get("sources", [])
     )
     if not health_rows:
-        health_rows = '<tr><td colspan="5">暂无健康状态数据。</td></tr>'
+        health_rows = '<tr><td colspan="8">暂无健康状态数据。</td></tr>'
 
     return f"""<!doctype html>
 <html lang="zh-CN">
@@ -204,8 +206,8 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
   <header>
     <main>
       <h1>今日热点灵感雷达</h1>
-      <p class="mode">生成时间：{html.escape(generated_at)} · 当前模式：{MODE_LABEL}</p>
-      <p class="notice">{MOCK_NOTICE}</p>
+      <p class="mode">生成时间：{html.escape(generated_at)} · 当前模式：{html.escape(mode)}</p>
+      <p class="notice">{notice}</p>
       <p class="overview">{html.escape(overview.get("summary", "暂无总览。"))}</p>
     </main>
   </header>
@@ -227,7 +229,7 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
 
     <h2>信息源健康状态摘要</h2>
     <table>
-      <thead><tr><th>平台</th><th>状态</th><th>抓取数</th><th>候选数</th><th>AI分析数</th></tr></thead>
+      <thead><tr><th>平台</th><th>状态</th><th>抓取数</th><th>原文链接数</th><th>榜单条目数</th><th>热榜页面数</th><th>来源类型</th><th>错误</th></tr></thead>
       <tbody>{health_rows}</tbody>
     </table>
   </main>
@@ -251,7 +253,7 @@ def main() -> None:
     Path("output/today.md").write_text(markdown, encoding="utf-8")
     Path("output/today.html").write_text(page, encoding="utf-8")
     Path("docs/index.html").write_text(page, encoding="utf-8")
-    print("Generated mock pages: output/today.md, output/today.html, docs/index.html")
+    print(f"Generated {analysis.get('mode', 'real')} pages: output/today.md, output/today.html, docs/index.html")
 
 
 if __name__ == "__main__":

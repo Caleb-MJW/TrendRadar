@@ -1,13 +1,10 @@
 import json
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import quote
 from zoneinfo import ZoneInfo
 
 
 TZ_NAME = "Asia/Shanghai"
-MODE = "mock"
-
 MATERIAL_USAGE = [
     "朋友圈灵感",
     "工作群话题",
@@ -42,17 +39,6 @@ BUCKETS = {
     "top_interesting": "热门有趣TOP20",
     "top_inspiration": "优增灵感TOP15",
     "watchlist": "观察备用",
-}
-
-SEARCH_URLS = {
-    "微博热搜": "https://s.weibo.com/weibo?q={keyword}",
-    "百度热搜": "https://www.baidu.com/s?wd={keyword}",
-    "抖音热点": "https://www.douyin.com/search/{keyword}",
-    "小红书热点": "https://www.xiaohongshu.com/search_result?keyword={keyword}",
-    "今日头条热榜": "https://www.toutiao.com/search/?keyword={keyword}",
-    "腾讯热点": "https://new.qq.com/search?query={keyword}",
-    "知乎热榜": "https://www.zhihu.com/search?q={keyword}",
-    "B站热门": "https://search.bilibili.com/all?keyword={keyword}",
 }
 
 TYPE_DIRECTIONS = {
@@ -190,11 +176,6 @@ def shanghai_now() -> datetime:
     return datetime.now(ZoneInfo(TZ_NAME))
 
 
-def fallback_search_url(platform: str, title: str) -> str:
-    template = SEARCH_URLS.get(platform, "https://www.baidu.com/s?wd={keyword}")
-    return template.format(keyword=quote(title))
-
-
 def topic_type(item: dict) -> str:
     tags = item.get("tags_raw") or []
     for tag in tags:
@@ -231,7 +212,7 @@ def source_level(source_url: str, board_item_url: str, board_url: str) -> str:
 
 
 def source_fields(item: dict, cluster: dict, title: str, platform: str) -> tuple[str, str, str, str, str]:
-    search_url = item.get("search_url") or cluster.get("primary_search_url") or fallback_search_url(platform, title)
+    search_url = item.get("search_url") or cluster.get("primary_search_url") or ""
     source_url = item.get("source_url") or cluster.get("primary_source_url") or ""
     board_item_url = item.get("board_item_url") or cluster.get("primary_board_item_url") or ""
     board_url = item.get("board_url") or cluster.get("primary_board_url") or ""
@@ -268,6 +249,7 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
     source_url, board_item_url, board_url, search_url, level = source_fields(item, cluster, title, platform)
     origin_type = item.get("source_origin_type") or cluster.get("source_origin_type") or "unknown"
     reference_valid = bool(item.get("is_reference_valid", cluster.get("is_reference_valid", False)))
+    mode = item.get("mode") or cluster.get("mode") or ("real" if origin_type == "hotlist" else "mock")
 
     if bucket == "top_inspiration":
         usage = MATERIAL_USAGE[index % 5]
@@ -283,7 +265,7 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
         save_to_library = reference_valid and total_score >= 80
 
     return {
-        "mode": item.get("mode") or cluster.get("mode") or MODE,
+        "mode": mode,
         "original_title": title,
         "source_platform": platform,
         "board_name": item.get("board_name") or first_non_empty(cluster.get("board_names", [])) or platform,
@@ -308,7 +290,11 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
         "material_usage": usage,
         "inspiration_tips": copy["tips"],
         "recommend_level": recommend_level,
-        "risk_note": "模拟数据仅用于测试页面链路，不代表真实热点，不建议作为素材参考。",
+        "risk_note": (
+            "真实热榜数据来自平台公开热门榜单；发布前仍需核验语境、链接有效性和潜在争议。"
+            if mode == "real"
+            else "模拟数据仅用于测试页面链路，不代表真实热点，不建议作为素材参考。"
+        ),
         "suggest_save_to_library": save_to_library,
         "display_bucket": BUCKETS[bucket],
     }
@@ -340,6 +326,7 @@ def main() -> None:
         else {"clusters": []}
     )
     clusters = clusters_payload.get("clusters", [])
+    mode = clusters_payload.get("mode", "real")
 
     top_hot = build_bucket(
         clusters,
@@ -383,9 +370,13 @@ def main() -> None:
         "date": date_text,
         "timezone": TZ_NAME,
         "generated_at": now.isoformat(),
-        "mode": MODE,
+        "mode": mode,
         "today_overview": {
-            "summary": "今日模拟热点更接近真实热榜生态：娱乐影视、AI工具、女性成长、宝妈家庭、亲子教育、健康养老、消费变化、城市社交和收入安全感都有覆盖。",
+            "summary": (
+                "今日内容来自第一批真实平台公开热榜：百度热搜、微博热搜、知乎热榜、B站热门。"
+                if mode == "real"
+                else "今日模拟热点仅用于测试页面链路，不代表真实热点，不建议作为素材参考。"
+            ),
             "total_clusters": len(clusters),
             "top_platforms": sorted(
                 {
@@ -411,7 +402,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{date_text}_analysis.json"
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Generated mock inspiration analysis: {output_path}")
+    print(f"Generated {mode} inspiration analysis: {output_path}")
 
 
 if __name__ == "__main__":

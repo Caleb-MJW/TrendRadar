@@ -6,7 +6,6 @@ from zoneinfo import ZoneInfo
 
 
 TZ_NAME = "Asia/Shanghai"
-MODE = "mock"
 
 
 def shanghai_now() -> datetime:
@@ -19,6 +18,13 @@ def existing_path(path: Path) -> str | None:
 
 def latest_health_files(date_text: str) -> list[str]:
     return [str(path) for path in sorted((Path("data") / "health").glob(f"{date_text}_*.json"))]
+
+
+def load_mode(analysis_path: Path) -> str:
+    if not analysis_path.exists():
+        return "real"
+    payload = json.loads(analysis_path.read_text(encoding="utf-8"))
+    return payload.get("mode", "real")
 
 
 def write_archive_html(path: Path, payload: dict) -> None:
@@ -43,7 +49,7 @@ def write_archive_html(path: Path, payload: dict) -> None:
 <body>
   <main>
     <h1>TrendRadar 每日归档</h1>
-    <p class="meta">日期：{html.escape(payload["date"])} · 生成时间：{html.escape(payload["generated_at"])} · 模式：模拟数据 / mock mode</p>
+    <p class="meta">日期：{html.escape(payload["date"])} · 生成时间：{html.escape(payload["generated_at"])} · 模式：{html.escape(payload["mode"])}</p>
     <section>
       <h2>摘要</h2>
       <p>{html.escape(payload["summary"])}</p>
@@ -72,6 +78,7 @@ def main() -> None:
     clusters_path = Path("data") / "clusters" / f"{date_text}.json"
     archive_html_path = Path("output") / "archive" / f"{date_text}.html"
     health_files = latest_health_files(date_text)
+    mode = load_mode(analysis_path)
 
     summary_parts = []
     summary_parts.append("分析数据已生成" if analysis_path.exists() else "分析数据暂缺")
@@ -81,8 +88,8 @@ def main() -> None:
     payload = {
         "date": date_text,
         "generated_at": now.isoformat(),
-        "mode": MODE,
-        "summary": "；".join(summary_parts) + "。该归档为模拟数据链路测试结果。",
+        "mode": mode,
+        "summary": "；".join(summary_parts) + f"。该归档为 {mode} 数据链路结果。",
         "analysis_file": existing_path(analysis_path),
         "clusters_file": existing_path(clusters_path),
         "health_files": health_files,
@@ -94,7 +101,7 @@ def main() -> None:
     final_json_path = final_dir / f"{date_text}_final.json"
     final_json_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     write_archive_html(archive_html_path, payload)
-    print(f"Generated mock daily archive: {final_json_path}, {archive_html_path}")
+    print(f"Generated {mode} daily archive: {final_json_path}, {archive_html_path}")
 
 
 if __name__ == "__main__":

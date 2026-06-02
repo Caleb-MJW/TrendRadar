@@ -5,7 +5,6 @@ from zoneinfo import ZoneInfo
 
 
 TZ_NAME = "Asia/Shanghai"
-MODE = "mock"
 
 
 def shanghai_now() -> datetime:
@@ -63,7 +62,10 @@ def main() -> None:
 
     clusters_by_title: dict[str, dict] = {}
     warnings = []
+    modes = set()
     for snapshot in snapshots:
+        if snapshot.get("mode"):
+            modes.add(snapshot["mode"])
         for item in snapshot.get("items", []):
             keep_item, warning = validate_item(item)
             if warning:
@@ -99,6 +101,7 @@ def main() -> None:
                     "primary_board_url": "",
                     "primary_search_url": "",
                     "source_level": "no_link",
+                    "mode": item.get("mode", snapshot.get("mode", "real")),
                     "source_origin_type": item.get("source_origin_type", "unknown"),
                     "is_reference_valid": bool(item.get("is_reference_valid", False)),
                     "source_urls": [],
@@ -155,7 +158,7 @@ def main() -> None:
         "date": date_text,
         "timezone": TZ_NAME,
         "generated_at": now.isoformat(),
-        "mode": MODE,
+        "mode": "real" if "real" in modes else "mock",
         "warnings": warnings,
         "clusters": clusters,
     }
@@ -164,7 +167,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{date_text}.json"
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Generated mock clusters: {output_path} ({len(clusters)} clusters)")
+    print(f"Generated {payload['mode']} clusters: {output_path} ({len(clusters)} clusters)")
 
 
 if __name__ == "__main__":

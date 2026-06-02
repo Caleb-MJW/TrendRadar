@@ -32,11 +32,11 @@
       "category": "social_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
-      "source_type": "placeholder",
+      "source_type": "phase_one_real_fetcher",
       "board_url": "https://s.weibo.com/top/summary",
       "fallback_url": "",
       "search_url_template": "https://s.weibo.com/weibo?q={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "百度热搜",
@@ -45,16 +45,16 @@
       "category": "search_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
-      "source_type": "placeholder",
+      "source_type": "phase_one_real_fetcher",
       "board_url": "https://top.baidu.com/board?tab=realtime",
       "fallback_url": "",
       "search_url_template": "https://www.baidu.com/s?wd={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "抖音热点",
       "board_name": "抖音热点榜",
-      "enabled": true,
+      "enabled": false,
       "category": "short_video_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
@@ -62,12 +62,12 @@
       "board_url": "https://www.douyin.com/hot",
       "fallback_url": "",
       "search_url_template": "https://www.douyin.com/search/{query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步暂不接入。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "小红书热点",
       "board_name": "小红书热榜",
-      "enabled": true,
+      "enabled": false,
       "category": "lifestyle_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
@@ -75,12 +75,12 @@
       "board_url": "https://www.xiaohongshu.com/explore",
       "fallback_url": "",
       "search_url_template": "https://www.xiaohongshu.com/search_result?keyword={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步暂不接入。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "今日头条热榜",
       "board_name": "今日头条热榜",
-      "enabled": true,
+      "enabled": false,
       "category": "news_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
@@ -88,12 +88,12 @@
       "board_url": "https://www.toutiao.com/hot-event/hot-board/",
       "fallback_url": "",
       "search_url_template": "https://so.toutiao.com/search?keyword={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步暂不接入。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "腾讯热点",
       "board_name": "腾讯热点",
-      "enabled": true,
+      "enabled": false,
       "category": "portal_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
@@ -101,7 +101,7 @@
       "board_url": "https://news.qq.com/",
       "fallback_url": "",
       "search_url_template": "https://new.qq.com/search?query={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步暂不接入。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "知乎热榜",
@@ -110,11 +110,11 @@
       "category": "discussion_hotspot",
       "target_count": 50,
       "top_direct_count": 10,
-      "source_type": "placeholder",
+      "source_type": "phase_one_real_fetcher",
       "board_url": "https://www.zhihu.com/hot",
       "fallback_url": "",
       "search_url_template": "https://www.zhihu.com/search?q={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "B站热门",
@@ -123,11 +123,11 @@
       "category": "video_hotspot",
       "target_count": 30,
       "top_direct_count": 10,
-      "source_type": "placeholder",
+      "source_type": "phase_one_real_fetcher",
       "board_url": "https://www.bilibili.com/v/popular/all",
       "fallback_url": "",
       "search_url_template": "https://search.bilibili.com/all?keyword={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
+      "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     }
   ]
 }

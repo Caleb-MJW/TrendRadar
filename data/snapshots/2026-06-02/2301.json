@@ -1,0 +1,42 @@
+{
+  "date": "2026-06-02",
+  "time": "2301",
+  "timezone": "Asia/Shanghai",
+  "generated_at": "2026-06-02T23:01:12.988382+08:00",
+  "mode": "real",
+  "sources": [
+    {
+      "platform": "百度热搜",
+      "status": "failed",
+      "fetched_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:01:12.988382+08:00",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "platform": "微博热搜",
+      "status": "failed",
+      "fetched_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:01:12.988382+08:00",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "platform": "知乎热榜",
+      "status": "failed",
+      "fetched_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:01:12.988382+08:00",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "platform": "B站热门",
+      "status": "failed",
+      "fetched_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:01:12.988382+08:00",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ],
+  "items": []
+}

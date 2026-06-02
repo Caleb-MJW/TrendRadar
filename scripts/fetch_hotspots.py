@@ -1,126 +1,67 @@
+import html
+import hashlib
 import json
+import os
+import re
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import quote
+from typing import Any
+from urllib.parse import quote, urljoin
+from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 
 TZ_NAME = "Asia/Shanghai"
-MODE = "mock"
-
-PLATFORM_CATEGORIES = {
-    "微博热搜": "社交热搜",
-    "百度热搜": "搜索热榜",
-    "抖音热点": "短视频热点",
-    "小红书热点": "生活方式",
-    "今日头条热榜": "资讯热榜",
-    "腾讯热点": "门户热点",
-    "知乎热榜": "问答讨论",
-    "B站热门": "视频热门",
-}
-
-SEARCH_URLS = {
-    "微博热搜": "https://s.weibo.com/weibo?q={keyword}",
-    "百度热搜": "https://www.baidu.com/s?wd={keyword}",
-    "抖音热点": "https://www.douyin.com/search/{keyword}",
-    "小红书热点": "https://www.xiaohongshu.com/search_result?keyword={keyword}",
-    "今日头条热榜": "https://www.toutiao.com/search/?keyword={keyword}",
-    "腾讯热点": "https://new.qq.com/search?query={keyword}",
-    "知乎热榜": "https://www.zhihu.com/search?q={keyword}",
-    "B站热门": "https://search.bilibili.com/all?keyword={keyword}",
-}
+DEFAULT_MODE = "real"
+MAX_ITEMS_PER_PLATFORM = 20
 
 BOARD_URLS = {
-    "微博热搜": "https://s.weibo.com/top/summary",
     "百度热搜": "https://top.baidu.com/board?tab=realtime",
-    "抖音热点": "https://www.douyin.com/hot",
-    "小红书热点": "https://www.xiaohongshu.com/explore",
-    "今日头条热榜": "https://www.toutiao.com/hot-event/hot-board/",
-    "腾讯热点": "https://news.qq.com/",
+    "微博热搜": "https://s.weibo.com/top/summary",
     "知乎热榜": "https://www.zhihu.com/hot",
     "B站热门": "https://www.bilibili.com/v/popular/all",
 }
 
 MOCK_TOPICS = {
-    "微博热搜": [
-        ("某热门剧女主选择引发网友讨论", ["娱乐影视话题", "女性成长", "关系边界"]),
-        ("年轻人开始流行下班后轻社交", ["城市生活/社交话题", "年轻人生活方式", "低成本社交"]),
-        ("体检报告里的这些信号被热议", ["健康养老话题", "家庭责任", "健康管理"]),
-        ("又一款 AI 应用刷屏朋友圈", ["AI科技话题", "职场变化", "效率工具"]),
-        ("00后整顿职场又有新说法", ["职场变化话题", "社会情绪", "职业选择"]),
-        ("宝妈晒重启人生计划评论区看哭", ["宝妈/家庭话题", "女性成长", "成长转型"]),
-        ("年轻人不想被消费主义推着走", ["消费观念话题", "年轻人生活方式", "社会情绪"]),
-        ("城市夜校报名排队到深夜", ["城市生活/社交话题", "成长转型", "活动经营"]),
-    ],
     "百度热搜": [
-        ("为什么越来越多人关注养老规划", ["健康养老话题", "家庭责任", "长期规划"]),
-        ("年轻人存钱方式发生变化", ["财经/收入安全感话题", "消费观念话题", "安全感"]),
-        ("家庭健康管理被频繁搜索", ["健康养老话题", "家庭责任", "民生"]),
-        ("AI会影响哪些普通岗位", ["AI科技话题", "职场变化话题", "岗位变化"]),
-        ("职场人如何提高抗风险能力", ["职场变化话题", "财经/收入安全感话题", "职业选择"]),
-        ("孩子暑期兴趣班怎么选", ["亲子教育话题", "家庭责任", "教育焦虑"]),
-        ("低价旅游套餐为什么突然火了", ["消费观念话题", "城市生活/社交话题", "生活方式"]),
-        ("大湾区通勤生活成本被关注", ["城市生活/社交话题", "财经/收入安全感话题", "城市生活"]),
+        "为什么越来越多人关注养老规划",
+        "年轻人存钱方式发生变化",
+        "家庭健康管理被频繁搜索",
+        "AI会影响哪些普通岗位",
+        "职场人如何提高抗风险能力",
+        "孩子暑期兴趣班怎么选",
+        "低价旅游套餐为什么突然火了",
+        "大湾区通勤生活成本被关注",
     ],
-    "抖音热点": [
-        ("一句话说破成年人安全感", ["社会情绪话题", "财经/收入安全感话题", "情绪共鸣"]),
-        ("这个职业变化让很多人破防", ["职场变化话题", "社会情绪话题", "职业选择"]),
-        ("当妈妈重新开始搞事业", ["宝妈/家庭话题", "女性成长", "成长转型"]),
-        ("AI帮普通人省下了多少时间", ["AI科技话题", "职场变化话题", "效率工具"]),
-        ("年轻人开始反向选择工作", ["年轻人生活方式话题", "职场变化话题", "职业选择"]),
-        ("一家三口的低成本周末火了", ["宝妈/家庭话题", "消费观念话题", "城市生活"]),
-        ("30秒看懂体检报告重点", ["健康养老话题", "家庭责任", "健康管理"]),
-        ("普通人的副业天花板在哪里", ["财经/收入安全感话题", "成长转型", "社会情绪"]),
-    ],
-    "小红书热点": [
-        ("30岁以后女生开始重新规划人生", ["女性成长话题", "成长转型", "人生选择"]),
-        ("宝妈重返职场最难的不是能力", ["宝妈/家庭话题", "女性成长", "职业选择"]),
-        ("年轻人不再迷信高消费社交", ["消费观念话题", "城市生活/社交话题", "低成本社交"]),
-        ("普通人开始给自己做人生 Plan B", ["财经/收入安全感话题", "成长转型", "职业选择"]),
-        ("低成本变精致生活火了", ["消费观念话题", "年轻人生活方式", "生活方式"]),
-        ("妈妈们开始互相分享家庭健康表", ["宝妈/家庭话题", "健康养老话题", "家庭责任"]),
-        ("亲子陪伴不一定要花很多钱", ["亲子教育话题", "家庭责任", "消费观念"]),
-        ("女生转行前先做这三件小事", ["女性成长话题", "职场变化话题", "成长转型"]),
-    ],
-    "今日头条热榜": [
-        ("多地年轻人选择灵活就业新模式", ["职场变化话题", "财经/收入安全感话题", "民生"]),
-        ("家庭消费结构正在发生变化", ["消费观念话题", "宝妈/家庭话题", "财经"]),
-        ("城市夜校和兴趣社交持续升温", ["城市生活/社交话题", "活动经营", "年轻人生活方式"]),
-        ("健康管理服务进入更多家庭", ["健康养老话题", "家庭责任", "民生"]),
-        ("大湾区人才流动话题升温", ["城市生活/社交话题", "人才发展", "职业选择"]),
-        ("不少家长开始重新看待兴趣教育", ["亲子教育话题", "家庭责任", "教育"]),
-        ("AI工具进入基层办公场景", ["AI科技话题", "职场变化话题", "效率"]),
-        ("年轻家庭更重视收入安全垫", ["财经/收入安全感话题", "宝妈/家庭话题", "安全感"]),
-    ],
-    "腾讯热点": [
-        ("热门综艺里的家庭分工冲上讨论榜", ["娱乐影视话题", "宝妈/家庭话题", "社会情绪"]),
-        ("多个城市推出青年友好型活动", ["城市生活/社交话题", "活动经营", "年轻人生活方式"]),
-        ("普通上班族开始研究第二收入", ["财经/收入安全感话题", "职场变化话题", "成长转型"]),
-        ("AI办公工具下载量继续走高", ["AI科技话题", "职场变化话题", "效率"]),
-        ("女性职业成长话题热度上升", ["女性成长话题", "职场变化话题", "人才发展"]),
-        ("家庭养老陪伴需求受到关注", ["健康养老话题", "家庭责任", "民生"]),
-        ("亲子户外活动成为周末新选择", ["亲子教育话题", "城市生活/社交话题", "家庭责任"]),
-        ("低预算生活方式带火社区团购", ["消费观念话题", "城市生活/社交话题", "生活方式"]),
+    "微博热搜": [
+        "某热门剧女主选择引发网友讨论",
+        "年轻人开始流行下班后轻社交",
+        "体检报告里的这些信号被热议",
+        "又一款 AI 应用刷屏朋友圈",
+        "00后整顿职场又有新说法",
+        "宝妈晒重启人生计划评论区看哭",
+        "年轻人不想被消费主义推着走",
+        "城市夜校报名排队到深夜",
     ],
     "知乎热榜": [
-        ("为什么很多人到 30 岁才开始重视职业选择权？", ["职场变化话题", "成长转型", "职业选择"]),
-        ("普通人应该如何建立第二增长曲线？", ["财经/收入安全感话题", "成长转型", "职业选择"]),
-        ("AI 普及后，哪些能力反而更值钱？", ["AI科技话题", "人才发展", "职场变化"]),
-        ("女性重启事业，最需要解决的是什么？", ["女性成长话题", "宝妈/家庭话题", "职业选择"]),
-        ("稳定工作和长期成长，哪个更重要？", ["职场变化话题", "社会情绪", "安全感"]),
-        ("亲子教育中最容易被忽略的成本是什么？", ["亲子教育话题", "家庭责任", "消费观念"]),
-        ("为什么低成本社交反而让人更放松？", ["城市生活/社交话题", "年轻人生活方式", "社会情绪"]),
-        ("普通家庭怎样做健康和养老的长期规划？", ["健康养老话题", "家庭责任", "财经"]),
+        "为什么很多人到 30 岁才开始重视职业选择权？",
+        "普通人应该如何建立第二增长曲线？",
+        "AI 普及后，哪些能力反而更值钱？",
+        "女性重启事业，最需要解决的是什么？",
+        "稳定工作和长期成长，哪个更重要？",
+        "亲子教育中最容易被忽略的成本是什么？",
+        "为什么低成本社交反而让人更放松？",
+        "普通家庭怎样做健康和养老的长期规划？",
     ],
     "B站热门": [
-        ("我用 AI 重新整理了自己的工作流", ["AI科技话题", "职场变化话题", "效率工具"]),
-        ("年轻人为什么越来越爱低成本社交", ["年轻人生活方式话题", "城市生活/社交话题", "消费观念"]),
-        ("普通人如何做一套人生升级系统", ["成长转型", "职业选择", "年轻人生活方式"]),
-        ("30岁后才明白的职业真相", ["职场变化话题", "社会情绪", "职业选择"]),
-        ("这届年轻人开始认真研究现金流", ["财经/收入安全感话题", "消费观念话题", "安全感"]),
-        ("宝妈做自媒体的一天到底有多满", ["宝妈/家庭话题", "女性成长", "短视频选题"]),
-        ("把体检报告做成家庭健康档案", ["健康养老话题", "家庭责任", "生活方式"]),
-        ("城市夜校体验：陌生人如何变成同学", ["城市生活/社交话题", "活动经营", "圈层社交"]),
+        "我用 AI 重新整理了自己的工作流",
+        "年轻人为什么越来越爱低成本社交",
+        "普通人如何做一套人生升级系统",
+        "30岁后才明白的职业真相",
+        "这届年轻人开始认真研究现金流",
+        "宝妈做自媒体的一天到底有多满",
+        "把体检报告做成家庭健康档案",
+        "城市夜校体验：陌生人如何变成同学",
     ],
 }
 
@@ -129,69 +70,321 @@ def shanghai_now() -> datetime:
     return datetime.now(ZoneInfo(TZ_NAME))
 
 
-def search_url(platform: str, title: str) -> str:
-    keyword = quote(title)
-    return SEARCH_URLS[platform].format(keyword=keyword)
+def http_get(url: str, *, json_mode: bool = False) -> Any:
+    request = Request(
+        url,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
+            ),
+            "Accept": "application/json,text/html;q=0.9,*/*;q=0.8",
+            "Referer": url,
+        },
+    )
+    with urlopen(request, timeout=12) as response:
+        raw = response.read()
+    text = raw.decode("utf-8", errors="ignore")
+    if json_mode:
+        return json.loads(text)
+    return text
 
 
-def board_item_url(platform: str, rank: int, slug: str) -> str:
-    board = BOARD_URLS[platform]
-    return f"{board}#mock-board-rank-{rank}-{slug}"
+def clean_text(value: Any) -> str:
+    if value is None:
+        return ""
+    return html.unescape(str(value)).strip()
 
 
-def make_item(platform: str, rank: int, title: str, tags: list[str], now: datetime, index: int) -> dict:
-    slug = f"mock-{now:%Y%m%d}-{index:03d}"
-    auxiliary_search_url = search_url(platform, title)
-    board_url = BOARD_URLS[platform]
-    item_url = board_item_url(platform, rank, slug)
+def source_level(source_url: str, board_item_url: str, board_url: str) -> str:
+    if source_url:
+        return "original"
+    if board_item_url:
+        return "board_item"
+    if board_url:
+        return "board_page"
+    return "no_link"
+
+
+def make_item(
+    *,
+    mode: str,
+    platform: str,
+    board_name: str,
+    title: str,
+    rank: int,
+    hot_score: int | float | str | None,
+    crawl_time: str,
+    source_url: str = "",
+    board_item_url: str = "",
+    board_url: str = "",
+    tags_raw: list[str] | None = None,
+) -> dict:
+    level = source_level(source_url, board_item_url, board_url)
+    origin_type = "hotlist" if mode == "real" else "mock_hotlist"
+    stable_id = hashlib.md5(f"{mode}|{platform}|{rank}|{title}".encode("utf-8")).hexdigest()[:12]
     return {
-        "id": slug,
-        "mode": MODE,
+        "id": f"{mode}-{platform}-{rank}-{stable_id}",
+        "mode": mode,
+        "source_origin_type": origin_type,
+        "is_reference_valid": mode == "real",
         "source_platform": platform,
-        "board_name": platform,
-        "source_category": PLATFORM_CATEGORIES[platform],
+        "board_name": board_name,
         "original_title": title,
         "source_rank": rank,
-        "hot_score": max(50, 102 - rank * 3 - index % 7),
-        "crawl_time": now.isoformat(),
-        "source_url": "",
-        "board_item_url": item_url,
+        "hot_score": hot_score if hot_score not in (None, "") else 0,
+        "crawl_time": crawl_time,
+        "source_url": source_url,
+        "board_item_url": board_item_url,
         "board_url": board_url,
-        "search_url": auxiliary_search_url,
-        "source_level": "board_item",
-        "source_origin_type": "mock_hotlist",
-        "is_reference_valid": False,
-        "is_top10_direct": rank <= 10,
-        "tags_raw": tags,
+        "source_level": level,
+        "tags_raw": tags_raw or [],
     }
+
+
+def fetch_baidu(now: datetime) -> list[dict]:
+    platform = "百度热搜"
+    board_name = "百度热搜榜"
+    board_url = BOARD_URLS[platform]
+    crawl_time = now.isoformat()
+    text = http_get(board_url)
+    matches = re.findall(r'"word"\s*:\s*"([^"]+)"(?:.*?"hotScore"\s*:\s*"?(\d+)"?)?', text)
+    items = []
+    seen = set()
+    for title, score in matches:
+        title = clean_text(title)
+        if not title or title in seen:
+            continue
+        seen.add(title)
+        rank = len(items) + 1
+        items.append(
+            make_item(
+                mode="real",
+                platform=platform,
+                board_name=board_name,
+                title=title,
+                rank=rank,
+                hot_score=int(score) if score else 0,
+                crawl_time=crawl_time,
+                board_url=board_url,
+            )
+        )
+        if len(items) >= MAX_ITEMS_PER_PLATFORM:
+            break
+    if not items:
+        raise RuntimeError("百度热搜页面未解析到榜单条目")
+    return items
+
+
+def fetch_weibo(now: datetime) -> list[dict]:
+    platform = "微博热搜"
+    board_name = "微博热搜榜"
+    board_url = BOARD_URLS[platform]
+    crawl_time = now.isoformat()
+    text = http_get(board_url)
+    row_pattern = re.compile(r'<td class="td-02">.*?<a href="([^"]+)"[^>]*>(.*?)</a>(.*?)</td>', re.S)
+    items = []
+    seen = set()
+    for href, raw_title, tail in row_pattern.findall(text):
+        title = clean_text(re.sub(r"<.*?>", "", raw_title))
+        if not title or title == "微博热搜" or title in seen:
+            continue
+        seen.add(title)
+        score_match = re.search(r'<span>(\d+)</span>', tail)
+        rank = len(items) + 1
+        item_url = urljoin("https://s.weibo.com", href)
+        items.append(
+            make_item(
+                mode="real",
+                platform=platform,
+                board_name=board_name,
+                title=title,
+                rank=rank,
+                hot_score=int(score_match.group(1)) if score_match else 0,
+                crawl_time=crawl_time,
+                board_item_url=item_url,
+                board_url=board_url,
+            )
+        )
+        if len(items) >= MAX_ITEMS_PER_PLATFORM:
+            break
+    if not items:
+        raise RuntimeError("微博热搜页面未解析到榜单条目")
+    return items
+
+
+def fetch_zhihu(now: datetime) -> list[dict]:
+    platform = "知乎热榜"
+    board_name = "知乎热榜"
+    board_url = BOARD_URLS[platform]
+    crawl_time = now.isoformat()
+    api_url = "https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total?limit=20&desktop=true"
+    payload = http_get(api_url, json_mode=True)
+    items = []
+    for entry in payload.get("data", [])[:MAX_ITEMS_PER_PLATFORM]:
+        target = entry.get("target") or {}
+        title = clean_text(target.get("title"))
+        if not title:
+            continue
+        question_id = target.get("id")
+        item_url = f"https://www.zhihu.com/question/{question_id}" if question_id else clean_text(target.get("url"))
+        rank = len(items) + 1
+        items.append(
+            make_item(
+                mode="real",
+                platform=platform,
+                board_name=board_name,
+                title=title,
+                rank=rank,
+                hot_score=clean_text(entry.get("detail_text")),
+                crawl_time=crawl_time,
+                source_url=item_url,
+                board_item_url=item_url,
+                board_url=board_url,
+            )
+        )
+    if not items:
+        raise RuntimeError("知乎热榜接口未返回可用条目")
+    return items
+
+
+def fetch_bilibili(now: datetime) -> list[dict]:
+    platform = "B站热门"
+    board_name = "B站热门"
+    board_url = BOARD_URLS[platform]
+    crawl_time = now.isoformat()
+    api_url = "https://api.bilibili.com/x/web-interface/popular?ps=20&pn=1"
+    payload = http_get(api_url, json_mode=True)
+    raw_items = (payload.get("data") or {}).get("list") or []
+    items = []
+    for entry in raw_items[:MAX_ITEMS_PER_PLATFORM]:
+        title = clean_text(entry.get("title"))
+        if not title:
+            continue
+        bvid = clean_text(entry.get("bvid"))
+        item_url = f"https://www.bilibili.com/video/{bvid}" if bvid else clean_text(entry.get("short_link_v2"))
+        stat = entry.get("stat") or {}
+        rank = len(items) + 1
+        items.append(
+            make_item(
+                mode="real",
+                platform=platform,
+                board_name=board_name,
+                title=title,
+                rank=rank,
+                hot_score=stat.get("view", 0),
+                crawl_time=crawl_time,
+                source_url=item_url,
+                board_item_url=item_url,
+                board_url=board_url,
+            )
+        )
+    if not items:
+        raise RuntimeError("B站热门接口未返回可用条目")
+    return items
+
+
+REAL_FETCHERS = [
+    ("百度热搜", fetch_baidu),
+    ("微博热搜", fetch_weibo),
+    ("知乎热榜", fetch_zhihu),
+    ("B站热门", fetch_bilibili),
+]
+
+
+def fetch_real(now: datetime) -> tuple[list[dict], list[dict]]:
+    items = []
+    sources = []
+    for platform, fetcher in REAL_FETCHERS:
+        try:
+            platform_items = fetcher(now)
+            items.extend(platform_items)
+            status = "normal" if len(platform_items) >= MAX_ITEMS_PER_PLATFORM else "partial"
+            error = None if platform_items else "no items fetched"
+        except Exception as exc:
+            platform_items = []
+            status = "failed"
+            error = str(exc)
+        sources.append(
+            {
+                "platform": platform,
+                "status": status,
+                "fetched_count": len(platform_items),
+                "source_origin_type": "hotlist",
+                "last_updated": now.isoformat(),
+                "error": error,
+            }
+        )
+    return items, sources
+
+
+def fetch_mock(now: datetime) -> tuple[list[dict], list[dict]]:
+    items = []
+    for platform, titles in MOCK_TOPICS.items():
+        board_url = BOARD_URLS[platform]
+        for rank, title in enumerate(titles, 1):
+            item_url = f"{board_url}#mock-board-rank-{rank}-{quote(title)}"
+            items.append(
+                make_item(
+                    mode="mock",
+                    platform=platform,
+                    board_name=platform,
+                    title=title,
+                    rank=rank,
+                    hot_score=max(50, 100 - rank * 3),
+                    crawl_time=now.isoformat(),
+                    board_item_url=item_url,
+                    board_url=board_url,
+                    tags_raw=["mock_hotlist"],
+                )
+            )
+    sources = [
+        {
+            "platform": platform,
+            "status": "normal",
+            "fetched_count": len(titles),
+            "source_origin_type": "mock_hotlist",
+            "last_updated": now.isoformat(),
+            "error": None,
+        }
+        for platform, titles in MOCK_TOPICS.items()
+    ]
+    return items, sources
+
+
+def run_mode() -> str:
+    mode = os.environ.get("TRENDRADAR_MODE", DEFAULT_MODE).strip().lower()
+    if mode not in {"real", "mock"}:
+        raise ValueError("TRENDRADAR_MODE must be real or mock")
+    return mode
 
 
 def main() -> None:
     now = shanghai_now()
+    mode = run_mode()
     date_text = now.strftime("%Y-%m-%d")
     time_text = now.strftime("%H%M")
     output_dir = Path("data") / "snapshots" / date_text
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{time_text}.json"
 
-    items = []
-    index = 1
-    for platform, topics in MOCK_TOPICS.items():
-        for rank, (title, tags) in enumerate(topics, 1):
-            items.append(make_item(platform, rank, title, tags, now, index))
-            index += 1
+    if mode == "real":
+        items, sources = fetch_real(now)
+    else:
+        items, sources = fetch_mock(now)
 
     payload = {
         "date": date_text,
         "time": time_text,
         "timezone": TZ_NAME,
         "generated_at": now.isoformat(),
-        "mode": MODE,
+        "mode": mode,
+        "sources": sources,
         "items": items,
     }
 
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Generated mock hotspot snapshot: {output_path} ({len(items)} items)")
+    print(f"Generated {mode} hotspot snapshot: {output_path} ({len(items)} items)")
 
 
 if __name__ == "__main__":
