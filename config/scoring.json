@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "hot_score": 0.45,
+    "interest_score": 0.35,
+    "weak_connection_score": 0.15,
+    "safety_score": 0.05
+  },
+  "principle": "热点性 > 趣味性/话题性 > 弱关联性",
+  "recommend_levels": {
+    "A": "热门且有灵感，适合重点查看或沉淀素材",
+    "B": "有趣可备用，有话题价值但不一定马上使用",
+    "C": "热门但暂不转化，进入观察备用",
+    "D": "不建议使用，存在明显风险或价值较弱"
+  }
+}
