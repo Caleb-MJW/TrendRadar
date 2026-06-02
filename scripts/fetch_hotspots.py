@@ -15,6 +15,11 @@ try:
 except ImportError:  # Diagnostics still need to be written when dependencies are missing.
     requests = None
 
+try:
+    from bs4 import BeautifulSoup
+except ImportError:  # HTML parsers will report this in diagnostics.
+    BeautifulSoup = None
+
 
 TZ_NAME = "Asia/Shanghai"
 DEFAULT_MODE = "real"
@@ -25,6 +30,12 @@ REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0",
     "Accept-Language": "zh-CN,zh;q=0.9",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
+
+JSON_REQUEST_HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Accept-Language": "zh-CN,zh;q=0.9",
+    "Accept": "application/json, text/plain, */*",
 }
 
 BOARD_URLS = {
@@ -108,18 +119,35 @@ def base_diagnostic(platform: str, url: str, now: datetime) -> dict:
         "attempted_url": url,
         "request_method": "GET",
         "http_status": None,
+        "content_type": None,
+        "final_url": None,
+        "response_length": None,
+        "page_title": None,
         "exception_type": None,
         "error": None,
         "elapsed_ms": None,
         "fetched_count": 0,
         "parser_status": "not_run",
         "parser_error": None,
+        "debug_hint": {},
+        "parser_candidates_count": 0,
         "source_origin_type": "hotlist",
         "last_updated": now.isoformat(),
     }
 
 
-def request_hotlist(platform: str, url: str, now: datetime) -> tuple[str, dict]:
+def page_title(text: str) -> str:
+    match = re.search(r"<title[^>]*>(.*?)</title>", text, re.I | re.S)
+    return clean_text(match.group(1)) if match else ""
+
+
+def request_hotlist(
+    platform: str,
+    url: str,
+    now: datetime,
+    *,
+    headers: dict[str, str] | None = None,
+) -> tuple[str, dict]:
     diagnostic = base_diagnostic(platform, url, now)
     if requests is None:
         diagnostic["exception_type"] = "ModuleNotFoundError"
@@ -130,12 +158,16 @@ def request_hotlist(platform: str, url: str, now: datetime) -> tuple[str, dict]:
     try:
         response = requests.get(
             url,
-            headers=REQUEST_HEADERS,
+            headers=headers or REQUEST_HEADERS,
             timeout=REQUEST_TIMEOUT_SECONDS,
             allow_redirects=True,
         )
         diagnostic["elapsed_ms"] = round((time.perf_counter() - started) * 1000)
         diagnostic["http_status"] = response.status_code
+        diagnostic["content_type"] = response.headers.get("content-type")
+        diagnostic["final_url"] = response.url
+        diagnostic["response_length"] = len(response.text)
+        diagnostic["page_title"] = page_title(response.text)
         response.raise_for_status()
         return response.text, diagnostic
     except Exception as exc:
@@ -144,6 +176,10 @@ def request_hotlist(platform: str, url: str, now: datetime) -> tuple[str, dict]:
         diagnostic["error"] = str(exc)
         if getattr(exc, "response", None) is not None:
             diagnostic["http_status"] = exc.response.status_code
+            diagnostic["content_type"] = exc.response.headers.get("content-type")
+            diagnostic["final_url"] = exc.response.url
+            diagnostic["response_length"] = len(exc.response.text)
+            diagnostic["page_title"] = page_title(exc.response.text)
         return "", diagnostic
 
 
@@ -183,8 +219,19 @@ def make_item(
     }
 
 
-def parser_diagnostic(diagnostic: dict, items: list[dict], parser_error: str | None = None) -> dict:
+def parser_diagnostic(
+    diagnostic: dict,
+    items: list[dict],
+    parser_error: str | None = None,
+    *,
+    candidates_count: int | None = None,
+    debug_hint: dict | None = None,
+) -> dict:
     diagnostic["fetched_count"] = len(items)
+    if candidates_count is not None:
+        diagnostic["parser_candidates_count"] = candidates_count
+    if debug_hint is not None:
+        diagnostic["debug_hint"] = debug_hint
     if parser_error:
         diagnostic["parser_status"] = "failed" if not items else "partial"
         diagnostic["parser_error"] = parser_error
@@ -259,7 +306,12 @@ def fetch_baidu(now: datetime) -> tuple[list[dict], dict]:
         )
         if len(items) >= MAX_ITEMS_PER_PLATFORM:
             break
-    return items, parser_diagnostic(diagnostic, items)
+    diagnostic["debug_hint"] = {
+        "contains_word": '"word"' in text,
+        "contains_hotScore": "hotScore" in text,
+        "contains_realtime": "realtime" in text,
+    }
+    return items, parser_diagnostic(diagnostic, items, candidates_count=len(matches), debug_hint=diagnostic["debug_hint"])
 
 
 def fetch_weibo(now: datetime) -> tuple[list[dict], dict]:
@@ -271,53 +323,46 @@ def fetch_weibo(now: datetime) -> tuple[list[dict], dict]:
     if not text:
         return [], diagnostic
 
-    row_pattern = re.compile(r'<td class="td-02">.*?<a href="([^"]+)"[^>]*>(.*?)</a>(.*?)</td>', re.S)
-    items = []
-    seen = set()
-    for href, raw_title, tail in row_pattern.findall(text):
-        title = clean_text(raw_title)
-        if not title or title == "微博热搜" or title in seen:
-            continue
-        seen.add(title)
-        score_match = re.search(r"<span>(\d+)</span>", tail)
-        item_url = urljoin("https://s.weibo.com", href)
-        items.append(
-            make_item(
-                mode="real",
-                platform=platform,
-                board_name=board_name,
-                title=title,
-                rank=len(items) + 1,
-                hot_score=int(score_match.group(1)) if score_match else 0,
-                crawl_time=crawl_time,
-                board_item_url=item_url,
-                board_url=board_url,
-            )
+    if BeautifulSoup is None:
+        return [], parser_diagnostic(
+            diagnostic,
+            [],
+            "beautifulsoup4 is not installed",
+            candidates_count=0,
+            debug_hint={
+                "contains_td_02": "td-02" in text,
+                "contains_realtimehot": "realtimehot" in text,
+                "contains_weibo_q": "/weibo?q=" in text or "weibo?q=" in text,
+                "contains_hot_search": "热搜" in text,
+            },
         )
-        if len(items) >= MAX_ITEMS_PER_PLATFORM:
-            break
-    return items, parser_diagnostic(diagnostic, items)
 
-
-def fetch_zhihu(now: datetime) -> tuple[list[dict], dict]:
-    platform = "知乎热榜"
-    board_name = "知乎热榜"
-    board_url = BOARD_URLS[platform]
-    crawl_time = now.isoformat()
-    text, diagnostic = request_hotlist(platform, board_url, now)
-    if not text:
-        return [], diagnostic
+    soup = BeautifulSoup(text, "html.parser")
+    candidate_links = []
+    for link in soup.select("td.td-02 a[href]"):
+        href = link.get("href") or ""
+        if "/weibo?q=" in href or "weibo?q=" in href:
+            candidate_links.append(link)
+    if not candidate_links:
+        for link in soup.select('a[href*="/weibo?q="], a[href*="weibo?q="]'):
+            candidate_links.append(link)
 
     items = []
     seen = set()
-    title_matches = re.findall(r'"title"\s*:\s*"([^"]{4,120})"', text)
-    url_matches = re.findall(r'"url"\s*:\s*"(https://www\.zhihu\.com/question/\d+[^"]*)"', text)
-    for raw_title in title_matches:
-        title = clean_text(raw_title)
-        if not title or title in seen or title in {"知乎热榜"}:
+    excluded_titles = {"微博热搜", "热搜榜", "更多", "广告", "置顶", "实时热点"}
+    for link in candidate_links:
+        href = link.get("href") or ""
+        title = clean_text(link.get_text(" "))
+        if (
+            not title
+            or title in excluded_titles
+            or title in seen
+            or title.startswith("#")
+            or len(title) < 2
+        ):
             continue
         seen.add(title)
-        item_url = url_matches[len(items)] if len(items) < len(url_matches) else ""
+        item_url = urljoin("https://s.weibo.com", href)
         items.append(
             make_item(
                 mode="real",
@@ -334,7 +379,74 @@ def fetch_zhihu(now: datetime) -> tuple[list[dict], dict]:
         )
         if len(items) >= MAX_ITEMS_PER_PLATFORM:
             break
-    return items, parser_diagnostic(diagnostic, items)
+    debug_hint = {
+        "contains_td_02": "td-02" in text,
+        "contains_realtimehot": "realtimehot" in text,
+        "contains_weibo_q": "/weibo?q=" in text or "weibo?q=" in text,
+        "contains_hot_search": "热搜" in text,
+    }
+    parser_error = None if items else "no weibo hotlist candidates parsed"
+    return items, parser_diagnostic(
+        diagnostic,
+        items,
+        parser_error,
+        candidates_count=len(candidate_links),
+        debug_hint=debug_hint,
+    )
+
+
+def fetch_zhihu(now: datetime) -> tuple[list[dict], dict]:
+    platform = "知乎热榜"
+    board_name = "知乎热榜"
+    board_url = BOARD_URLS[platform]
+    crawl_time = now.isoformat()
+    api_url = "https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total?limit=20&desktop=true"
+    headers = {
+        **JSON_REQUEST_HEADERS,
+        "Referer": board_url,
+        "Origin": "https://www.zhihu.com",
+    }
+    text, diagnostic = request_hotlist(platform, api_url, now, headers=headers)
+    if not text:
+        return [], diagnostic
+
+    items = []
+    candidates_count = 0
+    parser_error = None
+    try:
+        payload = json.loads(text)
+        data = payload.get("data") or []
+        candidates_count = len(data)
+        for entry in data[:MAX_ITEMS_PER_PLATFORM]:
+            target = entry.get("target") or {}
+            title = clean_text(target.get("title"))
+            if not title:
+                continue
+            question_id = target.get("id")
+            item_url = f"https://www.zhihu.com/question/{question_id}" if question_id else clean_text(target.get("url"))
+            items.append(
+                make_item(
+                    mode="real",
+                    platform=platform,
+                    board_name=board_name,
+                    title=title,
+                    rank=len(items) + 1,
+                    hot_score=clean_text(entry.get("detail_text")) or max(1, 100 - len(items)),
+                    crawl_time=crawl_time,
+                    source_url=item_url,
+                    board_item_url=item_url,
+                    board_url=board_url,
+                )
+            )
+    except Exception as exc:
+        parser_error = f"zhihu json parse failed: {type(exc).__name__}: {exc}"
+    debug_hint = {
+        "contains_hot_lists": "hot-lists" in diagnostic.get("attempted_url", ""),
+        "contains_topstory": "topstory" in diagnostic.get("attempted_url", ""),
+        "contains_target": '"target"' in text,
+        "contains_title": '"title"' in text,
+    }
+    return items, parser_diagnostic(diagnostic, items, parser_error, candidates_count=candidates_count, debug_hint=debug_hint)
 
 
 def fetch_bilibili(now: datetime) -> tuple[list[dict], dict]:
@@ -342,38 +454,87 @@ def fetch_bilibili(now: datetime) -> tuple[list[dict], dict]:
     board_name = "B站热门"
     board_url = BOARD_URLS[platform]
     crawl_time = now.isoformat()
-    text, diagnostic = request_hotlist(platform, board_url, now)
+    api_url = "https://api.bilibili.com/x/web-interface/ranking/v2?rid=0&type=all"
+    headers = {
+        **JSON_REQUEST_HEADERS,
+        "Referer": board_url,
+        "Origin": "https://www.bilibili.com",
+    }
+    text, diagnostic = request_hotlist(platform, api_url, now, headers=headers)
     if not text:
-        return [], diagnostic
+        page_text, page_diagnostic = request_hotlist(platform, board_url, now)
+        if not page_text:
+            return [], diagnostic
+        diagnostic = page_diagnostic
+        text = page_text
 
     items = []
-    seen = set()
-    objects = parse_json_objects(text, '"title"')
-    for obj in objects:
-        title = clean_text(obj.get("title"))
-        bvid = clean_text(obj.get("bvid"))
-        if not title or title in seen or not bvid:
-            continue
-        seen.add(title)
-        item_url = f"https://www.bilibili.com/video/{bvid}"
-        stat = obj.get("stat") or {}
-        items.append(
-            make_item(
-                mode="real",
-                platform=platform,
-                board_name=board_name,
-                title=title,
-                rank=len(items) + 1,
-                hot_score=stat.get("view", 0) if isinstance(stat, dict) else 0,
-                crawl_time=crawl_time,
-                source_url=item_url,
-                board_item_url=item_url,
-                board_url=board_url,
+    candidates_count = 0
+    parser_error = None
+    try:
+        payload = json.loads(text)
+        data = payload.get("data") or {}
+        raw_items = data.get("list") or []
+        candidates_count = len(raw_items)
+        for entry in raw_items[:MAX_ITEMS_PER_PLATFORM]:
+            title = clean_text(entry.get("title"))
+            bvid = clean_text(entry.get("bvid"))
+            if not title or not bvid:
+                continue
+            item_url = f"https://www.bilibili.com/video/{bvid}"
+            stat = entry.get("stat") or {}
+            items.append(
+                make_item(
+                    mode="real",
+                    platform=platform,
+                    board_name=board_name,
+                    title=title,
+                    rank=len(items) + 1,
+                    hot_score=stat.get("view", entry.get("score", 0)) if isinstance(stat, dict) else entry.get("score", 0),
+                    crawl_time=crawl_time,
+                    source_url=item_url,
+                    board_item_url=item_url,
+                    board_url=board_url,
+                )
             )
-        )
-        if len(items) >= MAX_ITEMS_PER_PLATFORM:
-            break
-    return items, parser_diagnostic(diagnostic, items)
+    except Exception as exc:
+        parser_error = f"bilibili json parse failed: {type(exc).__name__}: {exc}"
+        objects = parse_json_objects(text, '"title"')
+        candidates_count = len(objects)
+        seen = set()
+        for obj in objects:
+            title = clean_text(obj.get("title"))
+            bvid = clean_text(obj.get("bvid"))
+            if not title or title in seen or not bvid:
+                continue
+            seen.add(title)
+            item_url = f"https://www.bilibili.com/video/{bvid}"
+            stat = obj.get("stat") or {}
+            items.append(
+                make_item(
+                    mode="real",
+                    platform=platform,
+                    board_name=board_name,
+                    title=title,
+                    rank=len(items) + 1,
+                    hot_score=stat.get("view", 0) if isinstance(stat, dict) else 0,
+                    crawl_time=crawl_time,
+                    source_url=item_url,
+                    board_item_url=item_url,
+                    board_url=board_url,
+                )
+            )
+            if len(items) >= MAX_ITEMS_PER_PLATFORM:
+                break
+    debug_hint = {
+        "contains_initial_state": "__INITIAL_STATE__" in text,
+        "contains_ranking": "ranking" in text,
+        "contains_bvid": "bvid" in text,
+        "contains_popular": "popular" in text,
+    }
+    if items:
+        parser_error = None
+    return items, parser_diagnostic(diagnostic, items, parser_error, candidates_count=candidates_count, debug_hint=debug_hint)
 
 
 REAL_FETCHERS = [
