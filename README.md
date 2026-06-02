@@ -17,7 +17,7 @@ TrendRadar 的数据来源必须是各平台真实热门榜单中的原始内容
 
 数据源 = 平台真实热门榜单。
 
-关键词搜索 = 仅作为无法获得原文链接或榜单条目链接时的辅助复查入口，不作为正式来源。
+平台搜索不是数据来源。`search_url` 只允许作为后台人工辅助复查字段，不属于正式来源，不参与 `source_level`，也不作为页面主溯源按钮展示。
 
 AI 分析 = 只能分析已抓取的热榜内容，不能决定抓取关键词。
 
@@ -41,22 +41,22 @@ TrendRadar 不会按“保险、优增、职业”等关键词提前过滤热点
 1. `source_url`：原文、原视频、原笔记链接。
 2. `board_item_url`：平台热榜条目链接。
 3. `board_url`：平台热榜页面链接。
-4. `search_url`：平台搜索链接，仅作为辅助复查，不作为正式来源。
+4. `search_url`：人工辅助复查链接，不属于正式来源，不在主页面卡片中展示。
 
 来源等级字段 `source_level` 只允许：
 
 - `original`
 - `board_item`
 - `board_page`
-- `search_fallback`
 - `no_link`
 
 页面展示必须区分：
 
 - 正式来源：查看原文、查看榜单条目、查看热榜页面。
-- 辅助复查：平台搜索。
 
-如果只有 `search_url`，页面必须明确标注“仅辅助复查，不代表正式出处”。
+如果没有 `source_url`、`board_item_url`、`board_url`，页面必须显示“暂无正式出处，不进入素材参考”。
+
+真实素材必须来自平台热榜、榜单条目、原文链接或热榜页面。真实模式下，只有 `source_origin_type = hotlist` 且 `is_reference_valid = true` 的内容，才可以进入正式素材分析和素材库建议。若 `source_origin_type = keyword_search`，必须直接丢弃，不能进入分析。
 
 ## 目录结构
 

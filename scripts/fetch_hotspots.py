@@ -146,6 +146,7 @@ def make_item(platform: str, rank: int, title: str, tags: list[str], now: dateti
     item_url = board_item_url(platform, rank, slug)
     return {
         "id": slug,
+        "mode": MODE,
         "source_platform": platform,
         "board_name": platform,
         "source_category": PLATFORM_CATEGORIES[platform],
@@ -158,6 +159,8 @@ def make_item(platform: str, rank: int, title: str, tags: list[str], now: dateti
         "board_url": board_url,
         "search_url": auxiliary_search_url,
         "source_level": "board_item",
+        "source_origin_type": "mock_hotlist",
+        "is_reference_valid": False,
         "is_top10_direct": rank <= 10,
         "tags_raw": tags,
     }

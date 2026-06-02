@@ -27,16 +27,30 @@ def first_non_empty(values: list[str]) -> str:
     return ""
 
 
-def source_level(source_url: str, board_item_url: str, board_url: str, search_url: str) -> str:
+VALID_ORIGIN_TYPES = {"hotlist", "mock_hotlist"}
+
+
+def source_level(source_url: str, board_item_url: str, board_url: str) -> str:
     if source_url:
         return "original"
     if board_item_url:
         return "board_item"
     if board_url:
         return "board_page"
-    if search_url:
-        return "search_fallback"
     return "no_link"
+
+
+def validate_item(item: dict) -> tuple[bool, str | None]:
+    origin_type = item.get("source_origin_type")
+    if origin_type == "keyword_search":
+        return False, "discarded keyword_search item"
+    if origin_type not in VALID_ORIGIN_TYPES:
+        return True, f"unexpected source_origin_type: {origin_type}"
+    if item.get("search_url") and not (
+        item.get("source_url") or item.get("board_item_url") or item.get("board_url")
+    ):
+        return True, "search_url only; not a formal source"
+    return True, None
 
 
 def main() -> None:
@@ -48,8 +62,21 @@ def main() -> None:
         snapshots.append(json.loads(path.read_text(encoding="utf-8")))
 
     clusters_by_title: dict[str, dict] = {}
+    warnings = []
     for snapshot in snapshots:
         for item in snapshot.get("items", []):
+            keep_item, warning = validate_item(item)
+            if warning:
+                warnings.append(
+                    {
+                        "item_id": item.get("id"),
+                        "title": item.get("original_title"),
+                        "source_platform": item.get("source_platform"),
+                        "warning": warning,
+                    }
+                )
+            if not keep_item:
+                continue
             title = item.get("original_title", "").strip()
             if not title:
                 continue
@@ -72,6 +99,8 @@ def main() -> None:
                     "primary_board_url": "",
                     "primary_search_url": "",
                     "source_level": "no_link",
+                    "source_origin_type": item.get("source_origin_type", "unknown"),
+                    "is_reference_valid": bool(item.get("is_reference_valid", False)),
                     "source_urls": [],
                     "board_item_urls": [],
                     "board_urls": [],
@@ -88,6 +117,9 @@ def main() -> None:
             cluster["last_seen"] = max(cluster["last_seen"], item.get("crawl_time"))
             cluster["highest_rank"] = min(cluster["highest_rank"], item.get("source_rank", 999))
             cluster["appear_count"] += 1
+            if item.get("source_origin_type") == "hotlist":
+                cluster["source_origin_type"] = "hotlist"
+            cluster["is_reference_valid"] = bool(cluster["is_reference_valid"] or item.get("is_reference_valid"))
             if item.get("source_url"):
                 cluster["source_urls"].append(item["source_url"])
             if item.get("board_item_url"):
@@ -113,7 +145,6 @@ def main() -> None:
             cluster["primary_source_url"],
             cluster["primary_board_item_url"],
             cluster["primary_board_url"],
-            cluster["primary_search_url"],
         )
         cluster["is_multi_platform"] = len(cluster["source_platforms"]) > 1
         cluster["heat_trend"] = trend_for(cluster)
@@ -125,6 +156,7 @@ def main() -> None:
         "timezone": TZ_NAME,
         "generated_at": now.isoformat(),
         "mode": MODE,
+        "warnings": warnings,
         "clusters": clusters,
     }
 

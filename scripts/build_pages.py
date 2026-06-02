@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 
 TZ_NAME = "Asia/Shanghai"
 MODE_LABEL = "模拟数据 / mock mode"
+MOCK_NOTICE = "当前为模拟数据，仅用于测试页面链路，不代表真实热点，不建议作为素材参考。"
 
 
 def shanghai_now() -> datetime:
@@ -49,17 +50,12 @@ def render_markdown_section(title: str, entries: list[dict]) -> str:
         if entry.get("board_url"):
             official_links.append(f"[查看热榜页面]({entry['board_url']})")
         official_text = " ".join(official_links) if official_links else "暂无正式出处链接。"
-        search_text = (
-            f"[平台搜索]({entry['search_url']})（仅辅助复查，不代表正式出处）"
-            if entry.get("search_url")
-            else "暂无辅助复查链接。"
-        )
         lines.extend(
             [
                 f"{index}. **{entry['original_title']}**",
                 f"   - 来源平台: {entry['source_platform']} | 榜单名称: {entry.get('board_name') or entry['source_platform']} | 榜单排名: {entry['source_rank']} | 抓取时间: {entry.get('crawl_time') or '未知'}",
                 f"   - 正式来源: {official_text}",
-                f"   - 辅助复查: {search_text}",
+                f"   - 数据标记: {entry.get('source_origin_type', 'unknown')} | 参考有效性: {entry.get('is_reference_valid', False)}",
                 f"   - 热点摘要: {entry['hotspot_summary']}",
                 f"   - 为什么值得看: {entry['why_worth_attention']}",
                 f"   - 话题性/趣味点: {entry['interest_point']}",
@@ -80,6 +76,7 @@ def render_markdown(analysis: dict, health: dict, generated_at: str) -> str:
         "",
         f"- 生成时间: {generated_at}",
         f"- 当前模式: {MODE_LABEL}",
+        f"- 重要提示: {MOCK_NOTICE}",
         f"- 今日总览: {overview.get('summary', '暂无总览。')}",
         f"- 热点簇数量: {overview.get('total_clusters', 0)}",
         "",
@@ -116,16 +113,8 @@ def render_source_links(entry: dict) -> str:
         links.append(
             f'<a class="source-button" href="{html.escape(entry["board_url"])}" target="_blank" rel="noopener noreferrer">查看热榜页面</a>'
         )
-    official = "".join(links) if links else '<span class="source-fallback">暂无正式出处链接，仅保留来源平台、榜单名称、原标题和抓取时间。</span>'
-    search = ""
-    if entry.get("search_url"):
-        search = (
-            '<div class="source-note">'
-            f'<a class="source-button secondary" href="{html.escape(entry["search_url"])}" target="_blank" rel="noopener noreferrer">平台搜索</a>'
-            '<span>仅辅助复查，不代表正式出处。</span>'
-            "</div>"
-        )
-    return f'<div class="source-block"><div><strong>正式来源：</strong><div class="source-actions">{official}</div></div><div><strong>辅助复查：</strong>{search or "<span class=\"source-fallback\">暂无辅助复查链接。</span>"}</div></div>'
+    official = "".join(links) if links else '<span class="source-fallback">暂无正式出处，不进入素材参考。</span>'
+    return f'<div class="source-block"><strong>正式来源：</strong><div class="source-actions">{official}</div></div>'
 
 
 def render_tips(tips: list[str]) -> str:
@@ -144,6 +133,9 @@ def render_cards(entries: list[dict]) -> str:
         why = html.escape(entry["why_worth_attention"])
         interest = html.escape(entry["interest_point"])
         directions = "、".join(html.escape(item) for item in entry["weak_connection_directions"])
+        mock_badge = ""
+        if entry.get("source_origin_type") == "mock_hotlist":
+            mock_badge = '<p class="mock-badge">模拟热榜条目｜仅测试展示，不作为真实素材来源</p>'
         cards.append(
             f"""
             <article class="item">
@@ -151,6 +143,7 @@ def render_cards(entries: list[dict]) -> str:
               <div>
                 <h3>{title}</h3>
                 <p class="meta">来源平台：{html.escape(entry['source_platform'])} · 榜单名称：{html.escape(entry.get('board_name') or entry['source_platform'])} · 榜单排名：{entry['source_rank']} · 抓取时间：{html.escape(str(entry.get('crawl_time') or '未知'))} · 来源等级：{html.escape(entry.get('source_level', 'no_link'))}</p>
+                {mock_badge}
                 {render_source_links(entry)}
                 <p><strong>热点摘要：</strong>{summary}</p>
                 <p><strong>为什么值得看：</strong>{why}</p>
@@ -190,6 +183,8 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
     h3 {{ margin: 0 0 8px; font-size: 17px; }}
     p {{ line-height: 1.65; }}
     .meta, .mode {{ color: #5f6c7b; font-size: 14px; }}
+    .notice {{ margin-top: 12px; padding: 12px 14px; border: 1px solid #d6b25e; border-radius: 6px; background: #fff8e5; color: #5f4700; font-weight: 600; }}
+    .mock-badge {{ display: inline-block; margin: 6px 0 10px; padding: 5px 8px; border-radius: 6px; background: #fff8e5; color: #5f4700; font-size: 14px; font-weight: 600; }}
     .overview {{ font-size: 17px; max-width: 880px; }}
     .item {{ display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 16px 0; border-top: 1px solid #e4e7eb; }}
     .rank {{ width: 32px; height: 32px; border-radius: 6px; background: #1f2933; color: white; display: grid; place-items: center; font-weight: 700; }}
@@ -197,8 +192,6 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
     .source-block {{ display: grid; gap: 8px; margin: 10px 0 14px; padding: 10px 12px; background: #ffffff; border: 1px solid #e4e7eb; border-radius: 6px; }}
     .source-button {{ display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1px solid #c7d0d9; border-radius: 6px; color: #1f2933; background: #ffffff; text-decoration: none; font-size: 14px; }}
     .source-button:hover {{ background: #eef2f6; }}
-    .source-button.secondary {{ color: #5f6c7b; }}
-    .source-note {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; color: #6b7280; font-size: 14px; }}
     .source-fallback, .risk {{ color: #6b7280; font-size: 14px; }}
     .tips ul {{ margin-top: 8px; padding-left: 20px; }}
     .tips li {{ margin: 4px 0; line-height: 1.55; }}
@@ -212,6 +205,7 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
     <main>
       <h1>今日热点灵感雷达</h1>
       <p class="mode">生成时间：{html.escape(generated_at)} · 当前模式：{MODE_LABEL}</p>
+      <p class="notice">{MOCK_NOTICE}</p>
       <p class="overview">{html.escape(overview.get("summary", "暂无总览。"))}</p>
     </main>
   </header>

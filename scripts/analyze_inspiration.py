@@ -217,15 +217,16 @@ def directions_for(item: dict) -> list[str]:
     return directions[:3]
 
 
-def source_level(source_url: str, board_item_url: str, board_url: str, search_url: str) -> str:
+VALID_ORIGIN_TYPES = {"hotlist", "mock_hotlist"}
+
+
+def source_level(source_url: str, board_item_url: str, board_url: str) -> str:
     if source_url:
         return "original"
     if board_item_url:
         return "board_item"
     if board_url:
         return "board_page"
-    if search_url:
-        return "search_fallback"
     return "no_link"
 
 
@@ -234,8 +235,15 @@ def source_fields(item: dict, cluster: dict, title: str, platform: str) -> tuple
     source_url = item.get("source_url") or cluster.get("primary_source_url") or ""
     board_item_url = item.get("board_item_url") or cluster.get("primary_board_item_url") or ""
     board_url = item.get("board_url") or cluster.get("primary_board_url") or ""
-    level = source_level(source_url, board_item_url, board_url, search_url)
+    level = source_level(source_url, board_item_url, board_url)
     return source_url, board_item_url, board_url, search_url, level
+
+
+def is_analyzable_cluster(cluster: dict) -> bool:
+    origin_type = cluster.get("source_origin_type")
+    if origin_type == "keyword_search":
+        return False
+    return origin_type in VALID_ORIGIN_TYPES
 
 
 def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
@@ -258,11 +266,13 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
     copy = TYPE_COPY.get(topic_type(item), DEFAULT_COPY)
     directions = directions_for(item)
     source_url, board_item_url, board_url, search_url, level = source_fields(item, cluster, title, platform)
+    origin_type = item.get("source_origin_type") or cluster.get("source_origin_type") or "unknown"
+    reference_valid = bool(item.get("is_reference_valid", cluster.get("is_reference_valid", False)))
 
     if bucket == "top_inspiration":
         usage = MATERIAL_USAGE[index % 5]
         recommend_level = "high" if total_score >= 82 else "medium"
-        save_to_library = True
+        save_to_library = reference_valid
     elif bucket == "watchlist":
         usage = "观察备用"
         recommend_level = "watch"
@@ -270,9 +280,10 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
     else:
         usage = MATERIAL_USAGE[index % 6]
         recommend_level = "medium" if total_score >= 74 else "low"
-        save_to_library = total_score >= 80
+        save_to_library = reference_valid and total_score >= 80
 
     return {
+        "mode": item.get("mode") or cluster.get("mode") or MODE,
         "original_title": title,
         "source_platform": platform,
         "board_name": item.get("board_name") or first_non_empty(cluster.get("board_names", [])) or platform,
@@ -283,6 +294,8 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
         "board_url": board_url,
         "search_url": search_url,
         "source_level": level,
+        "source_origin_type": origin_type,
+        "is_reference_valid": reference_valid,
         "hotspot_summary": copy["summary"],
         "why_worth_attention": copy["why"],
         "interest_point": copy["interest"],
@@ -295,14 +308,14 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
         "material_usage": usage,
         "inspiration_tips": copy["tips"],
         "recommend_level": recommend_level,
-        "risk_note": "模拟数据，仅用于链路测试；发布真实内容前仍需核验来源、语境和潜在争议。",
+        "risk_note": "模拟数据仅用于测试页面链路，不代表真实热点，不建议作为素材参考。",
         "suggest_save_to_library": save_to_library,
         "display_bucket": BUCKETS[bucket],
     }
 
 
 def build_bucket(clusters: list[dict], bucket: str, limit: int, sort_key) -> list[dict]:
-    selected = sorted(clusters, key=sort_key)[:limit]
+    selected = sorted([cluster for cluster in clusters if is_analyzable_cluster(cluster)], key=sort_key)[:limit]
     entries = []
     for index, cluster in enumerate(selected):
         item = cluster.get("items", [{}])[0]

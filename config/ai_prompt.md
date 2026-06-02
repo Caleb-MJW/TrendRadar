@@ -28,15 +28,21 @@ TrendRadar 不是关键词搜索系统。
 
 数据源必须是平台真实热门榜单，包括微博热搜榜、百度热搜榜、抖音热点榜、小红书热榜、今日头条热榜、腾讯热点、知乎热榜、B站热门。
 
-关键词搜索只允许作为无法获得原文链接、榜单条目链接或热榜页面链接时的辅助复查入口。搜索链接不代表正式出处。
+平台搜索不是数据来源。`search_url` 只允许作为后台人工复查辅助字段，不属于正式来源，不参与 `source_level`，不作为页面主溯源按钮展示。
+
+系统只分析真实热榜条目。真实素材必须来自平台热榜、榜单条目、原文链接或热榜页面。
+
+如果 `source_origin_type = keyword_search`，必须直接丢弃，不能进入分析。
 
 分析时必须保留并尊重以下字段：
 
 - `source_url`：原文、原视频、原笔记链接。
 - `board_item_url`：平台热榜条目链接。
 - `board_url`：平台热榜页面链接。
-- `search_url`：辅助搜索链接。
-- `source_level`：`original` / `board_item` / `board_page` / `search_fallback` / `no_link`。
+- `search_url`：后台人工辅助复查链接，不属于正式来源。
+- `source_level`：`original` / `board_item` / `board_page` / `no_link`。
+- `source_origin_type`：`hotlist` / `mock_hotlist` / `keyword_search`。
+- `is_reference_valid`：真实热榜内容为 `true`，mock 内容为 `false`。
 
 ## 默认素材用途
 

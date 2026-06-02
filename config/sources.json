@@ -1,7 +1,7 @@
 {
   "principles": {
     "source_of_truth": "platform_hot_boards",
-    "keyword_search_role": "auxiliary_review_only",
+    "keyword_search_role": "backend_manual_review_only",
     "ai_role": "analyze_fetched_board_items_only",
     "forbidden": [
       "Do not use recruitment, insurance, career, growth, women, or other weak-connection keywords to search platforms as the primary data source.",
@@ -12,15 +12,16 @@
       "original",
       "board_item",
       "board_page",
-      "search_fallback",
       "no_link"
     ],
     "field_meanings": {
       "source_url": "Original article/video/note URL when available.",
       "board_item_url": "Platform hot-board item URL when available.",
       "board_url": "Platform hot-board page URL.",
-      "search_url": "Auxiliary review URL only; not a formal source.",
-      "source_level": "Formal source level: original / board_item / board_page / search_fallback / no_link."
+      "search_url": "Backend manual review URL only; not a formal source and not shown as a main page source button.",
+      "source_level": "Formal source level: original / board_item / board_page / no_link.",
+      "source_origin_type": "hotlist / mock_hotlist / keyword_search. keyword_search must be discarded before analysis.",
+      "is_reference_valid": "true only for real hotlist items; false for mock data."
     }
   },
   "sources": [
@@ -35,7 +36,7 @@
       "board_url": "https://s.weibo.com/top/summary",
       "fallback_url": "",
       "search_url_template": "https://s.weibo.com/weibo?q={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "百度热搜",
@@ -48,7 +49,7 @@
       "board_url": "https://top.baidu.com/board?tab=realtime",
       "fallback_url": "",
       "search_url_template": "https://www.baidu.com/s?wd={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "抖音热点",
@@ -61,7 +62,7 @@
       "board_url": "https://www.douyin.com/hot",
       "fallback_url": "",
       "search_url_template": "https://www.douyin.com/search/{query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "小红书热点",
@@ -74,7 +75,7 @@
       "board_url": "https://www.xiaohongshu.com/explore",
       "fallback_url": "",
       "search_url_template": "https://www.xiaohongshu.com/search_result?keyword={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "今日头条热榜",
@@ -87,7 +88,7 @@
       "board_url": "https://www.toutiao.com/hot-event/hot-board/",
       "fallback_url": "",
       "search_url_template": "https://so.toutiao.com/search?keyword={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "腾讯热点",
@@ -100,7 +101,7 @@
       "board_url": "https://news.qq.com/",
       "fallback_url": "",
       "search_url_template": "https://new.qq.com/search?query={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "知乎热榜",
@@ -113,7 +114,7 @@
       "board_url": "https://www.zhihu.com/hot",
       "fallback_url": "",
       "search_url_template": "https://www.zhihu.com/search?q={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     },
     {
       "platform": "B站热门",
@@ -126,7 +127,7 @@
       "board_url": "https://www.bilibili.com/v/popular/all",
       "fallback_url": "",
       "search_url_template": "https://search.bilibili.com/all?keyword={query}",
-      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为辅助复查，不作为正式来源。"
+      "notes": "第一阶段仅占位，不接入真实抓取。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
     }
   ]
 }
