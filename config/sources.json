@@ -33,7 +33,7 @@
       "target_count": 50,
       "top_direct_count": 10,
       "source_type": "phase_one_real_fetcher",
-      "board_url": "https://s.weibo.com/top/summary",
+      "board_url": "https://s.weibo.com/top/summary?cate=realtimehot",
       "fallback_url": "",
       "search_url_template": "https://s.weibo.com/weibo?q={query}",
       "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
@@ -111,7 +111,7 @@
       "target_count": 50,
       "top_direct_count": 10,
       "source_type": "phase_one_real_fetcher",
-      "board_url": "https://www.zhihu.com/hot",
+      "board_url": "https://www.zhihu.com/billboard",
       "fallback_url": "",
       "search_url_template": "https://www.zhihu.com/search?q={query}",
       "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"
@@ -124,7 +124,7 @@
       "target_count": 30,
       "top_direct_count": 10,
       "source_type": "phase_one_real_fetcher",
-      "board_url": "https://www.bilibili.com/v/popular/all",
+      "board_url": "https://www.bilibili.com/v/popular/rank/all",
       "fallback_url": "",
       "search_url_template": "https://search.bilibili.com/all?keyword={query}",
       "notes": "第 9 步第一批真实热榜源。搜索链接只作为后台人工复查字段，不作为正式来源，不在主页面展示。"

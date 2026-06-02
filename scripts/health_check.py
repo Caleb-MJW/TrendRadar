@@ -22,12 +22,13 @@ def latest_snapshot(date_text: str) -> tuple[Path | None, dict | None]:
     return path, json.loads(path.read_text(encoding="utf-8"))
 
 
-def status_for(source_status: str | None, fetched_count: int) -> str:
-    if source_status in {"failed", "disabled"}:
-        return source_status
+def status_for(meta: dict, fetched_count: int) -> str:
+    status = meta.get("status")
+    if status in {"normal", "partial", "failed", "disabled"}:
+        return status
     if fetched_count <= 0:
         return "failed"
-    if source_status == "partial" or fetched_count < 20:
+    if fetched_count < 20:
         return "partial"
     return "normal"
 
@@ -39,7 +40,8 @@ def main() -> None:
     snapshot_time = snapshot.get("time", now.strftime("%H%M")) if snapshot else now.strftime("%H%M")
     mode = snapshot.get("mode", "real") if snapshot else "real"
     items = snapshot.get("items", []) if snapshot else []
-    source_meta = {source.get("platform"): source for source in snapshot.get("sources", [])} if snapshot else {}
+    diagnostics = snapshot.get("fetch_diagnostics") or snapshot.get("sources", []) if snapshot else []
+    diagnostic_meta = {source.get("platform"): source for source in diagnostics}
 
     platform_counts = Counter(item.get("source_platform", "未知平台") for item in items)
     with_source_url = Counter(item.get("source_platform", "未知平台") for item in items if item.get("source_url"))
@@ -53,21 +55,28 @@ def main() -> None:
 
     sources = []
     for platform in PHASE_ONE_PLATFORMS:
-        meta = source_meta.get(platform, {})
-        fetched_count = platform_counts[platform]
-        status = status_for(meta.get("status"), fetched_count)
+        meta = diagnostic_meta.get(platform, {})
+        fetched_count = platform_counts[platform] or int(meta.get("fetched_count") or 0)
+        status = status_for(meta, fetched_count)
         origin_text = ",".join(sorted(origin_types[platform])) if origin_types[platform] else meta.get("source_origin_type", "hotlist")
         sources.append(
             {
                 "platform": platform,
                 "status": status,
+                "attempted_url": meta.get("attempted_url"),
+                "request_method": meta.get("request_method", "GET"),
+                "http_status": meta.get("http_status"),
+                "exception_type": meta.get("exception_type"),
+                "error": meta.get("error"),
+                "elapsed_ms": meta.get("elapsed_ms"),
                 "fetched_count": fetched_count,
+                "parser_status": meta.get("parser_status"),
+                "parser_error": meta.get("parser_error"),
                 "with_source_url_count": with_source_url[platform],
                 "with_board_item_url_count": with_board_item_url[platform],
                 "with_board_url_count": with_board_url[platform],
                 "source_origin_type": origin_text,
                 "last_updated": meta.get("last_updated") or snapshot.get("generated_at", now.isoformat()) if snapshot else now.isoformat(),
-                "error": meta.get("error") if status in {"failed", "partial"} else None,
             }
         )
 

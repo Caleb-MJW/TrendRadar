@@ -1,25 +1,37 @@
-import html
 import hashlib
+import html
 import json
 import os
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, urljoin
-from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
+
+try:
+    import requests
+except ImportError:  # Diagnostics still need to be written when dependencies are missing.
+    requests = None
 
 
 TZ_NAME = "Asia/Shanghai"
 DEFAULT_MODE = "real"
 MAX_ITEMS_PER_PLATFORM = 20
+REQUEST_TIMEOUT_SECONDS = 15
+
+REQUEST_HEADERS = {
+    "User-Agent": "Mozilla/5.0",
+    "Accept-Language": "zh-CN,zh;q=0.9",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
 BOARD_URLS = {
     "百度热搜": "https://top.baidu.com/board?tab=realtime",
-    "微博热搜": "https://s.weibo.com/top/summary",
-    "知乎热榜": "https://www.zhihu.com/hot",
-    "B站热门": "https://www.bilibili.com/v/popular/all",
+    "微博热搜": "https://s.weibo.com/top/summary?cate=realtimehot",
+    "知乎热榜": "https://www.zhihu.com/billboard",
+    "B站热门": "https://www.bilibili.com/v/popular/rank/all",
 }
 
 MOCK_TOPICS = {
@@ -70,30 +82,13 @@ def shanghai_now() -> datetime:
     return datetime.now(ZoneInfo(TZ_NAME))
 
 
-def http_get(url: str, *, json_mode: bool = False) -> Any:
-    request = Request(
-        url,
-        headers={
-            "User-Agent": (
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0 Safari/537.36"
-            ),
-            "Accept": "application/json,text/html;q=0.9,*/*;q=0.8",
-            "Referer": url,
-        },
-    )
-    with urlopen(request, timeout=12) as response:
-        raw = response.read()
-    text = raw.decode("utf-8", errors="ignore")
-    if json_mode:
-        return json.loads(text)
-    return text
-
-
 def clean_text(value: Any) -> str:
     if value is None:
         return ""
-    return html.unescape(str(value)).strip()
+    text = html.unescape(str(value))
+    text = re.sub(r"<.*?>", "", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
 
 
 def source_level(source_url: str, board_item_url: str, board_url: str) -> str:
@@ -104,6 +99,52 @@ def source_level(source_url: str, board_item_url: str, board_url: str) -> str:
     if board_url:
         return "board_page"
     return "no_link"
+
+
+def base_diagnostic(platform: str, url: str, now: datetime) -> dict:
+    return {
+        "platform": platform,
+        "status": "failed",
+        "attempted_url": url,
+        "request_method": "GET",
+        "http_status": None,
+        "exception_type": None,
+        "error": None,
+        "elapsed_ms": None,
+        "fetched_count": 0,
+        "parser_status": "not_run",
+        "parser_error": None,
+        "source_origin_type": "hotlist",
+        "last_updated": now.isoformat(),
+    }
+
+
+def request_hotlist(platform: str, url: str, now: datetime) -> tuple[str, dict]:
+    diagnostic = base_diagnostic(platform, url, now)
+    if requests is None:
+        diagnostic["exception_type"] = "ModuleNotFoundError"
+        diagnostic["error"] = "requests is not installed"
+        return "", diagnostic
+
+    started = time.perf_counter()
+    try:
+        response = requests.get(
+            url,
+            headers=REQUEST_HEADERS,
+            timeout=REQUEST_TIMEOUT_SECONDS,
+            allow_redirects=True,
+        )
+        diagnostic["elapsed_ms"] = round((time.perf_counter() - started) * 1000)
+        diagnostic["http_status"] = response.status_code
+        response.raise_for_status()
+        return response.text, diagnostic
+    except Exception as exc:
+        diagnostic["elapsed_ms"] = round((time.perf_counter() - started) * 1000)
+        diagnostic["exception_type"] = type(exc).__name__
+        diagnostic["error"] = str(exc)
+        if getattr(exc, "response", None) is not None:
+            diagnostic["http_status"] = exc.response.status_code
+        return "", diagnostic
 
 
 def make_item(
@@ -142,28 +183,75 @@ def make_item(
     }
 
 
-def fetch_baidu(now: datetime) -> list[dict]:
+def parser_diagnostic(diagnostic: dict, items: list[dict], parser_error: str | None = None) -> dict:
+    diagnostic["fetched_count"] = len(items)
+    if parser_error:
+        diagnostic["parser_status"] = "failed" if not items else "partial"
+        diagnostic["parser_error"] = parser_error
+    elif len(items) >= MAX_ITEMS_PER_PLATFORM:
+        diagnostic["parser_status"] = "success"
+    elif items:
+        diagnostic["parser_status"] = "partial"
+        diagnostic["parser_error"] = f"parsed only {len(items)} items"
+    else:
+        diagnostic["parser_status"] = "failed"
+        diagnostic["parser_error"] = "no hotlist items parsed"
+
+    if not items:
+        diagnostic["status"] = "failed"
+    elif len(items) >= MAX_ITEMS_PER_PLATFORM:
+        diagnostic["status"] = "normal"
+    else:
+        diagnostic["status"] = "partial"
+    return diagnostic
+
+
+def parse_json_objects(text: str, key: str) -> list[dict]:
+    decoder = json.JSONDecoder()
+    objects = []
+    start = 0
+    while True:
+        index = text.find(key, start)
+        if index == -1:
+            break
+        brace = text.rfind("{", 0, index)
+        if brace == -1:
+            start = index + len(key)
+            continue
+        try:
+            obj, end = decoder.raw_decode(text[brace:])
+            if isinstance(obj, dict):
+                objects.append(obj)
+            start = brace + end
+        except json.JSONDecodeError:
+            start = index + len(key)
+    return objects
+
+
+def fetch_baidu(now: datetime) -> tuple[list[dict], dict]:
     platform = "百度热搜"
     board_name = "百度热搜榜"
     board_url = BOARD_URLS[platform]
     crawl_time = now.isoformat()
-    text = http_get(board_url)
-    matches = re.findall(r'"word"\s*:\s*"([^"]+)"(?:.*?"hotScore"\s*:\s*"?(\d+)"?)?', text)
+    text, diagnostic = request_hotlist(platform, board_url, now)
+    if not text:
+        return [], diagnostic
+
     items = []
     seen = set()
+    matches = re.findall(r'"word"\s*:\s*"([^"]+)"(?:.*?"hotScore"\s*:\s*"?(\d+)"?)?', text)
     for title, score in matches:
         title = clean_text(title)
         if not title or title in seen:
             continue
         seen.add(title)
-        rank = len(items) + 1
         items.append(
             make_item(
                 mode="real",
                 platform=platform,
                 board_name=board_name,
                 title=title,
-                rank=rank,
+                rank=len(items) + 1,
                 hot_score=int(score) if score else 0,
                 crawl_time=crawl_time,
                 board_url=board_url,
@@ -171,27 +259,27 @@ def fetch_baidu(now: datetime) -> list[dict]:
         )
         if len(items) >= MAX_ITEMS_PER_PLATFORM:
             break
-    if not items:
-        raise RuntimeError("百度热搜页面未解析到榜单条目")
-    return items
+    return items, parser_diagnostic(diagnostic, items)
 
 
-def fetch_weibo(now: datetime) -> list[dict]:
+def fetch_weibo(now: datetime) -> tuple[list[dict], dict]:
     platform = "微博热搜"
     board_name = "微博热搜榜"
     board_url = BOARD_URLS[platform]
     crawl_time = now.isoformat()
-    text = http_get(board_url)
+    text, diagnostic = request_hotlist(platform, board_url, now)
+    if not text:
+        return [], diagnostic
+
     row_pattern = re.compile(r'<td class="td-02">.*?<a href="([^"]+)"[^>]*>(.*?)</a>(.*?)</td>', re.S)
     items = []
     seen = set()
     for href, raw_title, tail in row_pattern.findall(text):
-        title = clean_text(re.sub(r"<.*?>", "", raw_title))
+        title = clean_text(raw_title)
         if not title or title == "微博热搜" or title in seen:
             continue
         seen.add(title)
-        score_match = re.search(r'<span>(\d+)</span>', tail)
-        rank = len(items) + 1
+        score_match = re.search(r"<span>(\d+)</span>", tail)
         item_url = urljoin("https://s.weibo.com", href)
         items.append(
             make_item(
@@ -199,7 +287,7 @@ def fetch_weibo(now: datetime) -> list[dict]:
                 platform=platform,
                 board_name=board_name,
                 title=title,
-                rank=rank,
+                rank=len(items) + 1,
                 hot_score=int(score_match.group(1)) if score_match else 0,
                 crawl_time=crawl_time,
                 board_item_url=item_url,
@@ -208,80 +296,84 @@ def fetch_weibo(now: datetime) -> list[dict]:
         )
         if len(items) >= MAX_ITEMS_PER_PLATFORM:
             break
-    if not items:
-        raise RuntimeError("微博热搜页面未解析到榜单条目")
-    return items
+    return items, parser_diagnostic(diagnostic, items)
 
 
-def fetch_zhihu(now: datetime) -> list[dict]:
+def fetch_zhihu(now: datetime) -> tuple[list[dict], dict]:
     platform = "知乎热榜"
     board_name = "知乎热榜"
     board_url = BOARD_URLS[platform]
     crawl_time = now.isoformat()
-    api_url = "https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total?limit=20&desktop=true"
-    payload = http_get(api_url, json_mode=True)
+    text, diagnostic = request_hotlist(platform, board_url, now)
+    if not text:
+        return [], diagnostic
+
     items = []
-    for entry in payload.get("data", [])[:MAX_ITEMS_PER_PLATFORM]:
-        target = entry.get("target") or {}
-        title = clean_text(target.get("title"))
-        if not title:
+    seen = set()
+    title_matches = re.findall(r'"title"\s*:\s*"([^"]{4,120})"', text)
+    url_matches = re.findall(r'"url"\s*:\s*"(https://www\.zhihu\.com/question/\d+[^"]*)"', text)
+    for raw_title in title_matches:
+        title = clean_text(raw_title)
+        if not title or title in seen or title in {"知乎热榜"}:
             continue
-        question_id = target.get("id")
-        item_url = f"https://www.zhihu.com/question/{question_id}" if question_id else clean_text(target.get("url"))
-        rank = len(items) + 1
+        seen.add(title)
+        item_url = url_matches[len(items)] if len(items) < len(url_matches) else ""
         items.append(
             make_item(
                 mode="real",
                 platform=platform,
                 board_name=board_name,
                 title=title,
-                rank=rank,
-                hot_score=clean_text(entry.get("detail_text")),
+                rank=len(items) + 1,
+                hot_score=0,
                 crawl_time=crawl_time,
                 source_url=item_url,
                 board_item_url=item_url,
                 board_url=board_url,
             )
         )
-    if not items:
-        raise RuntimeError("知乎热榜接口未返回可用条目")
-    return items
+        if len(items) >= MAX_ITEMS_PER_PLATFORM:
+            break
+    return items, parser_diagnostic(diagnostic, items)
 
 
-def fetch_bilibili(now: datetime) -> list[dict]:
+def fetch_bilibili(now: datetime) -> tuple[list[dict], dict]:
     platform = "B站热门"
     board_name = "B站热门"
     board_url = BOARD_URLS[platform]
     crawl_time = now.isoformat()
-    api_url = "https://api.bilibili.com/x/web-interface/popular?ps=20&pn=1"
-    payload = http_get(api_url, json_mode=True)
-    raw_items = (payload.get("data") or {}).get("list") or []
+    text, diagnostic = request_hotlist(platform, board_url, now)
+    if not text:
+        return [], diagnostic
+
     items = []
-    for entry in raw_items[:MAX_ITEMS_PER_PLATFORM]:
-        title = clean_text(entry.get("title"))
-        if not title:
+    seen = set()
+    objects = parse_json_objects(text, '"title"')
+    for obj in objects:
+        title = clean_text(obj.get("title"))
+        bvid = clean_text(obj.get("bvid"))
+        if not title or title in seen or not bvid:
             continue
-        bvid = clean_text(entry.get("bvid"))
-        item_url = f"https://www.bilibili.com/video/{bvid}" if bvid else clean_text(entry.get("short_link_v2"))
-        stat = entry.get("stat") or {}
-        rank = len(items) + 1
+        seen.add(title)
+        item_url = f"https://www.bilibili.com/video/{bvid}"
+        stat = obj.get("stat") or {}
         items.append(
             make_item(
                 mode="real",
                 platform=platform,
                 board_name=board_name,
                 title=title,
-                rank=rank,
-                hot_score=stat.get("view", 0),
+                rank=len(items) + 1,
+                hot_score=stat.get("view", 0) if isinstance(stat, dict) else 0,
                 crawl_time=crawl_time,
                 source_url=item_url,
                 board_item_url=item_url,
                 board_url=board_url,
             )
         )
-    if not items:
-        raise RuntimeError("B站热门接口未返回可用条目")
-    return items
+        if len(items) >= MAX_ITEMS_PER_PLATFORM:
+            break
+    return items, parser_diagnostic(diagnostic, items)
 
 
 REAL_FETCHERS = [
@@ -294,37 +386,23 @@ REAL_FETCHERS = [
 
 def fetch_real(now: datetime) -> tuple[list[dict], list[dict]]:
     items = []
-    sources = []
-    for platform, fetcher in REAL_FETCHERS:
-        try:
-            platform_items = fetcher(now)
-            items.extend(platform_items)
-            status = "normal" if len(platform_items) >= MAX_ITEMS_PER_PLATFORM else "partial"
-            error = None if platform_items else "no items fetched"
-        except Exception as exc:
-            platform_items = []
-            status = "failed"
-            error = str(exc)
-        sources.append(
-            {
-                "platform": platform,
-                "status": status,
-                "fetched_count": len(platform_items),
-                "source_origin_type": "hotlist",
-                "last_updated": now.isoformat(),
-                "error": error,
-            }
-        )
-    return items, sources
+    diagnostics = []
+    for _, fetcher in REAL_FETCHERS:
+        platform_items, diagnostic = fetcher(now)
+        items.extend(platform_items)
+        diagnostics.append(diagnostic)
+    return items, diagnostics
 
 
 def fetch_mock(now: datetime) -> tuple[list[dict], list[dict]]:
     items = []
+    diagnostics = []
     for platform, titles in MOCK_TOPICS.items():
         board_url = BOARD_URLS[platform]
+        platform_items = []
         for rank, title in enumerate(titles, 1):
             item_url = f"{board_url}#mock-board-rank-{rank}-{quote(title)}"
-            items.append(
+            platform_items.append(
                 make_item(
                     mode="mock",
                     platform=platform,
@@ -338,18 +416,21 @@ def fetch_mock(now: datetime) -> tuple[list[dict], list[dict]]:
                     tags_raw=["mock_hotlist"],
                 )
             )
-    sources = [
-        {
-            "platform": platform,
-            "status": "normal",
-            "fetched_count": len(titles),
-            "source_origin_type": "mock_hotlist",
-            "last_updated": now.isoformat(),
-            "error": None,
-        }
-        for platform, titles in MOCK_TOPICS.items()
-    ]
-    return items, sources
+        items.extend(platform_items)
+        diagnostic = base_diagnostic(platform, board_url, now)
+        diagnostic.update(
+            {
+                "status": "normal",
+                "http_status": 200,
+                "elapsed_ms": 0,
+                "fetched_count": len(platform_items),
+                "parser_status": "success",
+                "source_origin_type": "mock_hotlist",
+                "error": None,
+            }
+        )
+        diagnostics.append(diagnostic)
+    return items, diagnostics
 
 
 def run_mode() -> str:
@@ -369,9 +450,9 @@ def main() -> None:
     output_path = output_dir / f"{time_text}.json"
 
     if mode == "real":
-        items, sources = fetch_real(now)
+        items, diagnostics = fetch_real(now)
     else:
-        items, sources = fetch_mock(now)
+        items, diagnostics = fetch_mock(now)
 
     payload = {
         "date": date_text,
@@ -379,7 +460,8 @@ def main() -> None:
         "timezone": TZ_NAME,
         "generated_at": now.isoformat(),
         "mode": mode,
-        "sources": sources,
+        "fetch_diagnostics": diagnostics,
+        "sources": diagnostics,
         "items": items,
     }
 
