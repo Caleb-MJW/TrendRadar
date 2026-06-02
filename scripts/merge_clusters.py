@@ -20,6 +20,13 @@ def trend_for(cluster: dict) -> str:
     return "new"
 
 
+def first_non_empty(values: list[str]) -> str:
+    for value in values:
+        if value:
+            return value
+    return ""
+
+
 def main() -> None:
     now = shanghai_now()
     date_text = now.strftime("%Y-%m-%d")
@@ -47,7 +54,12 @@ def main() -> None:
                     "appear_count": 0,
                     "is_multi_platform": False,
                     "heat_trend": "new",
+                    "primary_source_url": "",
+                    "primary_trace_url": "",
+                    "primary_search_url": "",
+                    "source_urls": [],
                     "trace_urls": [],
+                    "search_urls": [],
                     "items": [],
                 },
             )
@@ -58,14 +70,25 @@ def main() -> None:
             cluster["last_seen"] = max(cluster["last_seen"], item.get("crawl_time"))
             cluster["highest_rank"] = min(cluster["highest_rank"], item.get("source_rank", 999))
             cluster["appear_count"] += 1
+            if item.get("source_url"):
+                cluster["source_urls"].append(item["source_url"])
             if item.get("trace_url"):
                 cluster["trace_urls"].append(item["trace_url"])
+            elif item.get("search_url"):
+                cluster["trace_urls"].append(item["search_url"])
+            if item.get("search_url"):
+                cluster["search_urls"].append(item["search_url"])
             cluster["items"].append(item)
 
     clusters = []
     for cluster in clusters_by_title.values():
         cluster["original_titles"] = sorted(set(cluster["original_titles"]))
+        cluster["source_urls"] = sorted(set(cluster["source_urls"]))
         cluster["trace_urls"] = sorted(set(cluster["trace_urls"]))
+        cluster["search_urls"] = sorted(set(cluster["search_urls"]))
+        cluster["primary_source_url"] = first_non_empty(cluster["source_urls"])
+        cluster["primary_trace_url"] = first_non_empty(cluster["trace_urls"]) or first_non_empty(cluster["search_urls"])
+        cluster["primary_search_url"] = first_non_empty(cluster["search_urls"])
         cluster["is_multi_platform"] = len(cluster["source_platforms"]) > 1
         cluster["heat_trend"] = trend_for(cluster)
         clusters.append(cluster)

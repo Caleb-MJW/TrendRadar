@@ -41,12 +41,26 @@ def render_markdown_section(title: str, entries: list[dict]) -> str:
     if not entries:
         return "\n".join(lines + ["暂无数据。", ""])
     for index, entry in enumerate(entries, 1):
+        links = []
+        if entry.get("source_url"):
+            links.append(f"[查看原文]({entry['source_url']})")
+        if entry.get("trace_url"):
+            links.append(f"[查看来源]({entry['trace_url']})")
+        if entry.get("search_url"):
+            links.append(f"[平台搜索]({entry['search_url']})")
+        link_text = " ".join(links) if links else "暂无可点击链接，仅保留来源平台、原标题和抓取时间。"
         lines.extend(
             [
                 f"{index}. **{entry['original_title']}**",
-                f"   - 平台: {entry['source_platform']} | 排名: {entry['source_rank']} | 总分: {entry['total_score']}",
-                f"   - 摘要: {entry['hotspot_summary']}",
-                f"   - 用途: {entry['material_usage']} | 关联: {'、'.join(entry['weak_connection_directions'])}",
+                f"   - 来源: {entry['source_platform']} | 原平台排名: {entry['source_rank']} | 抓取时间: {entry.get('crawl_time') or '未知'}",
+                f"   - 溯源: {link_text}",
+                f"   - 热点摘要: {entry['hotspot_summary']}",
+                f"   - 为什么值得看: {entry['why_worth_attention']}",
+                f"   - 话题性/趣味点: {entry['interest_point']}",
+                f"   - 可轻度关联方向: {'、'.join(entry['weak_connection_directions'])}",
+                f"   - 灵感提示: {'；'.join(entry['inspiration_tips'])}",
+                f"   - 素材用途: {entry['material_usage']} | 推荐等级: {entry['recommend_level']} | 总分: {entry['total_score']}",
+                f"   - 风险提醒: {entry['risk_note']}",
             ]
         )
     lines.append("")
@@ -82,6 +96,38 @@ def render_markdown(analysis: dict, health: dict, generated_at: str) -> str:
     return "\n".join(lines)
 
 
+def render_trace_links(entry: dict) -> str:
+    links = []
+    if entry.get("source_url"):
+        links.append(
+            f'<a class="source-button" href="{html.escape(entry["source_url"])}" target="_blank" rel="noopener noreferrer">查看原文</a>'
+        )
+    if entry.get("trace_url"):
+        links.append(
+            f'<a class="source-button" href="{html.escape(entry["trace_url"])}" target="_blank" rel="noopener noreferrer">查看来源</a>'
+        )
+    if entry.get("search_url"):
+        links.append(
+            f'<a class="source-button" href="{html.escape(entry["search_url"])}" target="_blank" rel="noopener noreferrer">平台搜索</a>'
+        )
+    if links:
+        return f'<div class="source-actions">{"".join(links)}</div>'
+    platform = html.escape(entry.get("source_platform", "未知平台"))
+    title = html.escape(entry.get("original_title", "未知标题"))
+    crawl_time = html.escape(str(entry.get("crawl_time") or "未知"))
+    return (
+        '<p class="source-fallback">'
+        f"暂无可点击链接，仅保留来源平台、原标题和抓取时间。来源：{platform}；标题：{title}；抓取时间：{crawl_time}"
+        "</p>"
+    )
+
+
+def render_tips(tips: list[str]) -> str:
+    if not tips:
+        return "<li>暂无灵感提示。</li>"
+    return "".join(f"<li>{html.escape(tip)}</li>" for tip in tips)
+
+
 def render_cards(entries: list[dict]) -> str:
     if not entries:
         return "<p>暂无数据。</p>"
@@ -89,6 +135,8 @@ def render_cards(entries: list[dict]) -> str:
     for index, entry in enumerate(entries, 1):
         title = html.escape(entry["original_title"])
         summary = html.escape(entry["hotspot_summary"])
+        why = html.escape(entry["why_worth_attention"])
+        interest = html.escape(entry["interest_point"])
         directions = "、".join(html.escape(item) for item in entry["weak_connection_directions"])
         cards.append(
             f"""
@@ -96,8 +144,15 @@ def render_cards(entries: list[dict]) -> str:
               <div class="rank">{index}</div>
               <div>
                 <h3>{title}</h3>
-                <p>{summary}</p>
-                <p class="meta">{html.escape(entry['source_platform'])} · 排名 {entry['source_rank']} · 总分 {entry['total_score']} · {html.escape(entry['material_usage'])} · {directions}</p>
+                <p class="meta">来源平台：{html.escape(entry['source_platform'])} · 原平台排名：{entry['source_rank']} · 抓取时间：{html.escape(str(entry.get('crawl_time') or '未知'))}</p>
+                {render_trace_links(entry)}
+                <p><strong>热点摘要：</strong>{summary}</p>
+                <p><strong>为什么值得看：</strong>{why}</p>
+                <p><strong>话题性/趣味点：</strong>{interest}</p>
+                <p><strong>可轻度关联方向：</strong>{directions}</p>
+                <div class="tips"><strong>灵感提示：</strong><ul>{render_tips(entry.get('inspiration_tips', []))}</ul></div>
+                <p class="meta">素材用途：{html.escape(entry['material_usage'])} · 推荐等级：{html.escape(entry['recommend_level'])} · 总分：{entry['total_score']}</p>
+                <p class="risk">风险提醒：{html.escape(entry['risk_note'])}</p>
               </div>
             </article>
             """
@@ -132,6 +187,12 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
     .overview {{ font-size: 17px; max-width: 880px; }}
     .item {{ display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 16px 0; border-top: 1px solid #e4e7eb; }}
     .rank {{ width: 32px; height: 32px; border-radius: 6px; background: #1f2933; color: white; display: grid; place-items: center; font-weight: 700; }}
+    .source-actions {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; }}
+    .source-button {{ display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1px solid #c7d0d9; border-radius: 6px; color: #1f2933; background: #ffffff; text-decoration: none; font-size: 14px; }}
+    .source-button:hover {{ background: #eef2f6; }}
+    .source-fallback, .risk {{ color: #6b7280; font-size: 14px; }}
+    .tips ul {{ margin-top: 8px; padding-left: 20px; }}
+    .tips li {{ margin: 4px 0; line-height: 1.55; }}
     table {{ width: 100%; border-collapse: collapse; background: white; }}
     th, td {{ padding: 10px 12px; border: 1px solid #e4e7eb; text-align: left; }}
     th {{ background: #eef2f6; }}
