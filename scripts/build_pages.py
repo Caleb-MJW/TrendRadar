@@ -41,19 +41,25 @@ def render_markdown_section(title: str, entries: list[dict]) -> str:
     if not entries:
         return "\n".join(lines + ["暂无数据。", ""])
     for index, entry in enumerate(entries, 1):
-        links = []
+        official_links = []
         if entry.get("source_url"):
-            links.append(f"[查看原文]({entry['source_url']})")
-        if entry.get("trace_url"):
-            links.append(f"[查看来源]({entry['trace_url']})")
-        if entry.get("search_url"):
-            links.append(f"[平台搜索]({entry['search_url']})")
-        link_text = " ".join(links) if links else "暂无可点击链接，仅保留来源平台、原标题和抓取时间。"
+            official_links.append(f"[查看原文]({entry['source_url']})")
+        if entry.get("board_item_url"):
+            official_links.append(f"[查看榜单条目]({entry['board_item_url']})")
+        if entry.get("board_url"):
+            official_links.append(f"[查看热榜页面]({entry['board_url']})")
+        official_text = " ".join(official_links) if official_links else "暂无正式出处链接。"
+        search_text = (
+            f"[平台搜索]({entry['search_url']})（仅辅助复查，不代表正式出处）"
+            if entry.get("search_url")
+            else "暂无辅助复查链接。"
+        )
         lines.extend(
             [
                 f"{index}. **{entry['original_title']}**",
-                f"   - 来源: {entry['source_platform']} | 原平台排名: {entry['source_rank']} | 抓取时间: {entry.get('crawl_time') or '未知'}",
-                f"   - 溯源: {link_text}",
+                f"   - 来源平台: {entry['source_platform']} | 榜单名称: {entry.get('board_name') or entry['source_platform']} | 榜单排名: {entry['source_rank']} | 抓取时间: {entry.get('crawl_time') or '未知'}",
+                f"   - 正式来源: {official_text}",
+                f"   - 辅助复查: {search_text}",
                 f"   - 热点摘要: {entry['hotspot_summary']}",
                 f"   - 为什么值得看: {entry['why_worth_attention']}",
                 f"   - 话题性/趣味点: {entry['interest_point']}",
@@ -96,30 +102,30 @@ def render_markdown(analysis: dict, health: dict, generated_at: str) -> str:
     return "\n".join(lines)
 
 
-def render_trace_links(entry: dict) -> str:
+def render_source_links(entry: dict) -> str:
     links = []
     if entry.get("source_url"):
         links.append(
             f'<a class="source-button" href="{html.escape(entry["source_url"])}" target="_blank" rel="noopener noreferrer">查看原文</a>'
         )
-    if entry.get("trace_url"):
+    if entry.get("board_item_url"):
         links.append(
-            f'<a class="source-button" href="{html.escape(entry["trace_url"])}" target="_blank" rel="noopener noreferrer">查看来源</a>'
+            f'<a class="source-button" href="{html.escape(entry["board_item_url"])}" target="_blank" rel="noopener noreferrer">查看榜单条目</a>'
         )
+    if entry.get("board_url"):
+        links.append(
+            f'<a class="source-button" href="{html.escape(entry["board_url"])}" target="_blank" rel="noopener noreferrer">查看热榜页面</a>'
+        )
+    official = "".join(links) if links else '<span class="source-fallback">暂无正式出处链接，仅保留来源平台、榜单名称、原标题和抓取时间。</span>'
+    search = ""
     if entry.get("search_url"):
-        links.append(
-            f'<a class="source-button" href="{html.escape(entry["search_url"])}" target="_blank" rel="noopener noreferrer">平台搜索</a>'
+        search = (
+            '<div class="source-note">'
+            f'<a class="source-button secondary" href="{html.escape(entry["search_url"])}" target="_blank" rel="noopener noreferrer">平台搜索</a>'
+            '<span>仅辅助复查，不代表正式出处。</span>'
+            "</div>"
         )
-    if links:
-        return f'<div class="source-actions">{"".join(links)}</div>'
-    platform = html.escape(entry.get("source_platform", "未知平台"))
-    title = html.escape(entry.get("original_title", "未知标题"))
-    crawl_time = html.escape(str(entry.get("crawl_time") or "未知"))
-    return (
-        '<p class="source-fallback">'
-        f"暂无可点击链接，仅保留来源平台、原标题和抓取时间。来源：{platform}；标题：{title}；抓取时间：{crawl_time}"
-        "</p>"
-    )
+    return f'<div class="source-block"><div><strong>正式来源：</strong><div class="source-actions">{official}</div></div><div><strong>辅助复查：</strong>{search or "<span class=\"source-fallback\">暂无辅助复查链接。</span>"}</div></div>'
 
 
 def render_tips(tips: list[str]) -> str:
@@ -144,8 +150,8 @@ def render_cards(entries: list[dict]) -> str:
               <div class="rank">{index}</div>
               <div>
                 <h3>{title}</h3>
-                <p class="meta">来源平台：{html.escape(entry['source_platform'])} · 原平台排名：{entry['source_rank']} · 抓取时间：{html.escape(str(entry.get('crawl_time') or '未知'))}</p>
-                {render_trace_links(entry)}
+                <p class="meta">来源平台：{html.escape(entry['source_platform'])} · 榜单名称：{html.escape(entry.get('board_name') or entry['source_platform'])} · 榜单排名：{entry['source_rank']} · 抓取时间：{html.escape(str(entry.get('crawl_time') or '未知'))} · 来源等级：{html.escape(entry.get('source_level', 'no_link'))}</p>
+                {render_source_links(entry)}
                 <p><strong>热点摘要：</strong>{summary}</p>
                 <p><strong>为什么值得看：</strong>{why}</p>
                 <p><strong>话题性/趣味点：</strong>{interest}</p>
@@ -188,8 +194,11 @@ def render_html(analysis: dict, health: dict, generated_at: str) -> str:
     .item {{ display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 16px 0; border-top: 1px solid #e4e7eb; }}
     .rank {{ width: 32px; height: 32px; border-radius: 6px; background: #1f2933; color: white; display: grid; place-items: center; font-weight: 700; }}
     .source-actions {{ display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; }}
+    .source-block {{ display: grid; gap: 8px; margin: 10px 0 14px; padding: 10px 12px; background: #ffffff; border: 1px solid #e4e7eb; border-radius: 6px; }}
     .source-button {{ display: inline-flex; align-items: center; min-height: 32px; padding: 0 10px; border: 1px solid #c7d0d9; border-radius: 6px; color: #1f2933; background: #ffffff; text-decoration: none; font-size: 14px; }}
     .source-button:hover {{ background: #eef2f6; }}
+    .source-button.secondary {{ color: #5f6c7b; }}
+    .source-note {{ display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; color: #6b7280; font-size: 14px; }}
     .source-fallback, .risk {{ color: #6b7280; font-size: 14px; }}
     .tips ul {{ margin-top: 8px; padding-left: 20px; }}
     .tips li {{ margin: 4px 0; line-height: 1.55; }}

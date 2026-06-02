@@ -217,11 +217,25 @@ def directions_for(item: dict) -> list[str]:
     return directions[:3]
 
 
-def source_fields(item: dict, cluster: dict, title: str, platform: str) -> tuple[str, str, str]:
+def source_level(source_url: str, board_item_url: str, board_url: str, search_url: str) -> str:
+    if source_url:
+        return "original"
+    if board_item_url:
+        return "board_item"
+    if board_url:
+        return "board_page"
+    if search_url:
+        return "search_fallback"
+    return "no_link"
+
+
+def source_fields(item: dict, cluster: dict, title: str, platform: str) -> tuple[str, str, str, str, str]:
     search_url = item.get("search_url") or cluster.get("primary_search_url") or fallback_search_url(platform, title)
     source_url = item.get("source_url") or cluster.get("primary_source_url") or ""
-    trace_url = item.get("trace_url") or cluster.get("primary_trace_url") or search_url
-    return source_url, trace_url, search_url
+    board_item_url = item.get("board_item_url") or cluster.get("primary_board_item_url") or ""
+    board_url = item.get("board_url") or cluster.get("primary_board_url") or ""
+    level = source_level(source_url, board_item_url, board_url, search_url)
+    return source_url, board_item_url, board_url, search_url, level
 
 
 def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
@@ -243,7 +257,7 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
 
     copy = TYPE_COPY.get(topic_type(item), DEFAULT_COPY)
     directions = directions_for(item)
-    source_url, trace_url, search_url = source_fields(item, cluster, title, platform)
+    source_url, board_item_url, board_url, search_url, level = source_fields(item, cluster, title, platform)
 
     if bucket == "top_inspiration":
         usage = MATERIAL_USAGE[index % 5]
@@ -261,11 +275,14 @@ def score_entry(item: dict, cluster: dict, index: int, bucket: str) -> dict:
     return {
         "original_title": title,
         "source_platform": platform,
+        "board_name": item.get("board_name") or first_non_empty(cluster.get("board_names", [])) or platform,
         "source_rank": rank,
         "crawl_time": item.get("crawl_time"),
         "source_url": source_url,
-        "trace_url": trace_url,
+        "board_item_url": board_item_url,
+        "board_url": board_url,
         "search_url": search_url,
+        "source_level": level,
         "hotspot_summary": copy["summary"],
         "why_worth_attention": copy["why"],
         "interest_point": copy["interest"],
@@ -291,6 +308,13 @@ def build_bucket(clusters: list[dict], bucket: str, limit: int, sort_key) -> lis
         item = cluster.get("items", [{}])[0]
         entries.append(score_entry(item, cluster, index, bucket))
     return entries
+
+
+def first_non_empty(values: list[str]) -> str:
+    for value in values:
+        if value:
+            return value
+    return ""
 
 
 def main() -> None:

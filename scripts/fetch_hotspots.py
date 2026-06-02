@@ -30,6 +30,17 @@ SEARCH_URLS = {
     "B站热门": "https://search.bilibili.com/all?keyword={keyword}",
 }
 
+BOARD_URLS = {
+    "微博热搜": "https://s.weibo.com/top/summary",
+    "百度热搜": "https://top.baidu.com/board?tab=realtime",
+    "抖音热点": "https://www.douyin.com/hot",
+    "小红书热点": "https://www.xiaohongshu.com/explore",
+    "今日头条热榜": "https://www.toutiao.com/hot-event/hot-board/",
+    "腾讯热点": "https://news.qq.com/",
+    "知乎热榜": "https://www.zhihu.com/hot",
+    "B站热门": "https://www.bilibili.com/v/popular/all",
+}
+
 MOCK_TOPICS = {
     "微博热搜": [
         ("某热门剧女主选择引发网友讨论", ["娱乐影视话题", "女性成长", "关系边界"]),
@@ -123,20 +134,30 @@ def search_url(platform: str, title: str) -> str:
     return SEARCH_URLS[platform].format(keyword=keyword)
 
 
+def board_item_url(platform: str, rank: int, slug: str) -> str:
+    board = BOARD_URLS[platform]
+    return f"{board}#mock-board-rank-{rank}-{slug}"
+
+
 def make_item(platform: str, rank: int, title: str, tags: list[str], now: datetime, index: int) -> dict:
     slug = f"mock-{now:%Y%m%d}-{index:03d}"
-    url = search_url(platform, title)
+    auxiliary_search_url = search_url(platform, title)
+    board_url = BOARD_URLS[platform]
+    item_url = board_item_url(platform, rank, slug)
     return {
         "id": slug,
         "source_platform": platform,
+        "board_name": platform,
         "source_category": PLATFORM_CATEGORIES[platform],
         "original_title": title,
         "source_rank": rank,
         "hot_score": max(50, 102 - rank * 3 - index % 7),
         "crawl_time": now.isoformat(),
         "source_url": "",
-        "trace_url": url,
-        "search_url": url,
+        "board_item_url": item_url,
+        "board_url": board_url,
+        "search_url": auxiliary_search_url,
+        "source_level": "board_item",
         "is_top10_direct": rank <= 10,
         "tags_raw": tags,
     }

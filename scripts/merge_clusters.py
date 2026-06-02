@@ -27,6 +27,18 @@ def first_non_empty(values: list[str]) -> str:
     return ""
 
 
+def source_level(source_url: str, board_item_url: str, board_url: str, search_url: str) -> str:
+    if source_url:
+        return "original"
+    if board_item_url:
+        return "board_item"
+    if board_url:
+        return "board_page"
+    if search_url:
+        return "search_fallback"
+    return "no_link"
+
+
 def main() -> None:
     now = shanghai_now()
     date_text = now.strftime("%Y-%m-%d")
@@ -48,6 +60,7 @@ def main() -> None:
                     "main_title": title,
                     "original_titles": [],
                     "source_platforms": [],
+                    "board_names": [],
                     "first_seen": item.get("crawl_time"),
                     "last_seen": item.get("crawl_time"),
                     "highest_rank": item.get("source_rank", 999),
@@ -55,10 +68,13 @@ def main() -> None:
                     "is_multi_platform": False,
                     "heat_trend": "new",
                     "primary_source_url": "",
-                    "primary_trace_url": "",
+                    "primary_board_item_url": "",
+                    "primary_board_url": "",
                     "primary_search_url": "",
+                    "source_level": "no_link",
                     "source_urls": [],
-                    "trace_urls": [],
+                    "board_item_urls": [],
+                    "board_urls": [],
                     "search_urls": [],
                     "items": [],
                 },
@@ -66,16 +82,18 @@ def main() -> None:
             cluster["original_titles"].append(title)
             if item.get("source_platform") not in cluster["source_platforms"]:
                 cluster["source_platforms"].append(item.get("source_platform"))
+            if item.get("board_name") not in cluster["board_names"]:
+                cluster["board_names"].append(item.get("board_name"))
             cluster["first_seen"] = min(cluster["first_seen"], item.get("crawl_time"))
             cluster["last_seen"] = max(cluster["last_seen"], item.get("crawl_time"))
             cluster["highest_rank"] = min(cluster["highest_rank"], item.get("source_rank", 999))
             cluster["appear_count"] += 1
             if item.get("source_url"):
                 cluster["source_urls"].append(item["source_url"])
-            if item.get("trace_url"):
-                cluster["trace_urls"].append(item["trace_url"])
-            elif item.get("search_url"):
-                cluster["trace_urls"].append(item["search_url"])
+            if item.get("board_item_url"):
+                cluster["board_item_urls"].append(item["board_item_url"])
+            if item.get("board_url"):
+                cluster["board_urls"].append(item["board_url"])
             if item.get("search_url"):
                 cluster["search_urls"].append(item["search_url"])
             cluster["items"].append(item)
@@ -84,11 +102,19 @@ def main() -> None:
     for cluster in clusters_by_title.values():
         cluster["original_titles"] = sorted(set(cluster["original_titles"]))
         cluster["source_urls"] = sorted(set(cluster["source_urls"]))
-        cluster["trace_urls"] = sorted(set(cluster["trace_urls"]))
+        cluster["board_item_urls"] = sorted(set(cluster["board_item_urls"]))
+        cluster["board_urls"] = sorted(set(cluster["board_urls"]))
         cluster["search_urls"] = sorted(set(cluster["search_urls"]))
         cluster["primary_source_url"] = first_non_empty(cluster["source_urls"])
-        cluster["primary_trace_url"] = first_non_empty(cluster["trace_urls"]) or first_non_empty(cluster["search_urls"])
+        cluster["primary_board_item_url"] = first_non_empty(cluster["board_item_urls"])
+        cluster["primary_board_url"] = first_non_empty(cluster["board_urls"])
         cluster["primary_search_url"] = first_non_empty(cluster["search_urls"])
+        cluster["source_level"] = source_level(
+            cluster["primary_source_url"],
+            cluster["primary_board_item_url"],
+            cluster["primary_board_url"],
+            cluster["primary_search_url"],
+        )
         cluster["is_multi_platform"] = len(cluster["source_platforms"]) > 1
         cluster["heat_trend"] = trend_for(cluster)
         clusters.append(cluster)

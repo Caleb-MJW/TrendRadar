@@ -33,7 +33,10 @@ def main() -> None:
     link_counts = Counter(
         item.get("source_platform", "未知平台")
         for item in items
-        if item.get("source_url") or item.get("trace_url") or item.get("search_url")
+        if item.get("source_url")
+        or item.get("board_item_url")
+        or item.get("board_url")
+        or item.get("search_url")
     )
 
     sources = []
