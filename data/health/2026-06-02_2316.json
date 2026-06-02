@@ -1,0 +1,53 @@
+{
+  "date": "2026-06-02",
+  "time": "2316",
+  "timezone": "Asia/Shanghai",
+  "generated_at": "2026-06-02T23:16:31.895924+08:00",
+  "mode": "real",
+  "sources": [
+    {
+      "platform": "百度热搜",
+      "status": "normal",
+      "fetched_count": 20,
+      "with_source_url_count": 0,
+      "with_board_item_url_count": 0,
+      "with_board_url_count": 20,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:16:26.531704+08:00",
+      "error": null
+    },
+    {
+      "platform": "微博热搜",
+      "status": "failed",
+      "fetched_count": 0,
+      "with_source_url_count": 0,
+      "with_board_item_url_count": 0,
+      "with_board_url_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:16:26.531704+08:00",
+      "error": "微博热搜页面未解析到榜单条目"
+    },
+    {
+      "platform": "知乎热榜",
+      "status": "failed",
+      "fetched_count": 0,
+      "with_source_url_count": 0,
+      "with_board_item_url_count": 0,
+      "with_board_url_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:16:26.531704+08:00",
+      "error": "HTTP Error 401: Authorization Required"
+    },
+    {
+      "platform": "B站热门",
+      "status": "failed",
+      "fetched_count": 0,
+      "with_source_url_count": 0,
+      "with_board_item_url_count": 0,
+      "with_board_url_count": 0,
+      "source_origin_type": "hotlist",
+      "last_updated": "2026-06-02T23:16:26.531704+08:00",
+      "error": "B站热门接口未返回可用条目"
+    }
+  ]
+}
