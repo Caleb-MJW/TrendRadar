@@ -1,12 +1,13 @@
 {
   "date": "2026-06-02",
-  "generated_at": "2026-06-02T23:02:20.275596+08:00",
+  "generated_at": "2026-06-02T23:17:11.767203+08:00",
   "mode": "real",
-  "summary": "分析数据已生成；热点簇数据已生成；健康状态文件 1 份。该归档为 real 数据链路结果。",
+  "summary": "分析数据已生成；热点簇数据已生成；健康状态文件 2 份。该归档为 real 数据链路结果。",
   "analysis_file": "data/daily/2026-06-02_analysis.json",
   "clusters_file": "data/clusters/2026-06-02.json",
   "health_files": [
-    "data/health/2026-06-02_2301.json"
+    "data/health/2026-06-02_2301.json",
+    "data/health/2026-06-02_2316.json"
   ],
   "archive_html": "output/archive/2026-06-02.html"
 }
