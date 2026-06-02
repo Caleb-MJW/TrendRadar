@@ -1,0 +1,1933 @@
+{
+  "date": "2026-06-02",
+  "timezone": "Asia/Shanghai",
+  "generated_at": "2026-06-02T18:25:28.587069+08:00",
+  "mode": "mock",
+  "today_overview": {
+    "summary": "今日模拟热点覆盖职业安全感、AI效率、女性成长、家庭健康、低成本社交与城市生活变化。",
+    "total_clusters": 24,
+    "top_platforms": [
+      "B站热门",
+      "今日头条热榜",
+      "小红书热点",
+      "微博热搜",
+      "抖音热点",
+      "百度热搜",
+      "知乎热榜",
+      "腾讯热点"
+    ],
+    "score_weights": {
+      "hot_score": 0.45,
+      "interest_score": 0.35,
+      "weak_connection_score": 0.15,
+      "safety_score": 0.05
+    }
+  },
+  "top_hot": [
+    {
+      "original_title": "城市夜校课程再次受到关注",
+      "source_platform": "今日头条热榜",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-21",
+      "trace_url": "https://example.com/traces/mock-20260602-21",
+      "search_url": "https://example.com/search?q=城市夜校课程再次受到关注",
+      "hotspot_summary": "模拟分析：城市夜校课程再次受到关注 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 66.5,
+      "interest_score": 75.2,
+      "weak_connection_score": 66,
+      "safety_score": 88,
+      "total_score": 70.55,
+      "weak_connection_directions": [
+        "城市生活变化"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“城市生活变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "low",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "年轻人重新规划职业安全感",
+      "source_platform": "微博热搜",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-01",
+      "trace_url": "https://example.com/traces/mock-20260602-01",
+      "search_url": "https://example.com/search?q=年轻人重新规划职业安全感",
+      "hotspot_summary": "模拟分析：年轻人重新规划职业安全感 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 78.2,
+      "weak_connection_score": 68,
+      "safety_score": 90,
+      "total_score": 87.07,
+      "weak_connection_directions": [
+        "职业选择"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“职业选择”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "职场人开始重视长期健康投资",
+      "source_platform": "抖音热点",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-11",
+      "trace_url": "https://example.com/traces/mock-20260602-11",
+      "search_url": "https://example.com/search?q=职场人开始重视长期健康投资",
+      "hotspot_summary": "模拟分析：职场人开始重视长期健康投资 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 86.5,
+      "interest_score": 81.2,
+      "weak_connection_score": 70,
+      "safety_score": 92,
+      "total_score": 82.44,
+      "weak_connection_directions": [
+        "健康养老"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“健康养老”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "AI工具改变职场效率",
+      "source_platform": "百度热搜",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-02",
+      "trace_url": "https://example.com/traces/mock-20260602-02",
+      "search_url": "https://example.com/search?q=AI工具改变职场效率",
+      "hotspot_summary": "模拟分析：AI工具改变职场效率 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 83.4,
+      "weak_connection_score": 72,
+      "safety_score": 94,
+      "total_score": 89.69,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "年轻人把保险当作风险管理工具",
+      "source_platform": "腾讯热点",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-22",
+      "trace_url": "https://example.com/traces/mock-20260602-22",
+      "search_url": "https://example.com/search?q=年轻人把保险当作风险管理工具",
+      "hotspot_summary": "模拟分析：年轻人把保险当作风险管理工具 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 63.5,
+      "interest_score": 86.4,
+      "weak_connection_score": 74,
+      "safety_score": 88,
+      "total_score": 74.31,
+      "weak_connection_directions": [
+        "财富风险"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“财富风险”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "本地生活活动带动社区连接",
+      "source_platform": "小红书热点",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-12",
+      "trace_url": "https://example.com/traces/mock-20260602-12",
+      "search_url": "https://example.com/search?q=本地生活活动带动社区连接",
+      "hotspot_summary": "模拟分析：本地生活活动带动社区连接 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 83.5,
+      "interest_score": 89.4,
+      "weak_connection_score": 66,
+      "safety_score": 90,
+      "total_score": 83.27,
+      "weak_connection_directions": [
+        "活动经营"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“活动经营”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "亲子运动打卡成为家庭仪式",
+      "source_platform": "知乎热榜",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-23",
+      "trace_url": "https://example.com/traces/mock-20260602-23",
+      "search_url": "https://example.com/search?q=亲子运动打卡成为家庭仪式",
+      "hotspot_summary": "模拟分析：亲子运动打卡成为家庭仪式 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 60.5,
+      "interest_score": 91.6,
+      "weak_connection_score": 68,
+      "safety_score": 92,
+      "total_score": 74.08,
+      "weak_connection_directions": [
+        "家庭责任"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "宝妈重返职场经验引发共鸣",
+      "source_platform": "今日头条热榜",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-13",
+      "trace_url": "https://example.com/traces/mock-20260602-13",
+      "search_url": "https://example.com/search?q=宝妈重返职场经验引发共鸣",
+      "hotspot_summary": "模拟分析：宝妈重返职场经验引发共鸣 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 80.5,
+      "interest_score": 94.6,
+      "weak_connection_score": 70,
+      "safety_score": 94,
+      "total_score": 84.54,
+      "weak_connection_directions": [
+        "宝妈转型"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“宝妈转型”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "热门电视剧引发女性成长讨论",
+      "source_platform": "抖音热点",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-03",
+      "trace_url": "https://example.com/traces/mock-20260602-03",
+      "search_url": "https://example.com/search?q=热门电视剧引发女性成长讨论",
+      "hotspot_summary": "模拟分析：热门电视剧引发女性成长讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 73.6,
+      "weak_connection_score": 72,
+      "safety_score": 88,
+      "total_score": 85.96,
+      "weak_connection_directions": [
+        "女性成长"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“女性成长”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "AI简历助手进入毕业季讨论",
+      "source_platform": "腾讯热点",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-14",
+      "trace_url": "https://example.com/traces/mock-20260602-14",
+      "search_url": "https://example.com/search?q=AI简历助手进入毕业季讨论",
+      "hotspot_summary": "模拟分析：AI简历助手进入毕业季讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 77.5,
+      "interest_score": 75.8,
+      "weak_connection_score": 74,
+      "safety_score": 90,
+      "total_score": 77.0,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "健康管理成为家庭新话题",
+      "source_platform": "小红书热点",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-04",
+      "trace_url": "https://example.com/traces/mock-20260602-04",
+      "search_url": "https://example.com/search?q=健康管理成为家庭新话题",
+      "hotspot_summary": "模拟分析：健康管理成为家庭新话题 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 97.5,
+      "interest_score": 78.8,
+      "weak_connection_score": 66,
+      "safety_score": 92,
+      "total_score": 85.95,
+      "weak_connection_directions": [
+        "家庭责任",
+        "健康养老"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "短剧内容带动情绪价值讨论",
+      "source_platform": "B站热门",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-24",
+      "trace_url": "https://example.com/traces/mock-20260602-24",
+      "search_url": "https://example.com/search?q=短剧内容带动情绪价值讨论",
+      "hotspot_summary": "模拟分析：短剧内容带动情绪价值讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 57.5,
+      "interest_score": 81.8,
+      "weak_connection_score": 68,
+      "safety_score": 94,
+      "total_score": 69.41,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "low",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "低成本社交方式走红",
+      "source_platform": "今日头条热榜",
+      "source_rank": 5,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-05",
+      "trace_url": "https://example.com/traces/mock-20260602-05",
+      "search_url": "https://example.com/search?q=低成本社交方式走红",
+      "hotspot_summary": "模拟分析：低成本社交方式走红 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 94.5,
+      "interest_score": 84.0,
+      "weak_connection_score": 70,
+      "safety_score": 88,
+      "total_score": 86.83,
+      "weak_connection_directions": [
+        "圈层社交"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“圈层社交”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "年轻家庭尝试低预算周末计划",
+      "source_platform": "知乎热榜",
+      "source_rank": 5,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-15",
+      "trace_url": "https://example.com/traces/mock-20260602-15",
+      "search_url": "https://example.com/search?q=年轻家庭尝试低预算周末计划",
+      "hotspot_summary": "模拟分析：年轻家庭尝试低预算周末计划 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 74.5,
+      "interest_score": 87.0,
+      "weak_connection_score": 72,
+      "safety_score": 90,
+      "total_score": 79.27,
+      "weak_connection_directions": [
+        "家庭责任"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "平台型服务提升小团队效率",
+      "source_platform": "B站热门",
+      "source_rank": 6,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-16",
+      "trace_url": "https://example.com/traces/mock-20260602-16",
+      "search_url": "https://example.com/search?q=平台型服务提升小团队效率",
+      "hotspot_summary": "模拟分析：平台型服务提升小团队效率 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 71.5,
+      "interest_score": 89.2,
+      "weak_connection_score": 74,
+      "safety_score": 92,
+      "total_score": 79.09,
+      "weak_connection_directions": [
+        "平台价值",
+        "人才发展"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“平台价值”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "年轻人消费观变化",
+      "source_platform": "腾讯热点",
+      "source_rank": 6,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-06",
+      "trace_url": "https://example.com/traces/mock-20260602-06",
+      "search_url": "https://example.com/search?q=年轻人消费观变化",
+      "hotspot_summary": "模拟分析：年轻人消费观变化 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 91.5,
+      "interest_score": 92.2,
+      "weak_connection_score": 66,
+      "safety_score": 94,
+      "total_score": 88.05,
+      "weak_connection_directions": [
+        "消费观念变化"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“消费观念变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "亲子教育焦虑讨论升温",
+      "source_platform": "知乎热榜",
+      "source_rank": 7,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-07",
+      "trace_url": "https://example.com/traces/mock-20260602-07",
+      "search_url": "https://example.com/search?q=亲子教育焦虑讨论升温",
+      "hotspot_summary": "模拟分析：亲子教育焦虑讨论升温 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 88.5,
+      "interest_score": 70.4,
+      "weak_connection_score": 68,
+      "safety_score": 88,
+      "total_score": 79.07,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "银发家庭健康陪伴需求上升",
+      "source_platform": "微博热搜",
+      "source_rank": 7,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-17",
+      "trace_url": "https://example.com/traces/mock-20260602-17",
+      "search_url": "https://example.com/search?q=银发家庭健康陪伴需求上升",
+      "hotspot_summary": "模拟分析：银发家庭健康陪伴需求上升 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 68.5,
+      "interest_score": 73.4,
+      "weak_connection_score": 70,
+      "safety_score": 90,
+      "total_score": 71.52,
+      "weak_connection_directions": [
+        "家庭责任",
+        "健康养老"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "low",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "大湾区城市生活热度上升",
+      "source_platform": "B站热门",
+      "source_rank": 8,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-08",
+      "trace_url": "https://example.com/traces/mock-20260602-08",
+      "search_url": "https://example.com/search?q=大湾区城市生活热度上升",
+      "hotspot_summary": "模拟分析：大湾区城市生活热度上升 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 85.5,
+      "interest_score": 75.6,
+      "weak_connection_score": 72,
+      "safety_score": 92,
+      "total_score": 80.33,
+      "weak_connection_directions": [
+        "城市生活变化"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“城市生活变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "全网最热TOP20"
+    },
+    {
+      "original_title": "新型社群活动重塑熟人圈层",
+      "source_platform": "百度热搜",
+      "source_rank": 8,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-18",
+      "trace_url": "https://example.com/traces/mock-20260602-18",
+      "search_url": "https://example.com/search?q=新型社群活动重塑熟人圈层",
+      "hotspot_summary": "模拟分析：新型社群活动重塑熟人圈层 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 65.5,
+      "interest_score": 78.6,
+      "weak_connection_score": 74,
+      "safety_score": 94,
+      "total_score": 72.78,
+      "weak_connection_directions": [
+        "圈层社交",
+        "活动经营"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“圈层社交”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "全网最热TOP20"
+    }
+  ],
+  "top_interesting": [
+    {
+      "original_title": "银发家庭健康陪伴需求上升",
+      "source_platform": "微博热搜",
+      "source_rank": 7,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-17",
+      "trace_url": "https://example.com/traces/mock-20260602-17",
+      "search_url": "https://example.com/search?q=银发家庭健康陪伴需求上升",
+      "hotspot_summary": "模拟分析：银发家庭健康陪伴需求上升 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 68.5,
+      "interest_score": 70.4,
+      "weak_connection_score": 66,
+      "safety_score": 88,
+      "total_score": 69.77,
+      "weak_connection_directions": [
+        "家庭责任",
+        "健康养老"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "low",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "大湾区城市生活热度上升",
+      "source_platform": "B站热门",
+      "source_rank": 8,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-08",
+      "trace_url": "https://example.com/traces/mock-20260602-08",
+      "search_url": "https://example.com/search?q=大湾区城市生活热度上升",
+      "hotspot_summary": "模拟分析：大湾区城市生活热度上升 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 85.5,
+      "interest_score": 72.6,
+      "weak_connection_score": 68,
+      "safety_score": 90,
+      "total_score": 78.58,
+      "weak_connection_directions": [
+        "城市生活变化"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“城市生活变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "城市夜校课程再次受到关注",
+      "source_platform": "今日头条热榜",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-21",
+      "trace_url": "https://example.com/traces/mock-20260602-21",
+      "search_url": "https://example.com/search?q=城市夜校课程再次受到关注",
+      "hotspot_summary": "模拟分析：城市夜校课程再次受到关注 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 66.5,
+      "interest_score": 81.2,
+      "weak_connection_score": 70,
+      "safety_score": 92,
+      "total_score": 73.44,
+      "weak_connection_directions": [
+        "城市生活变化"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“城市生活变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "本地生活活动带动社区连接",
+      "source_platform": "小红书热点",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-12",
+      "trace_url": "https://example.com/traces/mock-20260602-12",
+      "search_url": "https://example.com/search?q=本地生活活动带动社区连接",
+      "hotspot_summary": "模拟分析：本地生活活动带动社区连接 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 83.5,
+      "interest_score": 83.4,
+      "weak_connection_score": 72,
+      "safety_score": 94,
+      "total_score": 82.27,
+      "weak_connection_directions": [
+        "活动经营"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“活动经营”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "热门电视剧引发女性成长讨论",
+      "source_platform": "抖音热点",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-03",
+      "trace_url": "https://example.com/traces/mock-20260602-03",
+      "search_url": "https://example.com/search?q=热门电视剧引发女性成长讨论",
+      "hotspot_summary": "模拟分析：热门电视剧引发女性成长讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 85.6,
+      "weak_connection_score": 74,
+      "safety_score": 88,
+      "total_score": 90.46,
+      "weak_connection_directions": [
+        "女性成长"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“女性成长”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "新型社群活动重塑熟人圈层",
+      "source_platform": "百度热搜",
+      "source_rank": 8,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-18",
+      "trace_url": "https://example.com/traces/mock-20260602-18",
+      "search_url": "https://example.com/search?q=新型社群活动重塑熟人圈层",
+      "hotspot_summary": "模拟分析：新型社群活动重塑熟人圈层 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 65.5,
+      "interest_score": 84.6,
+      "weak_connection_score": 66,
+      "safety_score": 90,
+      "total_score": 73.48,
+      "weak_connection_directions": [
+        "圈层社交",
+        "活动经营"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“圈层社交”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "副业学习计划成为通勤新习惯",
+      "source_platform": "微博热搜",
+      "source_rank": 9,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-09",
+      "trace_url": "https://example.com/traces/mock-20260602-09",
+      "search_url": "https://example.com/search?q=副业学习计划成为通勤新习惯",
+      "hotspot_summary": "模拟分析：副业学习计划成为通勤新习惯 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 82.5,
+      "interest_score": 86.8,
+      "weak_connection_score": 68,
+      "safety_score": 92,
+      "total_score": 82.3,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "年轻人把保险当作风险管理工具",
+      "source_platform": "腾讯热点",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-22",
+      "trace_url": "https://example.com/traces/mock-20260602-22",
+      "search_url": "https://example.com/search?q=年轻人把保险当作风险管理工具",
+      "hotspot_summary": "模拟分析：年轻人把保险当作风险管理工具 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 63.5,
+      "interest_score": 95.4,
+      "weak_connection_score": 70,
+      "safety_score": 94,
+      "total_score": 77.17,
+      "weak_connection_directions": [
+        "财富风险"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“财富风险”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "宝妈重返职场经验引发共鸣",
+      "source_platform": "今日头条热榜",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-13",
+      "trace_url": "https://example.com/traces/mock-20260602-13",
+      "search_url": "https://example.com/search?q=宝妈重返职场经验引发共鸣",
+      "hotspot_summary": "模拟分析：宝妈重返职场经验引发共鸣 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 80.5,
+      "interest_score": 73.6,
+      "weak_connection_score": 72,
+      "safety_score": 88,
+      "total_score": 77.19,
+      "weak_connection_directions": [
+        "宝妈转型"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“宝妈转型”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "健康管理成为家庭新话题",
+      "source_platform": "小红书热点",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-04",
+      "trace_url": "https://example.com/traces/mock-20260602-04",
+      "search_url": "https://example.com/search?q=健康管理成为家庭新话题",
+      "hotspot_summary": "模拟分析：健康管理成为家庭新话题 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 97.5,
+      "interest_score": 75.8,
+      "weak_connection_score": 74,
+      "safety_score": 90,
+      "total_score": 86.0,
+      "weak_connection_directions": [
+        "家庭责任",
+        "健康养老"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "女性创业者分享轻资产转型",
+      "source_platform": "抖音热点",
+      "source_rank": 9,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-19",
+      "trace_url": "https://example.com/traces/mock-20260602-19",
+      "search_url": "https://example.com/search?q=女性创业者分享轻资产转型",
+      "hotspot_summary": "模拟分析：女性创业者分享轻资产转型 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 62.5,
+      "interest_score": 74.8,
+      "weak_connection_score": 66,
+      "safety_score": 92,
+      "total_score": 68.8,
+      "weak_connection_directions": [
+        "女性成长"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“女性成长”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "low",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "家庭财务安全感被重新讨论",
+      "source_platform": "百度热搜",
+      "source_rank": 10,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-10",
+      "trace_url": "https://example.com/traces/mock-20260602-10",
+      "search_url": "https://example.com/search?q=家庭财务安全感被重新讨论",
+      "hotspot_summary": "模拟分析：家庭财务安全感被重新讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 79.5,
+      "interest_score": 77.0,
+      "weak_connection_score": 68,
+      "safety_score": 94,
+      "total_score": 77.62,
+      "weak_connection_directions": [
+        "家庭责任",
+        "财富风险"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "亲子运动打卡成为家庭仪式",
+      "source_platform": "知乎热榜",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-23",
+      "trace_url": "https://example.com/traces/mock-20260602-23",
+      "search_url": "https://example.com/search?q=亲子运动打卡成为家庭仪式",
+      "hotspot_summary": "模拟分析：亲子运动打卡成为家庭仪式 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 60.5,
+      "interest_score": 85.6,
+      "weak_connection_score": 70,
+      "safety_score": 88,
+      "total_score": 72.09,
+      "weak_connection_directions": [
+        "家庭责任"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "AI简历助手进入毕业季讨论",
+      "source_platform": "腾讯热点",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-14",
+      "trace_url": "https://example.com/traces/mock-20260602-14",
+      "search_url": "https://example.com/search?q=AI简历助手进入毕业季讨论",
+      "hotspot_summary": "模拟分析：AI简历助手进入毕业季讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 77.5,
+      "interest_score": 87.8,
+      "weak_connection_score": 72,
+      "safety_score": 90,
+      "total_score": 80.9,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "低成本社交方式走红",
+      "source_platform": "今日头条热榜",
+      "source_rank": 5,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-05",
+      "trace_url": "https://example.com/traces/mock-20260602-05",
+      "search_url": "https://example.com/search?q=低成本社交方式走红",
+      "hotspot_summary": "模拟分析：低成本社交方式走红 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 94.5,
+      "interest_score": 90.0,
+      "weak_connection_score": 74,
+      "safety_score": 92,
+      "total_score": 89.72,
+      "weak_connection_directions": [
+        "圈层社交"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“圈层社交”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "职场新人用AI整理会议纪要",
+      "source_platform": "小红书热点",
+      "source_rank": 10,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-20",
+      "trace_url": "https://example.com/traces/mock-20260602-20",
+      "search_url": "https://example.com/search?q=职场新人用AI整理会议纪要",
+      "hotspot_summary": "模拟分析：职场新人用AI整理会议纪要 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 59.5,
+      "interest_score": 89.0,
+      "weak_connection_score": 66,
+      "safety_score": 94,
+      "total_score": 72.53,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "短剧内容带动情绪价值讨论",
+      "source_platform": "B站热门",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-24",
+      "trace_url": "https://example.com/traces/mock-20260602-24",
+      "search_url": "https://example.com/search?q=短剧内容带动情绪价值讨论",
+      "hotspot_summary": "模拟分析：短剧内容带动情绪价值讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 57.5,
+      "interest_score": 72.8,
+      "weak_connection_score": 68,
+      "safety_score": 88,
+      "total_score": 65.95,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "low",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "年轻家庭尝试低预算周末计划",
+      "source_platform": "知乎热榜",
+      "source_rank": 5,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-15",
+      "trace_url": "https://example.com/traces/mock-20260602-15",
+      "search_url": "https://example.com/search?q=年轻家庭尝试低预算周末计划",
+      "hotspot_summary": "模拟分析：年轻家庭尝试低预算周末计划 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 74.5,
+      "interest_score": 75.0,
+      "weak_connection_score": 70,
+      "safety_score": 90,
+      "total_score": 74.78,
+      "weak_connection_directions": [
+        "家庭责任"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "年轻人消费观变化",
+      "source_platform": "腾讯热点",
+      "source_rank": 6,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-06",
+      "trace_url": "https://example.com/traces/mock-20260602-06",
+      "search_url": "https://example.com/search?q=年轻人消费观变化",
+      "hotspot_summary": "模拟分析：年轻人消费观变化 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 91.5,
+      "interest_score": 77.2,
+      "weak_connection_score": 72,
+      "safety_score": 92,
+      "total_score": 83.59,
+      "weak_connection_directions": [
+        "消费观念变化"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“消费观念变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    },
+    {
+      "original_title": "年轻人重新规划职业安全感",
+      "source_platform": "微博热搜",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-01",
+      "trace_url": "https://example.com/traces/mock-20260602-01",
+      "search_url": "https://example.com/search?q=年轻人重新规划职业安全感",
+      "hotspot_summary": "模拟分析：年轻人重新规划职业安全感 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 84.2,
+      "weak_connection_score": 74,
+      "safety_score": 94,
+      "total_score": 90.27,
+      "weak_connection_directions": [
+        "职业选择"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“职业选择”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "热门有趣TOP20"
+    }
+  ],
+  "top_inspiration": [
+    {
+      "original_title": "AI工具改变职场效率",
+      "source_platform": "百度热搜",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-02",
+      "trace_url": "https://example.com/traces/mock-20260602-02",
+      "search_url": "https://example.com/search?q=AI工具改变职场效率",
+      "hotspot_summary": "模拟分析：AI工具改变职场效率 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 83.4,
+      "weak_connection_score": 72,
+      "safety_score": 94,
+      "total_score": 89.69,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "年轻人重新规划职业安全感",
+      "source_platform": "微博热搜",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-01",
+      "trace_url": "https://example.com/traces/mock-20260602-01",
+      "search_url": "https://example.com/search?q=年轻人重新规划职业安全感",
+      "hotspot_summary": "模拟分析：年轻人重新规划职业安全感 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 78.2,
+      "weak_connection_score": 68,
+      "safety_score": 90,
+      "total_score": 87.07,
+      "weak_connection_directions": [
+        "职业选择"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“职业选择”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "低成本社交方式走红",
+      "source_platform": "今日头条热榜",
+      "source_rank": 5,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-05",
+      "trace_url": "https://example.com/traces/mock-20260602-05",
+      "search_url": "https://example.com/search?q=低成本社交方式走红",
+      "hotspot_summary": "模拟分析：低成本社交方式走红 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 94.5,
+      "interest_score": 84.0,
+      "weak_connection_score": 70,
+      "safety_score": 88,
+      "total_score": 86.83,
+      "weak_connection_directions": [
+        "圈层社交"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“圈层社交”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "热门电视剧引发女性成长讨论",
+      "source_platform": "抖音热点",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-03",
+      "trace_url": "https://example.com/traces/mock-20260602-03",
+      "search_url": "https://example.com/search?q=热门电视剧引发女性成长讨论",
+      "hotspot_summary": "模拟分析：热门电视剧引发女性成长讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 100,
+      "interest_score": 73.6,
+      "weak_connection_score": 72,
+      "safety_score": 88,
+      "total_score": 85.96,
+      "weak_connection_directions": [
+        "女性成长"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“女性成长”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "健康管理成为家庭新话题",
+      "source_platform": "小红书热点",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-04",
+      "trace_url": "https://example.com/traces/mock-20260602-04",
+      "search_url": "https://example.com/search?q=健康管理成为家庭新话题",
+      "hotspot_summary": "模拟分析：健康管理成为家庭新话题 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 97.5,
+      "interest_score": 78.8,
+      "weak_connection_score": 66,
+      "safety_score": 92,
+      "total_score": 85.95,
+      "weak_connection_directions": [
+        "家庭责任",
+        "健康养老"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "宝妈重返职场经验引发共鸣",
+      "source_platform": "今日头条热榜",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-13",
+      "trace_url": "https://example.com/traces/mock-20260602-13",
+      "search_url": "https://example.com/search?q=宝妈重返职场经验引发共鸣",
+      "hotspot_summary": "模拟分析：宝妈重返职场经验引发共鸣 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 80.5,
+      "interest_score": 94.6,
+      "weak_connection_score": 70,
+      "safety_score": 94,
+      "total_score": 84.54,
+      "weak_connection_directions": [
+        "宝妈转型"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“宝妈转型”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "本地生活活动带动社区连接",
+      "source_platform": "小红书热点",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-12",
+      "trace_url": "https://example.com/traces/mock-20260602-12",
+      "search_url": "https://example.com/search?q=本地生活活动带动社区连接",
+      "hotspot_summary": "模拟分析：本地生活活动带动社区连接 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 83.5,
+      "interest_score": 89.4,
+      "weak_connection_score": 66,
+      "safety_score": 90,
+      "total_score": 83.27,
+      "weak_connection_directions": [
+        "活动经营"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“活动经营”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "职场人开始重视长期健康投资",
+      "source_platform": "抖音热点",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-11",
+      "trace_url": "https://example.com/traces/mock-20260602-11",
+      "search_url": "https://example.com/search?q=职场人开始重视长期健康投资",
+      "hotspot_summary": "模拟分析：职场人开始重视长期健康投资 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 86.5,
+      "interest_score": 81.2,
+      "weak_connection_score": 70,
+      "safety_score": 92,
+      "total_score": 82.44,
+      "weak_connection_directions": [
+        "健康养老"
+      ],
+      "material_usage": "短视频选题",
+      "inspiration_tips": [
+        "可从“健康养老”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "high",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "年轻家庭尝试低预算周末计划",
+      "source_platform": "知乎热榜",
+      "source_rank": 5,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-15",
+      "trace_url": "https://example.com/traces/mock-20260602-15",
+      "search_url": "https://example.com/search?q=年轻家庭尝试低预算周末计划",
+      "hotspot_summary": "模拟分析：年轻家庭尝试低预算周末计划 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 74.5,
+      "interest_score": 87.0,
+      "weak_connection_score": 72,
+      "safety_score": 90,
+      "total_score": 79.27,
+      "weak_connection_directions": [
+        "家庭责任"
+      ],
+      "material_usage": "早会/会议话题",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "平台型服务提升小团队效率",
+      "source_platform": "B站热门",
+      "source_rank": 6,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-16",
+      "trace_url": "https://example.com/traces/mock-20260602-16",
+      "search_url": "https://example.com/search?q=平台型服务提升小团队效率",
+      "hotspot_summary": "模拟分析：平台型服务提升小团队效率 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 71.5,
+      "interest_score": 89.2,
+      "weak_connection_score": 74,
+      "safety_score": 92,
+      "total_score": 79.09,
+      "weak_connection_directions": [
+        "平台价值",
+        "人才发展"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“平台价值”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "AI简历助手进入毕业季讨论",
+      "source_platform": "腾讯热点",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-14",
+      "trace_url": "https://example.com/traces/mock-20260602-14",
+      "search_url": "https://example.com/search?q=AI简历助手进入毕业季讨论",
+      "hotspot_summary": "模拟分析：AI简历助手进入毕业季讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 77.5,
+      "interest_score": 75.8,
+      "weak_connection_score": 74,
+      "safety_score": 90,
+      "total_score": 77.0,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "年轻人把保险当作风险管理工具",
+      "source_platform": "腾讯热点",
+      "source_rank": 2,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-22",
+      "trace_url": "https://example.com/traces/mock-20260602-22",
+      "search_url": "https://example.com/search?q=年轻人把保险当作风险管理工具",
+      "hotspot_summary": "模拟分析：年轻人把保险当作风险管理工具 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 63.5,
+      "interest_score": 86.4,
+      "weak_connection_score": 74,
+      "safety_score": 88,
+      "total_score": 74.31,
+      "weak_connection_directions": [
+        "财富风险"
+      ],
+      "material_usage": "专业观点素材",
+      "inspiration_tips": [
+        "可从“财富风险”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "亲子运动打卡成为家庭仪式",
+      "source_platform": "知乎热榜",
+      "source_rank": 3,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-23",
+      "trace_url": "https://example.com/traces/mock-20260602-23",
+      "search_url": "https://example.com/search?q=亲子运动打卡成为家庭仪式",
+      "hotspot_summary": "模拟分析：亲子运动打卡成为家庭仪式 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 60.5,
+      "interest_score": 91.6,
+      "weak_connection_score": 68,
+      "safety_score": 92,
+      "total_score": 74.08,
+      "weak_connection_directions": [
+        "家庭责任"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "城市夜校课程再次受到关注",
+      "source_platform": "今日头条热榜",
+      "source_rank": 1,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/今日头条热榜/mock-20260602-21",
+      "trace_url": "https://example.com/traces/mock-20260602-21",
+      "search_url": "https://example.com/search?q=城市夜校课程再次受到关注",
+      "hotspot_summary": "模拟分析：城市夜校课程再次受到关注 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 66.5,
+      "interest_score": 75.2,
+      "weak_connection_score": 66,
+      "safety_score": 88,
+      "total_score": 70.55,
+      "weak_connection_directions": [
+        "城市生活变化"
+      ],
+      "material_usage": "朋友圈灵感",
+      "inspiration_tips": [
+        "可从“城市生活变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    },
+    {
+      "original_title": "短剧内容带动情绪价值讨论",
+      "source_platform": "B站热门",
+      "source_rank": 4,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-24",
+      "trace_url": "https://example.com/traces/mock-20260602-24",
+      "search_url": "https://example.com/search?q=短剧内容带动情绪价值讨论",
+      "hotspot_summary": "模拟分析：短剧内容带动情绪价值讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 57.5,
+      "interest_score": 81.8,
+      "weak_connection_score": 68,
+      "safety_score": 94,
+      "total_score": 69.41,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "工作群话题",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "medium",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": true,
+      "display_bucket": "优增灵感TOP15"
+    }
+  ],
+  "watchlist": [
+    {
+      "original_title": "家庭财务安全感被重新讨论",
+      "source_platform": "百度热搜",
+      "source_rank": 10,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-10",
+      "trace_url": "https://example.com/traces/mock-20260602-10",
+      "search_url": "https://example.com/search?q=家庭财务安全感被重新讨论",
+      "hotspot_summary": "模拟分析：家庭财务安全感被重新讨论 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 79.5,
+      "interest_score": 68.0,
+      "weak_connection_score": 66,
+      "safety_score": 88,
+      "total_score": 73.88,
+      "weak_connection_directions": [
+        "家庭责任",
+        "财富风险"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "职场新人用AI整理会议纪要",
+      "source_platform": "小红书热点",
+      "source_rank": 10,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/小红书热点/mock-20260602-20",
+      "trace_url": "https://example.com/traces/mock-20260602-20",
+      "search_url": "https://example.com/search?q=职场新人用AI整理会议纪要",
+      "hotspot_summary": "模拟分析：职场新人用AI整理会议纪要 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 59.5,
+      "interest_score": 71.0,
+      "weak_connection_score": 68,
+      "safety_score": 90,
+      "total_score": 66.33,
+      "weak_connection_directions": [
+        "AI时代变化"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“AI时代变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "副业学习计划成为通勤新习惯",
+      "source_platform": "微博热搜",
+      "source_rank": 9,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-09",
+      "trace_url": "https://example.com/traces/mock-20260602-09",
+      "search_url": "https://example.com/search?q=副业学习计划成为通勤新习惯",
+      "hotspot_summary": "模拟分析：副业学习计划成为通勤新习惯 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 82.5,
+      "interest_score": 74.8,
+      "weak_connection_score": 70,
+      "safety_score": 92,
+      "total_score": 78.4,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "女性创业者分享轻资产转型",
+      "source_platform": "抖音热点",
+      "source_rank": 9,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/抖音热点/mock-20260602-19",
+      "trace_url": "https://example.com/traces/mock-20260602-19",
+      "search_url": "https://example.com/search?q=女性创业者分享轻资产转型",
+      "hotspot_summary": "模拟分析：女性创业者分享轻资产转型 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 62.5,
+      "interest_score": 77.8,
+      "weak_connection_score": 72,
+      "safety_score": 94,
+      "total_score": 70.86,
+      "weak_connection_directions": [
+        "女性成长"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“女性成长”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "大湾区城市生活热度上升",
+      "source_platform": "B站热门",
+      "source_rank": 8,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-08",
+      "trace_url": "https://example.com/traces/mock-20260602-08",
+      "search_url": "https://example.com/search?q=大湾区城市生活热度上升",
+      "hotspot_summary": "模拟分析：大湾区城市生活热度上升 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 85.5,
+      "interest_score": 81.6,
+      "weak_connection_score": 74,
+      "safety_score": 88,
+      "total_score": 82.53,
+      "weak_connection_directions": [
+        "城市生活变化"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“城市生活变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "新型社群活动重塑熟人圈层",
+      "source_platform": "百度热搜",
+      "source_rank": 8,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/百度热搜/mock-20260602-18",
+      "trace_url": "https://example.com/traces/mock-20260602-18",
+      "search_url": "https://example.com/search?q=新型社群活动重塑熟人圈层",
+      "hotspot_summary": "模拟分析：新型社群活动重塑熟人圈层 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 65.5,
+      "interest_score": 84.6,
+      "weak_connection_score": 66,
+      "safety_score": 90,
+      "total_score": 73.48,
+      "weak_connection_directions": [
+        "圈层社交",
+        "活动经营"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“圈层社交”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "亲子教育焦虑讨论升温",
+      "source_platform": "知乎热榜",
+      "source_rank": 7,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/知乎热榜/mock-20260602-07",
+      "trace_url": "https://example.com/traces/mock-20260602-07",
+      "search_url": "https://example.com/search?q=亲子教育焦虑讨论升温",
+      "hotspot_summary": "模拟分析：亲子教育焦虑讨论升温 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 88.5,
+      "interest_score": 88.4,
+      "weak_connection_score": 68,
+      "safety_score": 92,
+      "total_score": 85.56,
+      "weak_connection_directions": [
+        "观察备用"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“观察备用”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "银发家庭健康陪伴需求上升",
+      "source_platform": "微博热搜",
+      "source_rank": 7,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/微博热搜/mock-20260602-17",
+      "trace_url": "https://example.com/traces/mock-20260602-17",
+      "search_url": "https://example.com/search?q=银发家庭健康陪伴需求上升",
+      "hotspot_summary": "模拟分析：银发家庭健康陪伴需求上升 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 68.5,
+      "interest_score": 91.4,
+      "weak_connection_score": 70,
+      "safety_score": 94,
+      "total_score": 78.02,
+      "weak_connection_directions": [
+        "家庭责任",
+        "健康养老"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“家庭责任”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "平台型服务提升小团队效率",
+      "source_platform": "B站热门",
+      "source_rank": 6,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/B站热门/mock-20260602-16",
+      "trace_url": "https://example.com/traces/mock-20260602-16",
+      "search_url": "https://example.com/search?q=平台型服务提升小团队效率",
+      "hotspot_summary": "模拟分析：平台型服务提升小团队效率 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 71.5,
+      "interest_score": 71.2,
+      "weak_connection_score": 72,
+      "safety_score": 88,
+      "total_score": 72.3,
+      "weak_connection_directions": [
+        "平台价值",
+        "人才发展"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“平台价值”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    },
+    {
+      "original_title": "年轻人消费观变化",
+      "source_platform": "腾讯热点",
+      "source_rank": 6,
+      "crawl_time": "2026-06-02T18:25:12.909049+08:00",
+      "source_url": "https://example.com/腾讯热点/mock-20260602-06",
+      "trace_url": "https://example.com/traces/mock-20260602-06",
+      "search_url": "https://example.com/search?q=年轻人消费观变化",
+      "hotspot_summary": "模拟分析：年轻人消费观变化 正在形成可观察的话题热度。",
+      "why_worth_attention": "该话题连接了生活方式、职业选择与家庭责任等长期议题，适合验证灵感雷达的筛选链路。",
+      "interest_point": "讨论点不只停留在事件本身，还能延展到个人决策、社群交流和内容选题。",
+      "hot_score": 91.5,
+      "interest_score": 74.2,
+      "weak_connection_score": 74,
+      "safety_score": 90,
+      "total_score": 82.75,
+      "weak_connection_directions": [
+        "消费观念变化"
+      ],
+      "material_usage": "观察备用",
+      "inspiration_tips": [
+        "可从“消费观念变化”角度提炼一个轻量观点。",
+        "适合作为群聊破冰、短内容选题或每日观察素材。"
+      ],
+      "recommend_level": "watch",
+      "risk_note": "模拟数据，仅用于链路测试；上线前需要替换为真实来源校验和人工风险审核。",
+      "suggest_save_to_library": false,
+      "display_bucket": "观察备用"
+    }
+  ]
+}
