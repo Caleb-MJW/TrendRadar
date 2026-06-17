@@ -1,7 +1,7 @@
 {
   "date": "2026-06-17",
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-06-17T02:22:28.345600+08:00",
+  "generated_at": "2026-06-17T13:27:33.151526+08:00",
   "mode": "real",
   "warnings": [],
   "clusters": [
@@ -18,11 +18,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-06-17T02:19:17.917315+08:00",
-      "last_seen": "2026-06-17T02:19:17.917315+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
       "highest_rank": 1,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -49,6 +49,23 @@
           "source_rank": 1,
           "hot_score": 7808721,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-1-ffa203a10d20",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "习近平党建思想 意义重大",
+          "source_rank": 1,
+          "hot_score": 7808737,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -110,6 +127,110 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-06-17-021",
+      "main_title": "梅西世界波破门",
+      "original_titles": [
+        "梅西世界波破门"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 2,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-2-384cfa751df7",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "梅西世界波破门",
+          "source_rank": 2,
+          "hot_score": 7712336,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-022",
+      "main_title": "世界杯：阿根廷vs阿尔及利亚",
+      "original_titles": [
+        "世界杯：阿根廷vs阿尔及利亚"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 3,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-3-968be97d4871",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "世界杯：阿根廷vs阿尔及利亚",
+          "source_rank": 3,
+          "hot_score": 7616910,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-06-17-003",
       "main_title": "青海6.3级地震 游客正拍照忙蹲下",
       "original_titles": [
@@ -162,6 +283,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-06-17-023",
+      "main_title": "6万亿元投资“源源而来”",
+      "original_titles": [
+        "6万亿元投资“源源而来”"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 4,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-4-6bc8324e820d",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "6万亿元投资“源源而来”",
+          "source_rank": 4,
+          "hot_score": 7519942,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-06-17-004",
       "main_title": "今年高校新增了这几个专业",
       "original_titles": [
@@ -205,6 +378,58 @@
           "source_rank": 4,
           "hot_score": 7521216,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-024",
+      "main_title": "必胜客被182亿元卖了",
+      "original_titles": [
+        "必胜客被182亿元卖了"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 5,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-5-6cf4a90401c0",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "必胜客被182亿元卖了",
+          "source_rank": 5,
+          "hot_score": 7429342,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -318,6 +543,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-06-17-025",
+      "main_title": "姆巴佩一夜把纪录破了个遍",
+      "original_titles": [
+        "姆巴佩一夜把纪录破了个遍"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 6,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-6-bb3777c7c7fa",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "姆巴佩一夜把纪录破了个遍",
+          "source_rank": 6,
+          "hot_score": 7332934,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-06-17-007",
       "main_title": "世界杯：法国vs塞内加尔",
       "original_titles": [
@@ -370,6 +647,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-06-17-026",
+      "main_title": "哈兰德独中两元 挪威4-1伊拉克",
+      "original_titles": [
+        "哈兰德独中两元 挪威4-1伊拉克"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 7,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-7-deb1e050e0ab",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "哈兰德独中两元 挪威4-1伊拉克",
+          "source_rank": 7,
+          "hot_score": 7234287,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-06-17-008",
       "main_title": "姆巴佩哈兰德同日迎来首秀",
       "original_titles": [
@@ -413,6 +742,127 @@
           "source_rank": 8,
           "hot_score": 7143738,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-027",
+      "main_title": "这三类运动猝死风险更高",
+      "original_titles": [
+        "这三类运动猝死风险更高"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 8,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-8-c11d826520ad",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "这三类运动猝死风险更高",
+          "source_rank": 8,
+          "hot_score": 7138516,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-011",
+      "main_title": "游客吃面发现碗底印着“你是猪吗”",
+      "original_titles": [
+        "游客吃面发现碗底印着“你是猪吗”"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T02:19:17.917315+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 9,
+      "appear_count": 2,
+      "is_multi_platform": false,
+      "heat_trend": "steady",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-11-54c975eb60e8",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "游客吃面发现碗底印着“你是猪吗”",
+          "source_rank": 11,
+          "hot_score": 6856190,
+          "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-9-d9121de2f13a",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "游客吃面发现碗底印着“你是猪吗”",
+          "source_rank": 9,
+          "hot_score": 7042186,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -526,10 +976,10 @@
       ]
     },
     {
-      "cluster_id": "cluster-2026-06-17-011",
-      "main_title": "游客吃面发现碗底印着“你是猪吗”",
+      "cluster_id": "cluster-2026-06-17-028",
+      "main_title": "真的会出事！出门前请检查这根线",
       "original_titles": [
-        "游客吃面发现碗底印着“你是猪吗”"
+        "真的会出事！出门前请检查这根线"
       ],
       "source_platforms": [
         "百度热搜"
@@ -537,8 +987,60 @@
       "board_names": [
         "百度热搜榜"
       ],
-      "first_seen": "2026-06-17T02:19:17.917315+08:00",
-      "last_seen": "2026-06-17T02:19:17.917315+08:00",
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 10,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-10-0a712790c410",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "真的会出事！出门前请检查这根线",
+          "source_rank": 10,
+          "hot_score": 6946761,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-029",
+      "main_title": "青海地震画面：地面开裂人群趴着避险",
+      "original_titles": [
+        "青海地震画面：地面开裂人群趴着避险"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
       "highest_rank": 11,
       "appear_count": 1,
       "is_multi_platform": false,
@@ -559,16 +1061,16 @@
       "search_urls": [],
       "items": [
         {
-          "id": "real-百度热搜-11-54c975eb60e8",
+          "id": "real-百度热搜-11-a32ef432bbbf",
           "mode": "real",
           "source_origin_type": "hotlist",
           "is_reference_valid": true,
           "source_platform": "百度热搜",
           "board_name": "百度热搜榜",
-          "original_title": "游客吃面发现碗底印着“你是猪吗”",
+          "original_title": "青海地震画面：地面开裂人群趴着避险",
           "source_rank": 11,
-          "hot_score": 6856190,
-          "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "hot_score": 6848188,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -590,11 +1092,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-06-17T02:19:17.917315+08:00",
-      "last_seen": "2026-06-17T02:19:17.917315+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
       "highest_rank": 12,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -626,6 +1128,23 @@
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
           "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-12-862c77747d13",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "造谣“上海地铁顶部坠落”者被拘",
+          "source_rank": 12,
+          "hot_score": 6754019,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
         }
       ]
     },
@@ -642,11 +1161,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-06-17T02:19:17.917315+08:00",
-      "last_seen": "2026-06-17T02:19:17.917315+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
       "highest_rank": 13,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -673,6 +1192,75 @@
           "source_rank": 13,
           "hot_score": 6662053,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-19-55389d0a54dc",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "51岁工地大叔9年考下13证 月薪过万",
+          "source_rank": 19,
+          "hot_score": 6084009,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-030",
+      "main_title": "美伊谅解备忘录14点内容披露",
+      "original_titles": [
+        "美伊谅解备忘录14点内容披露"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 13,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-13-8d0e09de5ccb",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "美伊谅解备忘录14点内容披露",
+          "source_rank": 13,
+          "hot_score": 6658516,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -725,6 +1313,110 @@
           "source_rank": 14,
           "hot_score": 6568175,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-031",
+      "main_title": "男生被接连施暴 打人者母亲是民警",
+      "original_titles": [
+        "男生被接连施暴 打人者母亲是民警"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 14,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-14-de0cc8f1db00",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "男生被接连施暴 打人者母亲是民警",
+          "source_rank": 14,
+          "hot_score": 6561371,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-032",
+      "main_title": "姆巴佩梅开二度 法国3-1塞内加尔",
+      "original_titles": [
+        "姆巴佩梅开二度 法国3-1塞内加尔"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 15,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-15-7f80aa70e39e",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "姆巴佩梅开二度 法国3-1塞内加尔",
+          "source_rank": 15,
+          "hot_score": 6477598,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -838,6 +1530,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-06-17-033",
+      "main_title": "福建舰下水4周年！近距离直击科幻一幕",
+      "original_titles": [
+        "福建舰下水4周年！近距离直击科幻一幕"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 16,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-16-ad511bee2afc",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "福建舰下水4周年！近距离直击科幻一幕",
+          "source_rank": 16,
+          "hot_score": 6381883,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-06-17-017",
       "main_title": "尔冬升：香港大咖也不敢带编剧进组",
       "original_titles": [
@@ -881,6 +1625,110 @@
           "source_rank": 17,
           "hot_score": 6276874,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-034",
+      "main_title": "苹果拟明年推出折叠屏iPhone",
+      "original_titles": [
+        "苹果拟明年推出折叠屏iPhone"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 17,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-17-4521cc54ccab",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "苹果拟明年推出折叠屏iPhone",
+          "source_rank": 17,
+          "hot_score": 6275120,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-035",
+      "main_title": "佛得角门将粉丝破千万",
+      "original_titles": [
+        "佛得角门将粉丝破千万"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 18,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-18-93ea3e797df5",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "佛得角门将粉丝破千万",
+          "source_rank": 18,
+          "hot_score": 6180822,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -985,6 +1833,58 @@
           "source_rank": 19,
           "hot_score": 6086843,
           "crawl_time": "2026-06-17T02:19:17.917315+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-06-17-036",
+      "main_title": "3亿北斗工程现“脆皮底座” 官方通报",
+      "original_titles": [
+        "3亿北斗工程现“脆皮底座” 官方通报"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-06-17T10:36:09.505703+08:00",
+      "last_seen": "2026-06-17T10:36:09.505703+08:00",
+      "highest_rank": 20,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-20-07a5c8f1ca1f",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "3亿北斗工程现“脆皮底座” 官方通报",
+          "source_rank": 20,
+          "hot_score": 5996136,
+          "crawl_time": "2026-06-17T10:36:09.505703+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
