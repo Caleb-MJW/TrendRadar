@@ -1,7 +1,7 @@
 {
   "date": "2026-07-10",
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-10T01:02:46.174092+08:00",
+  "generated_at": "2026-07-10T12:35:23.725754+08:00",
   "mode": "real",
   "warnings": [],
   "clusters": [
@@ -18,11 +18,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 1,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -54,6 +54,23 @@
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
           "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-1-bf70e21bbb49",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "以科技创新支撑和引领中国式现代化",
+          "source_rank": 1,
+          "hot_score": 7808780,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
         }
       ]
     },
@@ -70,11 +87,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 2,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -101,6 +118,127 @@
           "source_rank": 2,
           "hot_score": 7713609,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-7-c99320d18c67",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "晋江起火鞋厂负责人已被控制",
+          "source_rank": 7,
+          "hot_score": 7235650,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-021",
+      "main_title": "台风“巴威”预计登陆时间地点",
+      "original_titles": [
+        "台风“巴威”预计登陆时间地点"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 2,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-2-50c4bd9aaac6",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "台风“巴威”预计登陆时间地点",
+          "source_rank": 2,
+          "hot_score": 7713793,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-022",
+      "main_title": "姆巴佩刷新世界杯8大纪录",
+      "original_titles": [
+        "姆巴佩刷新世界杯8大纪录"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 3,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-3-c4811ec54f06",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "姆巴佩刷新世界杯8大纪录",
+          "source_rank": 3,
+          "hot_score": 7618544,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -174,11 +312,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 4,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -210,6 +348,23 @@
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
           "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-4-fd0369c80dff",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "洪灾后 务必注意这9件事",
+          "source_rank": 4,
+          "hot_score": 7523298,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
         }
       ]
     },
@@ -226,11 +381,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 5,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -257,6 +412,75 @@
           "source_rank": 5,
           "hot_score": 7423846,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-18-16e408968449",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "贵港街头解放军军车一眼望不到头",
+          "source_rank": 18,
+          "hot_score": 6192957,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-023",
+      "main_title": "圆通、中通、韵达等发布告客户书",
+      "original_titles": [
+        "圆通、中通、韵达等发布告客户书"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 5,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-5-913a2d9c6087",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "圆通、中通、韵达等发布告客户书",
+          "source_rank": 5,
+          "hot_score": 7427139,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -318,6 +542,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-10-024",
+      "main_title": "日本遗孤吃中国饭长大竟要做鬼",
+      "original_titles": [
+        "日本遗孤吃中国饭长大竟要做鬼"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 6,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-6-939d407639d9",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "日本遗孤吃中国饭长大竟要做鬼",
+          "source_rank": 6,
+          "hot_score": 7333976,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-10-007",
       "main_title": "鞋厂着火部位为一层 鞋材易燃蔓延快",
       "original_titles": [
@@ -361,6 +637,58 @@
           "source_rank": 7,
           "hot_score": 7239192,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-025",
+      "main_title": "伊朗发射导弹打击美军4处军事基地",
+      "original_titles": [
+        "伊朗发射导弹打击美军4处军事基地"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 8,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-8-c986e71cb3a5",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "伊朗发射导弹打击美军4处军事基地",
+          "source_rank": 8,
+          "hot_score": 7137840,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -474,6 +802,110 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-10-026",
+      "main_title": "法国2-0战胜摩洛哥 晋级四强",
+      "original_titles": [
+        "法国2-0战胜摩洛哥 晋级四强"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 9,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-9-9fb4481f0426",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "法国2-0战胜摩洛哥 晋级四强",
+          "source_rank": 9,
+          "hot_score": 7045930,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-027",
+      "main_title": "兰州机场“捕鼠办”是一家三口",
+      "original_titles": [
+        "兰州机场“捕鼠办”是一家三口"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 10,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-10-17ea46699767",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "兰州机场“捕鼠办”是一家三口",
+          "source_rank": 10,
+          "hot_score": 6948726,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-10-010",
       "main_title": "河南造出全球最大培育钻石",
       "original_titles": [
@@ -517,6 +949,58 @@
           "source_rank": 10,
           "hot_score": 6949813,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-028",
+      "main_title": "上海一景区48个人形玻璃雕像被指诡异",
+      "original_titles": [
+        "上海一景区48个人形玻璃雕像被指诡异"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 11,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-11-b39797eedaea",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "上海一景区48个人形玻璃雕像被指诡异",
+          "source_rank": 11,
+          "hot_score": 6854630,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -590,11 +1074,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 12,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -626,6 +1110,23 @@
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
           "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-12-21c03ceae185",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "“广西横州抗蛇毒血清告急”不实",
+          "source_rank": 12,
+          "hot_score": 6751769,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
         }
       ]
     },
@@ -642,11 +1143,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 13,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -678,6 +1179,23 @@
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
           "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-13-502bf2431c09",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "福建晋江火灾已致28死",
+          "source_rank": 13,
+          "hot_score": 6660102,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
         }
       ]
     },
@@ -694,11 +1212,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-07-10T00:21:13.084701+08:00",
-      "last_seen": "2026-07-10T00:21:13.084701+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
       "highest_rank": 14,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -725,6 +1243,75 @@
           "source_rank": 14,
           "hot_score": 6566711,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-15-118855bf81fa",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "男子接吻时摔倒打翻火锅致2女子烫伤",
+          "source_rank": 15,
+          "hot_score": 6473005,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-029",
+      "main_title": "原来《百家讲坛》是真的在教东西",
+      "original_titles": [
+        "原来《百家讲坛》是真的在教东西"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 14,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-14-535decb658e7",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "原来《百家讲坛》是真的在教东西",
+          "source_rank": 14,
+          "hot_score": 6561869,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -777,6 +1364,58 @@
           "source_rank": 15,
           "hot_score": 6466536,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-030",
+      "main_title": "法国队率先晋级四强 马克龙发声",
+      "original_titles": [
+        "法国队率先晋级四强 马克龙发声"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 16,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-16-cfbb56da49f0",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "法国队率先晋级四强 马克龙发声",
+          "source_rank": 16,
+          "hot_score": 6378810,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -890,6 +1529,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-10-031",
+      "main_title": "起火鞋厂年产量约300万双",
+      "original_titles": [
+        "起火鞋厂年产量约300万双"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 17,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-17-73ace2ce5774",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "起火鞋厂年产量约300万双",
+          "source_rank": 17,
+          "hot_score": 6283301,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-10-018",
       "main_title": "美特战分队现身台岛 新动向很危险",
       "original_titles": [
@@ -942,6 +1633,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-10-032",
+      "main_title": "台风+暴雨+强对流天气 三预警齐发",
+      "original_titles": [
+        "台风+暴雨+强对流天气 三预警齐发"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 19,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-19-58a858a0cf42",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "台风+暴雨+强对流天气 三预警齐发",
+          "source_rank": 19,
+          "hot_score": 6081945,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-10-019",
       "main_title": "哈兰德全网征集中国旅行攻略",
       "original_titles": [
@@ -985,6 +1728,58 @@
           "source_rank": 19,
           "hot_score": 6092910,
           "crawl_time": "2026-07-10T00:21:13.084701+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-10-033",
+      "main_title": "教师“抱臂叉腰”有被投诉风险",
+      "original_titles": [
+        "教师“抱臂叉腰”有被投诉风险"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-10T09:47:08.464692+08:00",
+      "last_seen": "2026-07-10T09:47:08.464692+08:00",
+      "highest_rank": 20,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-20-dc105756af0a",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "教师“抱臂叉腰”有被投诉风险",
+          "source_rank": 20,
+          "hot_score": 5990166,
+          "crawl_time": "2026-07-10T09:47:08.464692+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
