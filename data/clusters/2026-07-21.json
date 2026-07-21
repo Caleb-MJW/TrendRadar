@@ -1,7 +1,7 @@
 {
   "date": "2026-07-21",
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-07-21T11:57:09.982741+08:00",
+  "generated_at": "2026-07-21T15:12:16.245280+08:00",
   "mode": "real",
   "warnings": [],
   "clusters": [
@@ -53,6 +53,222 @@
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-040",
+      "main_title": "树恨你",
+      "original_titles": [
+        "树恨你"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 1,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1h4KU66ENd",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1h4KU66ENd",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1h4KU66ENd"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1h4KU66ENd"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-1-b50d94029c90",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "树恨你",
+          "source_rank": 1,
+          "hot_score": 4109647,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1h4KU66ENd",
+          "board_item_url": "https://www.bilibili.com/video/BV1h4KU66ENd",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-021",
+      "main_title": "鼓励包容并蓄 促进文明互鉴",
+      "original_titles": [
+        "鼓励包容并蓄 促进文明互鉴"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 1,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-1-4bdcfa75df4d",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "鼓励包容并蓄 促进文明互鉴",
+          "source_rank": 1,
+          "hot_score": 7809241,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-022",
+      "main_title": "女生高考684分花3000元咨询进双非",
+      "original_titles": [
+        "女生高考684分花3000元咨询进双非"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 2,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-2-9e102e9d7758",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "女生高考684分花3000元咨询进双非",
+          "source_rank": 2,
+          "hot_score": 7712403,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-041",
+      "main_title": "新乐器！订书钉演奏《千本樱》",
+      "original_titles": [
+        "新乐器！订书钉演奏《千本樱》"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 2,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV13YNd6dEb9",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV13YNd6dEb9",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV13YNd6dEb9"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV13YNd6dEb9"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-2-d7b6287c3666",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "新乐器！订书钉演奏《千本樱》",
+          "source_rank": 2,
+          "hot_score": 9622871,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV13YNd6dEb9",
+          "board_item_url": "https://www.bilibili.com/video/BV13YNd6dEb9",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
           "tags_raw": []
         }
       ]
@@ -162,6 +378,166 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-023",
+      "main_title": "中方就菲律宾蓄意挑衅提出严正交涉",
+      "original_titles": [
+        "中方就菲律宾蓄意挑衅提出严正交涉"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 3,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-3-245fddb351f0",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "中方就菲律宾蓄意挑衅提出严正交涉",
+          "source_rank": 3,
+          "hot_score": 7617709,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-042",
+      "main_title": "无骨草鱼 无骨草鱼教学，十年老师傅无保留教大家，简单易学。",
+      "original_titles": [
+        "无骨草鱼 无骨草鱼教学，十年老师傅无保留教大家，简单易学。"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 3,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1P6KA6NEDq",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1P6KA6NEDq",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1P6KA6NEDq"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1P6KA6NEDq"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-3-9aa02ae97ea1",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "无骨草鱼 无骨草鱼教学，十年老师傅无保留教大家，简单易学。",
+          "source_rank": 3,
+          "hot_score": 2451063,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1P6KA6NEDq",
+          "board_item_url": "https://www.bilibili.com/video/BV1P6KA6NEDq",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-024",
+      "main_title": "中国制造加速涌现“新”力量",
+      "original_titles": [
+        "中国制造加速涌现“新”力量"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 4,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-4-7cf199d16a1c",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "中国制造加速涌现“新”力量",
+          "source_rank": 4,
+          "hot_score": 7523403,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-004",
       "main_title": "今天为什么需要世界人工智能大会",
       "original_titles": [
@@ -205,6 +581,170 @@
           "source_rank": 4,
           "hot_score": 7521857,
           "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-043",
+      "main_title": "水皮",
+      "original_titles": [
+        "水皮"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 4,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1dmKJ6YEXV",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1dmKJ6YEXV",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1dmKJ6YEXV"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1dmKJ6YEXV"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-4-6b7e7511342c",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "水皮",
+          "source_rank": 4,
+          "hot_score": 3458144,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1dmKJ6YEXV",
+          "board_item_url": "https://www.bilibili.com/video/BV1dmKJ6YEXV",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-044",
+      "main_title": "67岁老人坚持锻炼身体不给儿女添麻烦教程",
+      "original_titles": [
+        "67岁老人坚持锻炼身体不给儿女添麻烦教程"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 5,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1sUKn6QEQG",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1sUKn6QEQG",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1sUKn6QEQG"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1sUKn6QEQG"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-5-dea4317bf4e9",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "67岁老人坚持锻炼身体不给儿女添麻烦教程",
+          "source_rank": 5,
+          "hot_score": 3361929,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1sUKn6QEQG",
+          "board_item_url": "https://www.bilibili.com/video/BV1sUKn6QEQG",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-025",
+      "main_title": "卖一辆10万元新车仅赚1500元",
+      "original_titles": [
+        "卖一辆10万元新车仅赚1500元"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 5,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-5-d0b584dd8407",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "卖一辆10万元新车仅赚1500元",
+          "source_rank": 5,
+          "hot_score": 7424263,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -266,6 +806,114 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-026",
+      "main_title": "《少林足球》多位演员已去世",
+      "original_titles": [
+        "《少林足球》多位演员已去世"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 6,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-6-d14dcae6aab5",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "《少林足球》多位演员已去世",
+          "source_rank": 6,
+          "hot_score": 7331488,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-045",
+      "main_title": "《鸣潮》巡回演唱会「致予新世界」官方录播",
+      "original_titles": [
+        "《鸣潮》巡回演唱会「致予新世界」官方录播"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 6,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1XhKr69EDd",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1XhKr69EDd",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1XhKr69EDd"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1XhKr69EDd"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-6-7396c7958fd3",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "《鸣潮》巡回演唱会「致予新世界」官方录播",
+          "source_rank": 6,
+          "hot_score": 2702286,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1XhKr69EDd",
+          "board_item_url": "https://www.bilibili.com/video/BV1XhKr69EDd",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-006",
       "main_title": "西班牙一男孩在夺冠庆祝活动中死亡",
       "original_titles": [
@@ -313,6 +961,131 @@
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-009",
+      "main_title": "从小坚持的睡前刷牙可能是错的",
+      "original_titles": [
+        "从小坚持的睡前刷牙可能是错的"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T09:25:25.943362+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 7,
+      "appear_count": 2,
+      "is_multi_platform": false,
+      "heat_trend": "steady",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-9-191ab1744d08",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "从小坚持的睡前刷牙可能是错的",
+          "source_rank": 9,
+          "hot_score": 7040233,
+          "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-7-25ed2f8e2fff",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "从小坚持的睡前刷牙可能是错的",
+          "source_rank": 7,
+          "hot_score": 7235090,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-046",
+      "main_title": "《崩坏：星穹铁道》公益第二卷：「当一颗星照亮夜空」",
+      "original_titles": [
+        "《崩坏：星穹铁道》公益第二卷：「当一颗星照亮夜空」"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 7,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1WQKn6SEaP",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1WQKn6SEaP",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1WQKn6SEaP"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1WQKn6SEaP"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-7-03f220fb4d66",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "《崩坏：星穹铁道》公益第二卷：「当一颗星照亮夜空」",
+          "source_rank": 7,
+          "hot_score": 1445844,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1WQKn6SEaP",
+          "board_item_url": "https://www.bilibili.com/video/BV1WQKn6SEaP",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
           "tags_raw": []
         }
       ]
@@ -370,6 +1143,62 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-047",
+      "main_title": "史蒂夫执教中国队！【AI全民制作人】",
+      "original_titles": [
+        "史蒂夫执教中国队！【AI全民制作人】"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 8,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV16DKq6sErJ",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV16DKq6sErJ",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV16DKq6sErJ"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV16DKq6sErJ"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-8-09b4ff8d6178",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "史蒂夫执教中国队！【AI全民制作人】",
+          "source_rank": 8,
+          "hot_score": 3234858,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV16DKq6sErJ",
+          "board_item_url": "https://www.bilibili.com/video/BV16DKq6sErJ",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-008",
       "main_title": "女儿高考完和妈妈一起扛楼赚学费",
       "original_titles": [
@@ -422,10 +1251,10 @@
       ]
     },
     {
-      "cluster_id": "cluster-2026-07-21-009",
-      "main_title": "从小坚持的睡前刷牙可能是错的",
+      "cluster_id": "cluster-2026-07-21-027",
+      "main_title": "花1.5万元买机票退票仅退432元",
       "original_titles": [
-        "从小坚持的睡前刷牙可能是错的"
+        "花1.5万元买机票退票仅退432元"
       ],
       "source_platforms": [
         "百度热搜"
@@ -433,8 +1262,60 @@
       "board_names": [
         "百度热搜榜"
       ],
-      "first_seen": "2026-07-21T09:25:25.943362+08:00",
-      "last_seen": "2026-07-21T09:25:25.943362+08:00",
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 8,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-8-0dba5fc857e0",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "花1.5万元买机票退票仅退432元",
+          "source_rank": 8,
+          "hot_score": 7137863,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-028",
+      "main_title": "26岁女子恋爱后体检发现自己是男性",
+      "original_titles": [
+        "26岁女子恋爱后体检发现自己是男性"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
       "highest_rank": 9,
       "appear_count": 1,
       "is_multi_platform": false,
@@ -455,20 +1336,76 @@
       "search_urls": [],
       "items": [
         {
-          "id": "real-百度热搜-9-191ab1744d08",
+          "id": "real-百度热搜-9-7a58ee82e082",
           "mode": "real",
           "source_origin_type": "hotlist",
           "is_reference_valid": true,
           "source_platform": "百度热搜",
           "board_name": "百度热搜榜",
-          "original_title": "从小坚持的睡前刷牙可能是错的",
+          "original_title": "26岁女子恋爱后体检发现自己是男性",
           "source_rank": 9,
-          "hot_score": 7040233,
-          "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "hot_score": 7044575,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-048",
+      "main_title": "躲在超市后门拆炸弹的三人",
+      "original_titles": [
+        "躲在超市后门拆炸弹的三人"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 9,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1qyNo6TEX3",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1qyNo6TEX3",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1qyNo6TEX3"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1qyNo6TEX3"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-9-0e7e327e69f5",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "躲在超市后门拆炸弹的三人",
+          "source_rank": 9,
+          "hot_score": 2432204,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1qyNo6TEX3",
+          "board_item_url": "https://www.bilibili.com/video/BV1qyNo6TEX3",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
           "tags_raw": []
         }
       ]
@@ -526,6 +1463,170 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-029",
+      "main_title": "女子商场遛狗不拴绳 被人摔狗扇耳光",
+      "original_titles": [
+        "女子商场遛狗不拴绳 被人摔狗扇耳光"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 10,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-10-027e568c8105",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "女子商场遛狗不拴绳 被人摔狗扇耳光",
+          "source_rank": 10,
+          "hot_score": 6951651,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-049",
+      "main_title": "穿山甲和瓜老板的世纪同框",
+      "original_titles": [
+        "穿山甲和瓜老板的世纪同框"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 10,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1WLKw6aEoT",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1WLKw6aEoT",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1WLKw6aEoT"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1WLKw6aEoT"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-10-ab46ee935592",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "穿山甲和瓜老板的世纪同框",
+          "source_rank": 10,
+          "hot_score": 2219708,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1WLKw6aEoT",
+          "board_item_url": "https://www.bilibili.com/video/BV1WLKw6aEoT",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-050",
+      "main_title": "千万博主谈b站真相（完整版）",
+      "original_titles": [
+        "千万博主谈b站真相（完整版）"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 11,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1oiKm6yEYU",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1oiKm6yEYU",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1oiKm6yEYU"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1oiKm6yEYU"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-11-9b7568c44dcd",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "千万博主谈b站真相（完整版）",
+          "source_rank": 11,
+          "hot_score": 1660042,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1oiKm6yEYU",
+          "board_item_url": "https://www.bilibili.com/video/BV1oiKm6yEYU",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-011",
       "main_title": "谢贤把家庭关系处理得非常体面",
       "original_titles": [
@@ -569,6 +1670,110 @@
           "source_rank": 11,
           "hot_score": 6857582,
           "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-030",
+      "main_title": "越来越多物业主动“开掉”业主",
+      "original_titles": [
+        "越来越多物业主动“开掉”业主"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 11,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-11-6e96ad034177",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "越来越多物业主动“开掉”业主",
+          "source_rank": 11,
+          "hot_score": 6858684,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-031",
+      "main_title": "“广西女流浪汉怀孕”系谣言",
+      "original_titles": [
+        "“广西女流浪汉怀孕”系谣言"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 12,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-12-10a1b4370272",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "“广西女流浪汉怀孕”系谣言",
+          "source_rank": 12,
+          "hot_score": 6759213,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -630,6 +1835,118 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-051",
+      "main_title": "古典美声+喉音技巧融合",
+      "original_titles": [
+        "古典美声+喉音技巧融合"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 12,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1y9K364EaB",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1y9K364EaB",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1y9K364EaB"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1y9K364EaB"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-12-f88f448f273e",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "古典美声+喉音技巧融合",
+          "source_rank": 12,
+          "hot_score": 3282290,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1y9K364EaB",
+          "board_item_url": "https://www.bilibili.com/video/BV1y9K364EaB",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-052",
+      "main_title": "【微电影】星河外卖员：晨昏线",
+      "original_titles": [
+        "【微电影】星河外卖员：晨昏线"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 13,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1W9KF6ZEUR",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1W9KF6ZEUR",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1W9KF6ZEUR"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1W9KF6ZEUR"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-13-fe176e3cd5f1",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "【微电影】星河外卖员：晨昏线",
+          "source_rank": 13,
+          "hot_score": 2273882,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1W9KF6ZEUR",
+          "board_item_url": "https://www.bilibili.com/video/BV1W9KF6ZEUR",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-013",
       "main_title": "男孩抱错妈妈 小女孩霸气护母",
       "original_titles": [
@@ -677,6 +1994,166 @@
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-032",
+      "main_title": "谢贤曾与主持人李锐结拜",
+      "original_titles": [
+        "谢贤曾与主持人李锐结拜"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 13,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-13-a37ade400069",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "谢贤曾与主持人李锐结拜",
+          "source_rank": 13,
+          "hot_score": 6662714,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-033",
+      "main_title": "BBA今年集体大降价",
+      "original_titles": [
+        "BBA今年集体大降价"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 14,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-14-25cabf93ca49",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "BBA今年集体大降价",
+          "source_rank": 14,
+          "hot_score": 6565358,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-053",
+      "main_title": "来杯好茶摇一摇，但是英语版",
+      "original_titles": [
+        "来杯好茶摇一摇，但是英语版"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 14,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1psKB6wE2t",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1psKB6wE2t",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1psKB6wE2t"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1psKB6wE2t"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-14-a6e3a8e389cf",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "来杯好茶摇一摇，但是英语版",
+          "source_rank": 14,
+          "hot_score": 2305745,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1psKB6wE2t",
+          "board_item_url": "https://www.bilibili.com/video/BV1psKB6wE2t",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
           "tags_raw": []
         }
       ]
@@ -734,6 +2211,62 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-054",
+      "main_title": "⚡对 对 子 战 神 8⚡",
+      "original_titles": [
+        "⚡对 对 子 战 神 8⚡"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 15,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1ngKq6XEgb",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1ngKq6XEgb",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1ngKq6XEgb"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1ngKq6XEgb"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-15-de87e0eb4915",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "⚡对 对 子 战 神 8⚡",
+          "source_rank": 15,
+          "hot_score": 3051695,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1ngKq6XEgb",
+          "board_item_url": "https://www.bilibili.com/video/BV1ngKq6XEgb",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-015",
       "main_title": "工人清理排水沟挖出多条大鱼",
       "original_titles": [
@@ -777,6 +2310,58 @@
           "source_rank": 15,
           "hot_score": 6478199,
           "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-034",
+      "main_title": "陈果：对中国真科技龙头不应太悲观",
+      "original_titles": [
+        "陈果：对中国真科技龙头不应太悲观"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 15,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-15-b4297543d7b7",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "陈果：对中国真科技龙头不应太悲观",
+          "source_rank": 15,
+          "hot_score": 6467159,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -838,6 +2423,222 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-055",
+      "main_title": "《坏摩托》",
+      "original_titles": [
+        "《坏摩托》"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 16,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1jjKA6DEED",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1jjKA6DEED",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1jjKA6DEED"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1jjKA6DEED"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-16-099f30a9993a",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "《坏摩托》",
+          "source_rank": 16,
+          "hot_score": 1545629,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1jjKA6DEED",
+          "board_item_url": "https://www.bilibili.com/video/BV1jjKA6DEED",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-035",
+      "main_title": "情侣采10斤菌子被本地小孩哥扔8斤",
+      "original_titles": [
+        "情侣采10斤菌子被本地小孩哥扔8斤"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 16,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-16-d27492cf3771",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "情侣采10斤菌子被本地小孩哥扔8斤",
+          "source_rank": 16,
+          "hot_score": 6374839,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-056",
+      "main_title": "《秋名山外卖神》",
+      "original_titles": [
+        "《秋名山外卖神》"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 17,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1iSKy6uEvw",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1iSKy6uEvw",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1iSKy6uEvw"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1iSKy6uEvw"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-17-bb6201dfec06",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "《秋名山外卖神》",
+          "source_rank": 17,
+          "hot_score": 2948298,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1iSKy6uEvw",
+          "board_item_url": "https://www.bilibili.com/video/BV1iSKy6uEvw",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-036",
+      "main_title": "儿女放弃接班 创始人套现13亿离场",
+      "original_titles": [
+        "儿女放弃接班 创始人套现13亿离场"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 17,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-17-0072f666f4b6",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "儿女放弃接班 创始人套现13亿离场",
+          "source_rank": 17,
+          "hot_score": 6277362,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-017",
       "main_title": "谢贤曾昏迷进ICU强撑到谢霆锋回港",
       "original_titles": [
@@ -881,6 +2682,114 @@
           "source_rank": 17,
           "hot_score": 6285172,
           "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-057",
+      "main_title": "【表里悖界】第一集 诡异降临",
+      "original_titles": [
+        "【表里悖界】第一集 诡异降临"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 18,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1FWKF6JEZJ",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1FWKF6JEZJ",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1FWKF6JEZJ"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1FWKF6JEZJ"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-18-a0320a02d262",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "【表里悖界】第一集 诡异降临",
+          "source_rank": 18,
+          "hot_score": 707113,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1FWKF6JEZJ",
+          "board_item_url": "https://www.bilibili.com/video/BV1FWKF6JEZJ",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-037",
+      "main_title": "中企高管遭杀害 嫌疑人被遣返回国",
+      "original_titles": [
+        "中企高管遭杀害 嫌疑人被遣返回国"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 18,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-18-0ed8ba418052",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "中企高管遭杀害 嫌疑人被遣返回国",
+          "source_rank": 18,
+          "hot_score": 6193037,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -994,6 +2903,114 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-07-21-038",
+      "main_title": "西班牙夺冠狂欢震动地震仪",
+      "original_titles": [
+        "西班牙夺冠狂欢震动地震仪"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 19,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-19-76ca32802600",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "西班牙夺冠狂欢震动地震仪",
+          "source_rank": 19,
+          "hot_score": 6084932,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-058",
+      "main_title": "跟着中国第一个旅游博主徐霞客的足迹去旅行，看看400年后变成了什么样！",
+      "original_titles": [
+        "跟着中国第一个旅游博主徐霞客的足迹去旅行，看看400年后变成了什么样！"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 19,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1WPNh6zEcx",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1WPNh6zEcx",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1WPNh6zEcx"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1WPNh6zEcx"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-19-cbfa5c498e22",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "跟着中国第一个旅游博主徐霞客的足迹去旅行，看看400年后变成了什么样！",
+          "source_rank": 19,
+          "hot_score": 2165764,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1WPNh6zEcx",
+          "board_item_url": "https://www.bilibili.com/video/BV1WPNh6zEcx",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-07-21-020",
       "main_title": "世界杯决赛赛后冲突还原",
       "original_titles": [
@@ -1037,6 +3054,114 @@
           "source_rank": 20,
           "hot_score": 5988161,
           "crawl_time": "2026-07-21T09:25:25.943362+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-059",
+      "main_title": "全 网 最 幸 运 的 动 画 教 程 3.5",
+      "original_titles": [
+        "全 网 最 幸 运 的 动 画 教 程 3.5"
+      ],
+      "source_platforms": [
+        "B站热门"
+      ],
+      "board_names": [
+        "B站热门"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 20,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "https://www.bilibili.com/video/BV1BfKr6vEQr",
+      "primary_board_item_url": "https://www.bilibili.com/video/BV1BfKr6vEQr",
+      "primary_board_url": "https://www.bilibili.com/v/popular/rank/all",
+      "primary_search_url": "",
+      "source_level": "original",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [
+        "https://www.bilibili.com/video/BV1BfKr6vEQr"
+      ],
+      "board_item_urls": [
+        "https://www.bilibili.com/video/BV1BfKr6vEQr"
+      ],
+      "board_urls": [
+        "https://www.bilibili.com/v/popular/rank/all"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-B站热门-20-b6a23901b9cf",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "B站热门",
+          "board_name": "B站热门",
+          "original_title": "全 网 最 幸 运 的 动 画 教 程 3.5",
+          "source_rank": 20,
+          "hot_score": 1549706,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
+          "source_url": "https://www.bilibili.com/video/BV1BfKr6vEQr",
+          "board_item_url": "https://www.bilibili.com/video/BV1BfKr6vEQr",
+          "board_url": "https://www.bilibili.com/v/popular/rank/all",
+          "source_level": "original",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-07-21-039",
+      "main_title": "房东觉得房子卖亏藏死鸡报复买家",
+      "original_titles": [
+        "房东觉得房子卖亏藏死鸡报复买家"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-07-21T12:57:36.098818+08:00",
+      "last_seen": "2026-07-21T12:57:36.098818+08:00",
+      "highest_rank": 20,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-20-ca5c5e73dd8c",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "房东觉得房子卖亏藏死鸡报复买家",
+          "source_rank": 20,
+          "hot_score": 5982939,
+          "crawl_time": "2026-07-21T12:57:36.098818+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
