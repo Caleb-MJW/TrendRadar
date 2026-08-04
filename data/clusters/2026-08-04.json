@@ -1,7 +1,7 @@
 {
   "date": "2026-08-04",
   "timezone": "Asia/Shanghai",
-  "generated_at": "2026-08-04T00:56:41.167469+08:00",
+  "generated_at": "2026-08-04T11:49:50.467704+08:00",
   "mode": "real",
   "warnings": [],
   "clusters": [
@@ -18,11 +18,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-08-04T00:13:04.453814+08:00",
-      "last_seen": "2026-08-04T00:13:04.453814+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
       "highest_rank": 1,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -49,6 +49,23 @@
           "source_rank": 1,
           "hot_score": 7809447,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-1-bff1d76675bd",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "实业报国志 接力谱新篇",
+          "source_rank": 1,
+          "hot_score": 7808278,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -110,6 +127,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-021",
+      "main_title": "国家出手 新能源汽车充电将全面升级",
+      "original_titles": [
+        "国家出手 新能源汽车充电将全面升级"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 2,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-2-3d05799c3dd0",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "国家出手 新能源汽车充电将全面升级",
+          "source_rank": 2,
+          "hot_score": 7712183,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-003",
       "main_title": "含糖碳酸饮料大势已去",
       "original_titles": [
@@ -122,11 +191,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-08-04T00:13:04.453814+08:00",
-      "last_seen": "2026-08-04T00:13:04.453814+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
       "highest_rank": 3,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -158,6 +227,75 @@
           "board_url": "https://top.baidu.com/board?tab=realtime",
           "source_level": "board_page",
           "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-7-f60db15146f1",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "含糖碳酸饮料大势已去",
+          "source_rank": 7,
+          "hot_score": 7237332,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-022",
+      "main_title": "多地发文鼓励居民装修既有住房",
+      "original_titles": [
+        "多地发文鼓励居民装修既有住房"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 3,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-3-f7e3a606e721",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "多地发文鼓励居民装修既有住房",
+          "source_rank": 3,
+          "hot_score": 7616606,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
         }
       ]
     },
@@ -174,11 +312,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-08-04T00:13:04.453814+08:00",
-      "last_seen": "2026-08-04T00:13:04.453814+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
       "highest_rank": 4,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -205,6 +343,23 @@
           "source_rank": 4,
           "hot_score": 7523674,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-4-9d602d799f78",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "穿山跨海的“黄金大外环”要来了",
+          "source_rank": 4,
+          "hot_score": 7521654,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -266,6 +421,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-023",
+      "main_title": "香港传奇影星葛兰去世 享年93岁",
+      "original_titles": [
+        "香港传奇影星葛兰去世 享年93岁"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 5,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-5-a305a5e938e9",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "香港传奇影星葛兰去世 享年93岁",
+          "source_rank": 5,
+          "hot_score": 7423958,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-006",
       "main_title": "“江西球王”杨志军单场轰101分",
       "original_titles": [
@@ -309,6 +516,58 @@
           "source_rank": 6,
           "hot_score": 7332739,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-024",
+      "main_title": "法院执行局长骚扰女当事人索贿被停职",
+      "original_titles": [
+        "法院执行局长骚扰女当事人索贿被停职"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 6,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-6-4e1362ba7065",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "法院执行局长骚扰女当事人索贿被停职",
+          "source_rank": 6,
+          "hot_score": 7332247,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -422,6 +681,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-025",
+      "main_title": "爸爸出门忘关火 女儿淡定“控场”",
+      "original_titles": [
+        "爸爸出门忘关火 女儿淡定“控场”"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 8,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-8-bf64db331493",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "爸爸出门忘关火 女儿淡定“控场”",
+          "source_rank": 8,
+          "hot_score": 7142907,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-009",
       "main_title": "1755枚比特币被偷 价值约7.43亿元",
       "original_titles": [
@@ -474,6 +785,110 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-026",
+      "main_title": "委内瑞拉强震死亡人数上升至6125人",
+      "original_titles": [
+        "委内瑞拉强震死亡人数上升至6125人"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 9,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-9-414dd9cba1f1",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "委内瑞拉强震死亡人数上升至6125人",
+          "source_rank": 9,
+          "hot_score": 7044555,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-027",
+      "main_title": "DeepSeek斩杀线斩的是什么",
+      "original_titles": [
+        "DeepSeek斩杀线斩的是什么"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 10,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-10-c8b2b2309c01",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "DeepSeek斩杀线斩的是什么",
+          "source_rank": 10,
+          "hot_score": 6949947,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-010",
       "main_title": "“婚外胚胎案”妻子：他想一箭三雕",
       "original_titles": [
@@ -517,6 +932,58 @@
           "source_rank": 10,
           "hot_score": 6948147,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-028",
+      "main_title": "瑙鲁正式更改国名 中文译名不变",
+      "original_titles": [
+        "瑙鲁正式更改国名 中文译名不变"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 11,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-11-2eb0e442a88e",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "瑙鲁正式更改国名 中文译名不变",
+          "source_rank": 11,
+          "hot_score": 6854287,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -590,11 +1057,11 @@
         "百度热搜榜"
       ],
       "first_seen": "2026-08-04T00:13:04.453814+08:00",
-      "last_seen": "2026-08-04T00:13:04.453814+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
       "highest_rank": 12,
-      "appear_count": 1,
+      "appear_count": 2,
       "is_multi_platform": false,
-      "heat_trend": "new",
+      "heat_trend": "steady",
       "primary_source_url": "",
       "primary_board_item_url": "",
       "primary_board_url": "https://top.baidu.com/board?tab=realtime",
@@ -621,6 +1088,75 @@
           "source_rank": 12,
           "hot_score": 6751782,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        },
+        {
+          "id": "real-百度热搜-12-74f761795785",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "国家博物馆声明：从未授权馆外扫码",
+          "source_rank": 12,
+          "hot_score": 6763118,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-029",
+      "main_title": "合肥一新房厨房布满螨虫",
+      "original_titles": [
+        "合肥一新房厨房布满螨虫"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 13,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-13-9b5782ad1435",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "合肥一新房厨房布满螨虫",
+          "source_rank": 13,
+          "hot_score": 6655272,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -682,6 +1218,58 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-030",
+      "main_title": "军事爱好者爆料国产航母密件获刑",
+      "original_titles": [
+        "军事爱好者爆料国产航母密件获刑"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 14,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-14-e001bd5a0031",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "军事爱好者爆料国产航母密件获刑",
+          "source_rank": 14,
+          "hot_score": 6569685,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-014",
       "main_title": "贵州一景区有游客跌入68级瀑布",
       "original_titles": [
@@ -725,6 +1313,58 @@
           "source_rank": 14,
           "hot_score": 6564308,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-031",
+      "main_title": "台风白海豚两种路径公布",
+      "original_titles": [
+        "台风白海豚两种路径公布"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 15,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-15-7bb371def85c",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "台风白海豚两种路径公布",
+          "source_rank": 15,
+          "hot_score": 6463158,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
@@ -838,6 +1478,110 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-032",
+      "main_title": "停车超时1分钟多收费1小时合理吗",
+      "original_titles": [
+        "停车超时1分钟多收费1小时合理吗"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 16,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-16-7ae144d11eca",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "停车超时1分钟多收费1小时合理吗",
+          "source_rank": 16,
+          "hot_score": 6380006,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-033",
+      "main_title": "智驾“小蓝灯”管控渐近",
+      "original_titles": [
+        "智驾“小蓝灯”管控渐近"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 17,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-17-1edef5db66a5",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "智驾“小蓝灯”管控渐近",
+          "source_rank": 17,
+          "hot_score": 6276365,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-017",
       "main_title": "青岛火车站好多人拖着铁桶扎啤返乡",
       "original_titles": [
@@ -942,6 +1686,110 @@
       ]
     },
     {
+      "cluster_id": "cluster-2026-08-04-034",
+      "main_title": "美国女子4年不洗头震惊理发师",
+      "original_titles": [
+        "美国女子4年不洗头震惊理发师"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 18,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-18-18b6e040b57e",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "美国女子4年不洗头震惊理发师",
+          "source_rank": 18,
+          "hot_score": 6174561,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-035",
+      "main_title": "中国科学家首获威廉·诺德伯格奖章",
+      "original_titles": [
+        "中国科学家首获威廉·诺德伯格奖章"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 19,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-19-6ec8a17edf36",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "中国科学家首获威廉·诺德伯格奖章",
+          "source_rank": 19,
+          "hot_score": 6089959,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
       "cluster_id": "cluster-2026-08-04-019",
       "main_title": "男乒世界排名前5只剩下王楚钦",
       "original_titles": [
@@ -985,6 +1833,58 @@
           "source_rank": 19,
           "hot_score": 6086165,
           "crawl_time": "2026-08-04T00:13:04.453814+08:00",
+          "source_url": "",
+          "board_item_url": "",
+          "board_url": "https://top.baidu.com/board?tab=realtime",
+          "source_level": "board_page",
+          "tags_raw": []
+        }
+      ]
+    },
+    {
+      "cluster_id": "cluster-2026-08-04-036",
+      "main_title": "中国广电低价大流量卡热销",
+      "original_titles": [
+        "中国广电低价大流量卡热销"
+      ],
+      "source_platforms": [
+        "百度热搜"
+      ],
+      "board_names": [
+        "百度热搜榜"
+      ],
+      "first_seen": "2026-08-04T09:20:21.950331+08:00",
+      "last_seen": "2026-08-04T09:20:21.950331+08:00",
+      "highest_rank": 20,
+      "appear_count": 1,
+      "is_multi_platform": false,
+      "heat_trend": "new",
+      "primary_source_url": "",
+      "primary_board_item_url": "",
+      "primary_board_url": "https://top.baidu.com/board?tab=realtime",
+      "primary_search_url": "",
+      "source_level": "board_page",
+      "mode": "real",
+      "source_origin_type": "hotlist",
+      "is_reference_valid": true,
+      "source_urls": [],
+      "board_item_urls": [],
+      "board_urls": [
+        "https://top.baidu.com/board?tab=realtime"
+      ],
+      "search_urls": [],
+      "items": [
+        {
+          "id": "real-百度热搜-20-f1b3148d62cb",
+          "mode": "real",
+          "source_origin_type": "hotlist",
+          "is_reference_valid": true,
+          "source_platform": "百度热搜",
+          "board_name": "百度热搜榜",
+          "original_title": "中国广电低价大流量卡热销",
+          "source_rank": 20,
+          "hot_score": 5995842,
+          "crawl_time": "2026-08-04T09:20:21.950331+08:00",
           "source_url": "",
           "board_item_url": "",
           "board_url": "https://top.baidu.com/board?tab=realtime",
