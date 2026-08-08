@@ -1,10 +1,19 @@
 {
   "date": "2026-08-08",
-  "generated_at": "2026-08-08T00:24:46.657904+08:00",
+  "generated_at": "2026-08-08T23:56:17.178544+08:00",
   "mode": "real",
-  "summary": "分析数据暂缺；热点簇数据暂缺；健康状态文件 0 份。该归档为 real 数据链路结果。",
-  "analysis_file": null,
-  "clusters_file": null,
-  "health_files": [],
+  "summary": "分析数据已生成；热点簇数据已生成；健康状态文件 8 份。该归档为 real 数据链路结果。",
+  "analysis_file": "data/daily/2026-08-08_analysis.json",
+  "clusters_file": "data/clusters/2026-08-08.json",
+  "health_files": [
+    "data/health/2026-08-08_0845.json",
+    "data/health/2026-08-08_1115.json",
+    "data/health/2026-08-08_1244.json",
+    "data/health/2026-08-08_1432.json",
+    "data/health/2026-08-08_1625.json",
+    "data/health/2026-08-08_1819.json",
+    "data/health/2026-08-08_2022.json",
+    "data/health/2026-08-08_2221.json"
+  ],
   "archive_html": "output/archive/2026-08-08.html"
 }
